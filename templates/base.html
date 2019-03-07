@@ -17,6 +17,7 @@
     {% endblock %}
 </head>
 
+<body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'home' %}">{% trans "Koala" %}</a>
@@ -59,7 +60,6 @@
     </nav>
 </header>
 
-<body>
 {% block content %}{% endblock %}
 </body>
 </html>
