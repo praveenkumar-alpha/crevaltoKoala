@@ -60,6 +60,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'django.templatetags.i18n',
+                'django.templatetags.static',
+                'server.templatetags.common'
+            ]
         },
     },
 ]
