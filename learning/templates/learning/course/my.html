@@ -1,0 +1,30 @@
+{% extends "learning/course/base.html" %}
+{% load i18n learning %}
+
+{% block courses_content %}
+    <div class="clearfix">
+        <h2 class="float-left">{% trans "My courses" %}</h2>
+        <a href="{% url 'learning:course/add' %}" class="float-right btn btn-outline-success">{% trans "Create a new course" %}</a>
+    </div>
+
+    <div class="row">
+        {% for course in object_list %}
+            <div class="col-md-6 p-2 d-flex">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <div class="clearfix">
+                            <h5 class="card-title float-left">{{ course.name }}</h5>
+                            <span class="float-right badge badge-{{ course.state|get_state_badge_type }} p-2">{{ course.get_state_display }}</span>
+                        </div>
+                        <hr class="mt-2 mb-3">
+                        <h6 class="card-subtitle mb-2 text-muted">{% trans "By:" %} {{ course.author.display_name }}</h6>
+                        <p class="card-text">{{ course.description | truncatewords:30 }}</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0">
+                        <a href="#" class="card-link float-right">{% trans "See more" %}</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

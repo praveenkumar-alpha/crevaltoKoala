@@ -1,5 +1,7 @@
-div#learning-sidebar {
+
+@media  {
+
+}div#learning-sidebar {
   min-height: 100vh;
-  max-width: 12%;
-  flex: 0 0 12%
+  flex: 0 0 20%;
 }

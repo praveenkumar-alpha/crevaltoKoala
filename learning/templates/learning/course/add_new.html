@@ -2,15 +2,22 @@
 {% load i18n %}
 
 {% block courses_content %}
-    <h2>{%  trans "Create a new course" %}</h2>
+    <h2>{% trans "Create a new course" %}</h2>
     <form method="post">
         {% csrf_token %}
 
-        {% include "learning/partials/basic_block.html" with field=form.name %}
+        <div class="row">
+            <div class="col-md-9">
+                {% include "learning/partials/basic_block.html" with field=form.name %}
+            </div>
+            <div class="col-md-3">
+                {% include "learning/partials/basic_block.html" with field=form.state %}
+            </div>
+        </div>
+
         {% include "learning/partials/basic_block.html" with field=form.description %}
-        {% include "learning/partials/basic_block.html" with field=form.state %}
         <label>
-            <input type="text" name="{{ form.author.name }}" hidden="hidden" value="{{ user.id }}" />
+            <input type="text" name="{{ form.author.name }}" hidden="hidden" value="{{ user.id }}"/>
         </label>
         <button type="submit" class="btn btn-primary float-right">{% trans "Create a new course" %}</button>
     </form>

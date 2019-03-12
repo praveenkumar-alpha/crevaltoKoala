@@ -9,13 +9,21 @@
                     <h5 class="text-center">Courses</h5>
                 </div>
                 <div class="list-group list-group-flush">
-                    <a href="{% url 'learning:course/add' %}" class="list-group-item list-group-item-action bg-light">{% trans "Create a course" %}</a>
+                    <a
+                            href="{% url 'learning:course/my' %}"
+                            class="list-group-item list-group-item-action {% if request.resolver_match.view_name == 'learning:course/my' %}active{% else %}bg-light{% endif %}"
+                    >{% trans "My courses" %}</a>
+                    <a
+                            href="{% url 'learning:course/add' %}"
+                            class="list-group-item list-group-item-action {% if request.resolver_match.view_name == 'learning:course/add' %}active{% else %}bg-light{% endif %}"
+                    >{% trans "Create a course" %}</a>
                 </div>
             </div>
         </div>
 
         <div id="learning-content" class="container-fluid pt-2">
-            <div class="col-lg-8 col-md-8 col-sm-12 mx-auto">
+            <div class="col-lg-10 col-md-11 col-sm-12 mx-auto">
+                {% include "partials/messages.html" %}
                 {% block learning_content %}{% endblock %}
             </div>
         </div>
