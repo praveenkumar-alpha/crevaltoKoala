@@ -8,6 +8,6 @@ app_name = 'learning'
 urlpatterns = [
     path('', TemplateView.as_view(template_name="learning/index.html"), name='index'),
 
-    path('course/add/', CreateCourse.as_view(), name='create_course')
+    path('course/add/', CreateCourse.as_view(), name='course/add', )
 ]
 

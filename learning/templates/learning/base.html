@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="d-flex" id="wrapper">
+        <div id="learning-sidebar" class="bg-light border-right pt-2">
+            <div class="ml-2 mr-2">
+                <div>
+                    <h5 class="text-center">Courses</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="{% url 'learning:course/add' %}" class="list-group-item list-group-item-action bg-light">{% trans "Create a course" %}</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="learning-content" class="container-fluid pt-2">
+            <div class="col-lg-8 col-md-8 col-sm-12 mx-auto">
+                {% block learning_content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
