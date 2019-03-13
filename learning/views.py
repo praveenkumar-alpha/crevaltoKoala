@@ -42,9 +42,8 @@ class CourseListView(ListView):
 
 class CourseUpdateView(PermissionRequiredMixin, UpdateView):
     model = Course
+    form_class = CourseForm
     template_name = "learning/course/detail.html"
-
-    fields = ['name', 'description', 'state']
 
     def has_permission(self):
         course = Course.objects.get(pk=self.kwargs['pk'])

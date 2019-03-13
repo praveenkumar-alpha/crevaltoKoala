@@ -5,7 +5,7 @@
     <h2>{% trans "Create a new course" %}</h2>
     <form method="post">
         {% csrf_token %}
-        {% include "learning/course/update_course.html" %}
+        {% include "learning/course/course_form.html" %}
         <label>
             <input type="text" name="{{ form.author.name }}" hidden="hidden" value="{{ user.id }}"/>
         </label>

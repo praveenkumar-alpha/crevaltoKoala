@@ -24,12 +24,8 @@ DEBUG = False
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
-    # External dependencies
-    'guardian',  # Per instance object permissions
-
     # Koala applications
     'accounts',
-    'learning',
 
     # Django default apps
     'django.contrib.admin',
@@ -38,6 +34,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Koala applications
+    'learning',
+
+    # External dependencies
+    'guardian',  # Per instance object permissions
+    'markdownx',  # To render Markdown documents
 
 ]
 

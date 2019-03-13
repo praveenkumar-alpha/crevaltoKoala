@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <div class="row">
     <div class="col-md-9">
         {% include "learning/partials/basic_block.html" with field=form.name %}
@@ -7,4 +9,7 @@
     </div>
 </div>
 
-{% include "learning/partials/basic_block.html" with field=form.description %}
+
+{{ form.description.label_tag }}
+{{ form.description }}
+{{ form.media }}

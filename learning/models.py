@@ -1,10 +1,11 @@
 from enum import Enum
 
 from django.db import models
-from accounts.models import Person
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.safestring import mark_safe
 from django.utils.translation import pgettext_lazy
+from django.utils.translation import ugettext_lazy as _
+
+from accounts.models import Person
 
 
 class CourseState(Enum):
@@ -14,14 +15,14 @@ class CourseState(Enum):
 
 
 class Course(models.Model):
-
     name = models.CharField(
         max_length=255,
         verbose_name=_("Name")
     )
     description = models.TextField(
         blank=True,
-        verbose_name=_("Description")
+        verbose_name=_("Description"),
+        help_text=mark_safe(_('You can use the <a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Markdown</a> syntax here.'))
     )
     state = models.CharField(
         max_length=20,

@@ -27,7 +27,10 @@ urlpatterns = [
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('accounts/', include('django.contrib.auth.urls')),
 
-    path('learning/', include('learning.urls', namespace='learning'))
+    path('learning/', include('learning.urls', namespace='learning')),
+
+    # Extra dependencies
+    path('markdownx/', include('markdownx.urls'))
 
 
 ]

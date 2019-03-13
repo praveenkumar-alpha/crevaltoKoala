@@ -1,4 +1,5 @@
 from django import template
+from django.utils.safestring import mark_safe
 
 from learning.models import CourseState
 
@@ -16,3 +17,12 @@ def get_state_badge_type(value):
     else:
         badge_type = 'light'
     return badge_type
+
+
+@register.filter
+def render_markdown(value):
+    try:
+        import markdown
+        return mark_safe(markdown.markdown(value))
+    except ImportError:
+        return value
