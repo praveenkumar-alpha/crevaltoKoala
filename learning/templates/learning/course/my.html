@@ -21,7 +21,7 @@
                         <p class="card-text">{{ course.description | truncatewords:30 }}</p>
                     </div>
                     <div class="card-footer bg-white border-top-0">
-                        <a href="#" class="card-link float-right">{% trans "See more" %}</a>
+                        <a href="{% url 'learning:course/detail' pk=course.id %}" class="card-link float-right">{% trans "See more" %}</a>
                     </div>
                 </div>
             </div>

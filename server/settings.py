@@ -24,14 +24,21 @@ DEBUG = False
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    # External dependencies
+    'guardian',  # Per instance object permissions
+
+    # Koala applications
     'accounts',
+    'learning',
+
+    # Django default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'learning'
+
 ]
 
 MIDDLEWARE = [
@@ -43,6 +50,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'guardian.backends.ObjectPermissionBackend',
+)
 
 ROOT_URLCONF = 'server.urls'
 
@@ -103,7 +115,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     './static/',
 ]
-
 
 LANGUAGE_CODE = 'fr_FR'
 TIME_ZONE = 'Europe/Paris'
