@@ -46,7 +46,7 @@ class CreateCourse(LoginRequiredMixin, CreateView):
         return super().form_invalid(form)
 
 
-class CourseListView(ListView):
+class CourseListView(LoginRequiredMixin, ListView):
     model = Course
     template_name = "learning/course/my.html"
 
