@@ -1,8 +1,8 @@
 {% extends "learning/base.html" %}
-{% load static %}
+{% load i18n sass_tags %}
 
 {% block extrastyle %}{{ block.super }}
-    <link rel="stylesheet" href="{% static 'learning/course.css' %}"/>
+    <link rel="stylesheet" href="{% sass_src 'learning/course.scss' %}"/>
 {% endblock %}
 
 {% block learning_content %}

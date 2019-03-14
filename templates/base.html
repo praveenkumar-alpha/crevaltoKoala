@@ -10,9 +10,9 @@
     <title>{% block title %}Koala{% endblock %}</title>
 
     {% block extrastyle %}
-        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"/>
-        <script defer src="{% static 'jquery.min.js' %}"></script>
-        <script defer src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'server/bootstrap/css/bootstrap.min.css' %}"/>
+        <script defer src="{% static 'server/jquery.min.js' %}"></script>
+        <script defer src="{% static 'server/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     {% endblock %}
 
     {% block extrahead %} {% endblock %}
@@ -20,7 +20,7 @@
 
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light border-bottom">
         <a class="navbar-brand" href="{% url 'home' %}">Koala</a>
 
         <ul class="navbar-nav">

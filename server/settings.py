@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # External dependencies
     'guardian',  # Per instance object permissions
     'markdownx',  # To render Markdown documents
+    'sass_processor',  # Compile stylesheet files
 
 ]
 
@@ -113,10 +114,15 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+STATIC_ROOT = "./prodstatic"
+STATIC_URL = '/static/'
+SASS_PROCESSOR_ROOT = STATIC_ROOT
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    './static/',
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
 ]
 
 LANGUAGE_CODE = 'fr_FR'
@@ -127,8 +133,6 @@ USE_TZ = True
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
-
-STATIC_URL = '/static/'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
