@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: learning\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-14 09:53+0100\n"
-"PO-Revision-Date: 2019-03-14 09:13+0100\n"
+"POT-Creation-Date: 2019-03-14 12:19+0100\n"
+"PO-Revision-Date: 2019-03-14 12:20+0100\n"
 "Last-Translator: Guillaume Bernard <guillaume-bernard@loria.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -18,31 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: apps.py:7
+#: learning/apps.py:6
+msgid "Learning"
+msgstr "Apprendre"
+
+#: learning/apps.py:7
 msgid "Learning management"
 msgstr "Gestion des apprentissages"
 
-#: models.py:17
+#: learning/models.py:12
 msgid "Draft"
 msgstr "Brouillon"
 
-#: models.py:18
+#: learning/models.py:13
 msgid "Published"
 msgstr "Publié"
 
-#: models.py:19
+#: learning/models.py:14
 msgid "Archived"
 msgstr "Archivé"
 
-#: models.py:24
+#: learning/models.py:20
 msgid "Name"
 msgstr "Nom"
 
-#: models.py:28
+#: learning/models.py:24
 msgid "Description"
 msgstr "Description"
 
-#: models.py:29
+#: learning/models.py:25
 msgid ""
 "You can use the <a href=\"https://www.markdownguide.org/basic-syntax/\" "
 "target=\"_blank\">Markdown</a> syntax here."
@@ -50,72 +54,77 @@ msgstr ""
 "Vous pouvez utilisez la syntaxe <a href=\"https://www.markdownguide.org/"
 "basic-syntax/\" target=\"_blank\">Markdown</a> ici."
 
-#: models.py:35
+#: learning/models.py:31
 msgid "State"
 msgstr "État"
 
-#: models.py:40
+#: learning/models.py:36
 msgid "Published the"
 msgstr "Publié le"
 
-#: models.py:45
+#: learning/models.py:41
 msgid "Last updated the"
 msgstr "Mis à jour le"
 
-#: models.py:51
+#: learning/models.py:47
 msgid "Author"
 msgstr "Auteur"
 
-#: models.py:59
+#: learning/models.py:55
 msgctxt "Course verbose name (singular form)"
 msgid "course"
 msgstr "cours"
 
-#: models.py:60
+#: learning/models.py:56
 msgctxt "Course verbose name (plural form)"
 msgid "courses"
 msgstr "cours"
 
-#: templates/learning/base.html:15 templates/learning/course/my.html:6
+#: learning/templates/learning/base.html:13
+msgid "Courses"
+msgstr "Cours"
+
+#: learning/templates/learning/base.html:19
+#: learning/templates/learning/course/my.html:6
 msgid "My courses"
 msgstr "Mes cours"
 
-#: templates/learning/base.html:19
+#: learning/templates/learning/base.html:23
 msgid "Create a course"
 msgstr "Créer un cours"
 
-#: templates/learning/course/add_new.html:5
-#: templates/learning/course/add_new.html:12
-#: templates/learning/course/my.html:7
+#: learning/templates/learning/course/add_new.html:5
+#: learning/templates/learning/course/add_new.html:12
+#: learning/templates/learning/course/my.html:7
 msgid "Create a new course"
 msgstr "Créer un nouveau cours"
 
-#: templates/learning/course/detail.html:5
+#: learning/templates/learning/course/detail.html:5
 #, python-format
 msgid "Update course “%(name)s”"
 msgstr "Mettre à jour le cours « %(name)s »"
 
-#: templates/learning/course/detail.html:9
+#: learning/templates/learning/course/detail.html:9
 msgid "Update course"
 msgstr "Mettre à jour le cours"
 
-#: templates/learning/course/my.html:20
+#: learning/templates/learning/course/my.html:20
 msgid "By:"
 msgstr "Par :"
 
-#: templates/learning/course/my.html:28
+#: learning/templates/learning/course/my.html:28
 msgid "See more"
 msgstr "Voir plus"
 
-#: templates/markdownx/widget2.html:7
+#: learning/templates/markdownx/widget2.html:7
 msgid "Write"
 msgstr "Écrire"
 
-#: templates/markdownx/widget2.html:10
+#: learning/templates/markdownx/widget2.html:10
 msgid "Preview"
 msgstr "Aperçu"
 
-#: views.py:35
+#: learning/views.py:35
 msgid ""
 "The user given in your response does not match with you. Are you trying to "
 "test us? Consider joining instead."
@@ -123,12 +132,12 @@ msgstr ""
 "L’utilisateur indiqué dans la réponse ne correspond pas avec vous. Vous êtes "
 "en train de nous tester ? Rejoignez-nous plutôt."
 
-#: views.py:41
+#: learning/views.py:41
 #, python-format
 msgid "Course “%(course_name)s” created."
 msgstr "Cours « %(course_name)s » créé."
 
-#: views.py:72
+#: learning/views.py:72
 #, python-format
 msgid "The course “%(course_name)s” has been updated."
 msgstr "Le cours « %(course_name)s » a été mis à jour."
