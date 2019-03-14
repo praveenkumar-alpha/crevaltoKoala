@@ -1,4 +1,9 @@
 {% extends "learning/base.html" %}
+{% load static %}
+
+{% block extrastyle %}{{ block.super }}
+    <link rel="stylesheet" href="{% static 'learning/course.css' %}"/>
+{% endblock %}
 
 {% block learning_content %}
     {% block courses_content %}{% endblock %}

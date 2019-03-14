@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% load i18n static %}
+{% load static %}
 
 {% block title %}{{ title }}{% endblock %}
 
-{% block extra_head %}{{ block.super }}
+{% block extrastyle %}{{ block.super }}
     <link rel="shortcut icon" href="{% static 'accounts/images/favicon.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'accounts/style.css' %}"/>
     <script defer src="{% static 'accounts/fonts/fontawesome.js' %}"></script>
