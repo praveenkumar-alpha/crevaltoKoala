@@ -5,13 +5,27 @@ from django.utils.translation import ugettext_lazy as _
 from django.views.generic import CreateView, ListView, UpdateView
 from guardian.shortcuts import assign_perm
 
-from learning.forms import CourseForm
+from learning.forms import CourseCreateForm, CourseUpdateForm
 from learning.models import Course
+
+
+def update_valid_or_invalid_form_fields(form):
+    for field in form.fields:
+        try:
+            current_class = form.fields[field].widget.attrs['class']
+        except KeyError:
+            current_class = str()
+
+        if field in form.errors:
+            form.fields[field].widget.attrs.update({'class': current_class + ' ' + 'is-invalid'})
+        elif field in form.changed_data:
+                form.fields[field].widget.attrs.update({'class': current_class + ' ' + 'is-valid'})
+    return form
 
 
 class CreateCourse(LoginRequiredMixin, CreateView):
     model = Course
-    form_class = CourseForm
+    form_class = CourseCreateForm
     template_name = "learning/course/add_new.html"
     success_url = reverse_lazy("learning:course/my")
 
@@ -42,13 +56,21 @@ class CourseListView(ListView):
 
 class CourseUpdateView(PermissionRequiredMixin, UpdateView):
     model = Course
-    form_class = CourseForm
+    form_class = CourseUpdateForm
     template_name = "learning/course/detail.html"
 
     def has_permission(self):
         course = Course.objects.get(pk=self.kwargs['pk'])
         return self.request.user.has_perm('learning.change_course', course)
 
+    def form_invalid(self, form):
+        form = update_valid_or_invalid_form_fields(form)
+        return super().form_invalid(form)
+
+    def form_valid(self, form):
+        if form.has_changed():
+            messages.success(self.request, _("The course “{course_name}” has been updated.".format(course_name=self.object.name)))
+        return super().form_valid(form)
+
     def get_success_url(self):
-        messages.success(self.request, _("The course “{course_name}” has been updated.".format(course_name=self.object.name)))
         return reverse_lazy('learning:course/detail', kwargs={'pk': self.object.id})
