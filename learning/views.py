@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.urls import reverse_lazy
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _, gettext
 from django.views.generic import CreateView, ListView, UpdateView
 from guardian.shortcuts import assign_perm
 
@@ -32,13 +32,13 @@ class CreateCourse(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         # Just in case somebody wants to play with the form..
         if not form.cleaned_data['author'].id == self.request.user.id:
-            messages.error(self.request, _("The user given in your response does not match with you. Are you trying to test us ? Consider joining instead."))
+            messages.error(self.request, _("The user given in your response does not match with you. Are you trying to test us? Consider joining instead."))
             return self.form_invalid(form)
         else:
             form.save()
             assign_perm('change_course', form.instance.author, form.instance)
             assign_perm('delete_course', form.instance.author, form.instance)
-            messages.success(self.request, "Course \"{course_name}\" created!".format(course_name=form.cleaned_data['name']))
+            messages.success(self.request, _('Course “%(course_name)s” created.') % {'course_name': form.instance.name})
             return super().form_valid(form)
 
     def form_invalid(self, form):
@@ -69,7 +69,7 @@ class CourseUpdateView(PermissionRequiredMixin, UpdateView):
 
     def form_valid(self, form):
         if form.has_changed():
-            messages.success(self.request, _("The course “{course_name}” has been updated.".format(course_name=self.object.name)))
+            messages.success(self.request, _('The course “%(course_name)s” has been updated.') % {'course_name': self.object.name})
         return super().form_valid(form)
 
     def get_success_url(self):
