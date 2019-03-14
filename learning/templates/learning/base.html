@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+{% block extrastyle %}{{ block.super }}
+    <link rel="stylesheet" href="{% static 'learning/learning.css' %}"/>
+{% endblock %}
+
 {% block content %}
     <div class="d-flex" id="wrapper">
         <div id="learning-sidebar" class="bg-light border-right pt-2">

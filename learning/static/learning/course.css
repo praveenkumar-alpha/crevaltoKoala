@@ -11,11 +11,6 @@ div.form-group > small.text-muted > ul {
     padding-left: 1rem;
 }
 
-div#learning-sidebar {
-    min-height: 100vh;
-    flex: 0 0 20%;
-}
-
 .tab-pane {
     min-height: 18rem;
     max-height: 18rem;
