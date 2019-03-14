@@ -1,11 +1,13 @@
 {% extends "learning/course/base.html" %}
-{% load i18n %}
+{% load i18n learning %}
 
 {% block courses_content %}
-    <h2>{% blocktrans with name=object.name %}Update course “{{ name }}”{% endblocktrans %}</h2>
-    <form method="post">
-        {% csrf_token %}
-        {% include "learning/course/course_form.html" %}
-        <button type="submit" class="btn btn-primary float-right">{% trans "Update course" %}</button>
-    </form>
+    <div class="clearfix">
+        <h2 class="card-title float-left">{{ object.name }}</h2>
+        <span class="ml-2 mt-2 float-right badge badge-{{ course.state|get_state_badge_type }} p-2">{{ object.get_state_display }}</span>
+    </div>
+    <hr>
+    <div class="p-3" id="learning_course_description">
+        {{ object.description | render_markdown }}
+    </div>
 {% endblock %}

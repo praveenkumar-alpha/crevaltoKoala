@@ -39,8 +39,11 @@ class CourseAdmin(GuardedModelAdmin):
 
     def save_model(self, request, obj, form, change):
         super(CourseAdmin, self).save_model(request, obj, form, change)
-        assign_perm('change_course', obj.author, obj)
-        assign_perm('delete_course', obj.author, obj)
+        from guardian.utils import get_anonymous_user
+        if not get_anonymous_user().has_perm('learning.view_course', obj):
+            assign_perm('learning.view_course', [form.instance.author, get_anonymous_user()], obj)
+        assign_perm('learning.change_course', obj.author, obj)
+        assign_perm('learning.delete_course', obj.author, obj)
 
 
 admin.site.register(Course, CourseAdmin)
