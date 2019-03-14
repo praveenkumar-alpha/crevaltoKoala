@@ -1,12 +1,27 @@
 {% extends "learning/course/base.html" %}
-{% load i18n learning %}
+{% load i18n learning guardian_tags %}
 
 {% block courses_content %}
     <div class="clearfix">
-        <h2 class="card-title float-left">{{ object.name }}</h2>
-        <span class="ml-2 mt-2 float-right badge badge-{{ course.state|get_state_badge_type }} p-2">{{ object.get_state_display }}</span>
+        <a href="{% url 'learning:course/detail' pk=object.id %}" class="float-left"><h2>{{ object.name }}</h2></a>
+        <div class="ml-2 float-right">
+            {% get_obj_perms request.user for object as "course_perms" %}
+            {% if "delete_course" in course_perms %}
+                <a href="#" class="btn btn-outline-danger"><i class="fa fa-trash"></i> {% trans "Delete" %}</a>
+            {% endif %}
+            {% if "change_course" in course_perms %}
+                <a href="{% url 'learning:course/update' pk=object.id %}" class="btn btn-outline-primary"><i class="fa fa-edit"></i> {% trans "Edit" %}</a>
+            {% endif %}
+        </div>
     </div>
+
     <hr>
+
+    <p>{% trans "This course is:"%} <span class="badge badge-{{ course.state|get_state_badge_type }}">{{ object.get_state_display }}</span> </p>
+
+
+    <hr>
+
     <div class="p-3" id="learning_course_description">
         {{ object.description | render_markdown }}
     </div>

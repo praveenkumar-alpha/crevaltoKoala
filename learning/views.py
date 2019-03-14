@@ -22,9 +22,10 @@
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.urls import reverse_lazy
-from django.utils.translation import ugettext_lazy as _, gettext
+from django.utils.translation import ugettext_lazy as _
 from django.views.generic import CreateView, ListView, UpdateView, DetailView
 from guardian.shortcuts import assign_perm
+from guardian.utils import get_anonymous_user
 
 from learning.forms import CourseCreateForm, CourseUpdateForm
 from learning.models import Course
@@ -40,7 +41,7 @@ def update_valid_or_invalid_form_fields(form):
         if field in form.errors:
             form.fields[field].widget.attrs.update({'class': current_class + ' ' + 'is-invalid'})
         elif field in form.changed_data:
-                form.fields[field].widget.attrs.update({'class': current_class + ' ' + 'is-valid'})
+            form.fields[field].widget.attrs.update({'class': current_class + ' ' + 'is-valid'})
     return form
 
 
@@ -57,7 +58,6 @@ class CreateCourse(LoginRequiredMixin, CreateView):
             return self.form_invalid(form)
         else:
             form.save()
-            from guardian.utils import get_anonymous_user
             assign_perm('view_course', [
                 form.instance.author,
                 get_anonymous_user()
@@ -83,7 +83,7 @@ class CourseListView(LoginRequiredMixin, ListView):
 class CourseUpdateView(PermissionRequiredMixin, UpdateView):
     model = Course
     form_class = CourseUpdateForm
-    template_name = "learning/course/update.html"
+    template_name = "learning/course/change.html"
 
     def has_permission(self):
         course = Course.objects.get(pk=self.kwargs['pk'])

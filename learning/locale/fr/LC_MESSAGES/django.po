@@ -8,45 +8,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: learning\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-14 12:19+0100\n"
-"PO-Revision-Date: 2019-03-14 12:20+0100\n"
-"Last-Translator: Guillaume Bernard <guillaume-bernard@loria.fr>\n"
+"POT-Creation-Date: 2019-03-14 15:07+0100\n"
+"PO-Revision-Date: 2019-03-14 15:12+0100\n"
+"Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: learning/apps.py:6
-msgid "Learning"
-msgstr "Apprendre"
-
-#: learning/apps.py:7
+#: learning/apps.py:28
 msgid "Learning management"
 msgstr "Gestion des apprentissages"
 
-#: learning/models.py:12
+#: learning/models.py:33
 msgid "Draft"
 msgstr "Brouillon"
 
-#: learning/models.py:13
+#: learning/models.py:34
 msgid "Published"
 msgstr "Publié"
 
-#: learning/models.py:14
+#: learning/models.py:35
 msgid "Archived"
 msgstr "Archivé"
 
-#: learning/models.py:20
+#: learning/models.py:41
 msgid "Name"
 msgstr "Nom"
 
-#: learning/models.py:24
+#: learning/models.py:45
 msgid "Description"
 msgstr "Description"
 
-#: learning/models.py:25
+#: learning/models.py:46
 msgid ""
 "You can use the <a href=\"https://www.markdownguide.org/basic-syntax/\" "
 "target=\"_blank\">Markdown</a> syntax here."
@@ -54,28 +51,28 @@ msgstr ""
 "Vous pouvez utilisez la syntaxe <a href=\"https://www.markdownguide.org/"
 "basic-syntax/\" target=\"_blank\">Markdown</a> ici."
 
-#: learning/models.py:31
+#: learning/models.py:52
 msgid "State"
 msgstr "État"
 
-#: learning/models.py:36
+#: learning/models.py:57
 msgid "Published the"
 msgstr "Publié le"
 
-#: learning/models.py:41
+#: learning/models.py:62
 msgid "Last updated the"
 msgstr "Mis à jour le"
 
-#: learning/models.py:47
+#: learning/models.py:68
 msgid "Author"
 msgstr "Auteur"
 
-#: learning/models.py:55
+#: learning/models.py:76
 msgctxt "Course verbose name (singular form)"
 msgid "course"
 msgstr "cours"
 
-#: learning/models.py:56
+#: learning/models.py:77
 msgctxt "Course verbose name (plural form)"
 msgid "courses"
 msgstr "cours"
@@ -93,26 +90,42 @@ msgstr "Mes cours"
 msgid "Create a course"
 msgstr "Créer un cours"
 
-#: learning/templates/learning/course/add_new.html:5
-#: learning/templates/learning/course/add_new.html:12
+#: learning/templates/learning/course/add.html:5
+#: learning/templates/learning/course/add.html:12
 #: learning/templates/learning/course/my.html:7
 msgid "Create a new course"
 msgstr "Créer un nouveau cours"
 
-#: learning/templates/learning/course/detail.html:5
+#: learning/templates/learning/course/change.html:6
 #, python-format
 msgid "Update course “%(name)s”"
 msgstr "Mettre à jour le cours « %(name)s »"
 
-#: learning/templates/learning/course/detail.html:9
+#: learning/templates/learning/course/change.html:8
+msgid "Cancel and get back to course"
+msgstr "Annuler et retourner au cours"
+
+#: learning/templates/learning/course/change.html:15
 msgid "Update course"
 msgstr "Mettre à jour le cours"
 
-#: learning/templates/learning/course/my.html:20
+#: learning/templates/learning/course/detail.html:10
+msgid "Delete"
+msgstr "Supprimer"
+
+#: learning/templates/learning/course/detail.html:13
+msgid "Edit"
+msgstr "Modifier"
+
+#: learning/templates/learning/course/detail.html:20
+msgid "This course is:"
+msgstr "Ce cours est :"
+
+#: learning/templates/learning/course/my.html:22
 msgid "By:"
 msgstr "Par :"
 
-#: learning/templates/learning/course/my.html:28
+#: learning/templates/learning/course/my.html:30
 msgid "See more"
 msgstr "Voir plus"
 
@@ -124,7 +137,7 @@ msgstr "Écrire"
 msgid "Preview"
 msgstr "Aperçu"
 
-#: learning/views.py:35
+#: learning/views.py:57
 msgid ""
 "The user given in your response does not match with you. Are you trying to "
 "test us? Consider joining instead."
@@ -132,12 +145,15 @@ msgstr ""
 "L’utilisateur indiqué dans la réponse ne correspond pas avec vous. Vous êtes "
 "en train de nous tester ? Rejoignez-nous plutôt."
 
-#: learning/views.py:41
+#: learning/views.py:67
 #, python-format
 msgid "Course “%(course_name)s” created."
 msgstr "Cours « %(course_name)s » créé."
 
-#: learning/views.py:72
+#: learning/views.py:98
 #, python-format
 msgid "The course “%(course_name)s” has been updated."
 msgstr "Le cours « %(course_name)s » a été mis à jour."
+
+#~ msgid "Learning"
+#~ msgstr "Apprendre"
