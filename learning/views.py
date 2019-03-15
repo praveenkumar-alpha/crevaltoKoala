@@ -25,11 +25,10 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _, gettext
 from django.views.generic import CreateView, ListView, UpdateView, DetailView, DeleteView
-from guardian.shortcuts import assign_perm
-from guardian.utils import get_anonymous_user
 
 from learning.forms import CourseCreateForm, CourseUpdateForm
 from learning.models import Course
+from learning.permissions import apply_author_permissions
 
 
 def update_valid_or_invalid_form_fields(form):
@@ -53,18 +52,13 @@ class CreateCourse(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy("learning:course/my")
 
     def form_valid(self, form):
-        # Just in case somebody wants to play with the form..
+        # Just in case somebody wants to play with the form…
         if not form.cleaned_data['author'].id == self.request.user.id:
             messages.error(self.request, _("The user given in your response does not match with you. Are you trying to test us? Consider joining instead."))
             return self.form_invalid(form)
         else:
             form.save()
-            assign_perm('view_course', [
-                form.instance.author,
-                get_anonymous_user()
-            ], form.instance)
-            assign_perm('change_course', form.instance.author, form.instance)
-            assign_perm('delete_course', form.instance.author, form.instance)
+            apply_author_permissions(form.instance, allow_anonymous=True)
             messages.success(self.request, _('Course “%(course_name)s” created.') % {'course_name': form.instance.name})
             return super().form_valid(form)
 

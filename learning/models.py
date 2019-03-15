@@ -74,13 +74,6 @@ class Course(models.Model):
     def activities(self):
         return [course_activity.activity for course_activity in self.course_activities.order_by('rank').all()]
 
-    @property
-    def activites_rank(self):
-        return [
-            (course_activity.rank, course_activity.activity)
-            for course_activity in self.course_activities.order_by('rank').all()
-        ]
-
     def __str__(self):
         return self.name
 

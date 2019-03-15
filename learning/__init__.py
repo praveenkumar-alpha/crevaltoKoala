@@ -19,4 +19,19 @@
 # We make an extensive use of the Django framework, https://www.djangoproject.com/
 #
 
+import logging
+
 default_app_config = 'learning.apps.LearningConfig'
+
+logger = logging.getLogger(__name__)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(funcName)s in %(module)s − %(message)s')
+
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+try:
+    import settings
+    logger.setLevel(settings.LOGGING_LEVEL)
+except (ImportError, Exception):
+    logger.setLevel(logging.INFO)
