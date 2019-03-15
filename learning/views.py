@@ -107,6 +107,9 @@ class CourseDetailView(PermissionRequiredMixin, DetailView):
     model = Course
     template_name = "learning/course/detail.html"
 
+    def get_object(self, queryset=None):
+        return super().get_object()
+
     def has_permission(self):
         course = Course.objects.get(pk=self.kwargs['pk'])
         return self.request.user.has_perm('learning.view_course', course)

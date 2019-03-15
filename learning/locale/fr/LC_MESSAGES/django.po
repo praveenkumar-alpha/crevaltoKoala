@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: learning\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-15 10:49+0100\n"
-"PO-Revision-Date: 2019-03-15 10:50+0100\n"
+"POT-Creation-Date: 2019-03-15 13:42+0100\n"
+"PO-Revision-Date: 2019-03-15 13:42+0100\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -23,27 +23,28 @@ msgstr ""
 msgid "Learning management"
 msgstr "Gestion des apprentissages"
 
-#: learning/models.py:33
+#: learning/models.py:35
 msgid "Draft"
 msgstr "Brouillon"
 
-#: learning/models.py:34
+#: learning/models.py:36
 msgid "Published"
 msgstr "Publié"
 
-#: learning/models.py:35
+#: learning/models.py:37
 msgid "Archived"
 msgstr "Archivé"
 
-#: learning/models.py:41
+#: learning/models.py:43 learning/models.py:96
+#: learning/templates/learning/course/detail.html:31
 msgid "Name"
 msgstr "Nom"
 
-#: learning/models.py:45
+#: learning/models.py:47 learning/models.py:100
 msgid "Description"
 msgstr "Description"
 
-#: learning/models.py:46
+#: learning/models.py:48 learning/models.py:101
 msgid ""
 "You can use the <a href=\"https://www.markdownguide.org/basic-syntax/\" "
 "target=\"_blank\">Markdown</a> syntax here."
@@ -51,31 +52,76 @@ msgstr ""
 "Vous pouvez utilisez la syntaxe <a href=\"https://www.markdownguide.org/"
 "basic-syntax/\" target=\"_blank\">Markdown</a> ici."
 
-#: learning/models.py:52
+#: learning/models.py:54
 msgid "State"
 msgstr "État"
 
-#: learning/models.py:57
+#: learning/models.py:59 learning/models.py:106
 msgid "Published the"
 msgstr "Publié le"
 
-#: learning/models.py:62
+#: learning/models.py:64 learning/models.py:111
 msgid "Last updated the"
 msgstr "Mis à jour le"
 
-#: learning/models.py:68
+#: learning/models.py:70 learning/models.py:117
+#: learning/templates/learning/course/detail.html:32
 msgid "Author"
 msgstr "Auteur"
 
-#: learning/models.py:76
+#: learning/models.py:89
 msgctxt "Course verbose name (singular form)"
 msgid "course"
 msgstr "cours"
 
-#: learning/models.py:77
+#: learning/models.py:90
 msgctxt "Course verbose name (plural form)"
 msgid "courses"
 msgstr "cours"
+
+#: learning/models.py:125
+msgctxt "Activity verbose name (singular form)"
+msgid "activity"
+msgstr "activité"
+
+#: learning/models.py:126
+msgctxt "Activity verbose name (plural form)"
+msgid "activities"
+msgstr "activités"
+
+#: learning/models.py:131 learning/templates/learning/course/detail.html:30
+msgid "Rank"
+msgstr "Rang"
+
+#: learning/models.py:134
+msgid "Minimal allowed score"
+msgstr "Score minimal autorisé"
+
+#: learning/models.py:142
+msgid "Success score"
+msgstr "Score de succès"
+
+#: learning/models.py:153
+msgid "Course"
+msgstr "Cours"
+
+#: learning/models.py:159
+msgid "Activity"
+msgstr "Activité"
+
+#: learning/models.py:165
+msgid "Success score must be greater than minimal score."
+msgstr "Le score de succès doit être plus grand que le score minimal."
+
+#: learning/models.py:172
+msgctxt "Course activity verbose name (singular form)"
+msgid "course activity"
+msgstr "activité de cours"
+
+#: learning/models.py:173
+msgctxt "Course activity verbose name (plural form)"
+msgid "course activities"
+msgstr "activités de cours"
 
 #: learning/templates/learning/base.html:17
 msgid "Courses"
@@ -145,9 +191,13 @@ msgstr "Supprimer"
 msgid "Edit"
 msgstr "Modifier"
 
-#: learning/templates/learning/course/detail.html:20
+#: learning/templates/learning/course/detail.html:18
 msgid "This course is:"
 msgstr "Ce cours est :"
+
+#: learning/templates/learning/course/detail.html:26
+msgid "Activities"
+msgstr "Activités"
 
 #: learning/templates/learning/course/my.html:22
 msgid "By:"
@@ -183,19 +233,19 @@ msgstr "Cours « %(course_name)s » créé."
 msgid "The course “%(course_name)s” has been updated."
 msgstr "Le cours « %(course_name)s » a été mis à jour."
 
-#: learning/views.py:117
+#: learning/views.py:120
 msgid "You do not have the required permissions to access this course"
 msgstr "Vous n’avez pas les permissions requises pour consulter ce cours."
 
-#: learning/views.py:117 learning/views.py:134
+#: learning/views.py:120 learning/views.py:137
 msgid "Try to login, this may solve the issue."
 msgstr "Essayez de vous connecter, cela peut résoudre le problème."
 
-#: learning/views.py:134
+#: learning/views.py:137
 msgid "You do not have the required permissions to delete this course"
 msgstr "Vous n’avez pas les permissions requises pour supprimer ce cours"
 
-#: learning/views.py:139
+#: learning/views.py:142
 #, python-format
 msgid "The course ”%(course_name)s” has been deleted"
 msgstr "Le cours « %(course_name)s » a été supprimé"

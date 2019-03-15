@@ -21,10 +21,12 @@
 
 from enum import Enum
 
+from django.core.exceptions import ValidationError
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.safestring import mark_safe
-from django.utils.translation import pgettext_lazy
 from django.utils.translation import gettext_lazy as _
+from django.utils.translation import pgettext_lazy
 
 from accounts.models import Person
 
@@ -64,9 +66,20 @@ class Course(models.Model):
     author = models.ForeignKey(
         Person,
         on_delete=models.CASCADE,
-        related_name="writes",
+        related_name="course",
         verbose_name=_("Author")
     )
+
+    @property
+    def activities(self):
+        return [course_activity.activity for course_activity in self.course_activities.order_by('rank').all()]
+
+    @property
+    def activites_rank(self):
+        return [
+            (course_activity.rank, course_activity.activity)
+            for course_activity in self.course_activities.order_by('rank').all()
+        ]
 
     def __str__(self):
         return self.name
@@ -75,3 +88,86 @@ class Course(models.Model):
         ordering = ["name"]
         verbose_name = pgettext_lazy("Course verbose name (singular form)", "course")
         verbose_name_plural = pgettext_lazy("Course verbose name (plural form)", "courses")
+
+
+class Activity(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name=_("Name")
+    )
+    description = models.TextField(
+        blank=True,
+        verbose_name=_("Description"),
+        help_text=mark_safe(_('You can use the <a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Markdown</a> syntax here.'))
+    )
+    published = models.DateTimeField(
+        auto_now_add=True,
+        auto_now=False,
+        verbose_name=_("Published the")
+    )
+    updated = models.DateTimeField(
+        auto_now_add=False,
+        auto_now=True,
+        verbose_name=_("Last updated the")
+    )
+    author = models.ForeignKey(
+        Person,
+        on_delete=models.CASCADE,
+        related_name="activities",
+        verbose_name=_("Author")
+    )
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ["name"]
+        verbose_name = pgettext_lazy("Activity verbose name (singular form)", "activity")
+        verbose_name_plural = pgettext_lazy("Activity verbose name (plural form)", "activities")
+
+
+class CourseActivity(models.Model):
+    rank = models.PositiveIntegerField(
+        verbose_name=_("Rank")
+    )
+    minimal_allowed_score = models.PositiveIntegerField(
+        verbose_name=_("Minimal allowed score"),
+        default=25,
+        validators=[
+            MaxValueValidator(100),
+            MinValueValidator(0)
+        ]
+    )
+    success_score = models.PositiveIntegerField(
+        verbose_name=_("Success score"),
+        default=50,
+        validators=[
+            MaxValueValidator(100),
+            MinValueValidator(0),
+        ]
+    )
+    course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name="course_activities",
+        verbose_name=_("Course")
+    )
+    activity = models.ForeignKey(
+        Activity,
+        on_delete=models.CASCADE,
+        related_name="course_activities",
+        verbose_name=_("Activity")
+    )
+
+    def clean(self):
+        if self.success_score <= self.minimal_allowed_score:
+            raise ValidationError(
+                _("Success score must be greater than minimal score.")
+            )
+        return super().clean()
+
+    class Meta:
+        unique_together = ("rank", "course")
+        ordering = ["rank"]
+        verbose_name = pgettext_lazy("Course activity verbose name (singular form)", "course activity")
+        verbose_name_plural = pgettext_lazy("Course activity verbose name (plural form)", "course activities")

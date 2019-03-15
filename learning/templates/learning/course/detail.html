@@ -14,15 +14,32 @@
             {% endif %}
         </div>
     </div>
-
     <hr>
-
-    <p>{% trans "This course is:"%} <span class="badge badge-{{ course.state|get_state_badge_type }}">{{ object.get_state_display }}</span> </p>
-
-
+    <p>{% trans "This course is:" %} <span class="badge badge-{{ course.state|get_state_badge_type }}">{{ object.get_state_display }}</span></p>
     <hr>
-
     <div class="p-3" id="learning_course_description">
         {{ object.description | render_markdown }}
     </div>
+
+    <hr>
+
+    <h3>{% trans "Activities" %}</h3>
+    <table class="table table-striped">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">{% trans "Rank" %}</th>
+            <th scope="col">{% trans "Name" %}</th>
+            <th scope="col">{% trans "Author" %}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for activity in object.activities %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ activity.name }}</td>
+                <td>{{ activity.author.display_name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

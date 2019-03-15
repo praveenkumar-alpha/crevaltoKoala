@@ -20,12 +20,38 @@
 #
 
 from django.contrib import admin
+from django.contrib.admin import StackedInline
 from guardian.admin import GuardedModelAdmin
 from guardian.shortcuts import assign_perm
 
-from .models import Course
+from .models import Course, Activity, CourseActivity
 
 
+def apply_author_permissions(obj, allow_anonymous=False):
+    obj_type = type(obj).__name__.lower()
+    from guardian.utils import get_anonymous_user
+    if not get_anonymous_user().has_perm('learning.view_{}'.format(obj_type), obj) and allow_anonymous:
+        assign_perm('learning.view_{}'.format(obj_type), [obj.author, get_anonymous_user()], obj)
+    assign_perm('learning.change_{}'.format(obj_type), obj.author, obj)
+    assign_perm('learning.delete_{}'.format(obj_type), obj.author, obj)
+
+
+class CourseActivityInline(StackedInline):
+    model = CourseActivity
+    extra = 0
+
+
+@admin.register(Activity)
+class ActivityAdmin(GuardedModelAdmin):
+    model = Activity
+    list_display = ('id', 'name')
+
+    def save_model(self, request, obj, form, change):
+        super(ActivityAdmin, self).save_model(request, obj, form, change)
+        apply_author_permissions(obj, allow_anonymous=True)
+
+
+@admin.register(Course)
 class CourseAdmin(GuardedModelAdmin):
     """
      Inheriting from GuardedModelAdmin just adds access to per-object
@@ -37,13 +63,10 @@ class CourseAdmin(GuardedModelAdmin):
     list_display = ('id', 'name', 'state', 'published', 'author')
     list_filter = ('published', 'state')
 
+    inlines = [
+        CourseActivityInline
+    ]
+
     def save_model(self, request, obj, form, change):
         super(CourseAdmin, self).save_model(request, obj, form, change)
-        from guardian.utils import get_anonymous_user
-        if not get_anonymous_user().has_perm('learning.view_course', obj):
-            assign_perm('learning.view_course', [form.instance.author, get_anonymous_user()], obj)
-        assign_perm('learning.change_course', obj.author, obj)
-        assign_perm('learning.delete_course', obj.author, obj)
-
-
-admin.site.register(Course, CourseAdmin)
+        apply_author_permissions(obj, allow_anonymous=True)
