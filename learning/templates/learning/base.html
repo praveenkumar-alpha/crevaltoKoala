@@ -1,8 +1,12 @@
 {% extends "base.html" %}
-{% load i18n sass_tags %}
+{% load i18n static sass_tags %}
 
 {% block extrastyle %}{{ block.super }}
     <link rel="stylesheet" href="{% sass_src 'learning/learning.scss' %}"/>
+{% endblock %}
+
+{% block extrahead %}{{ block.super }}
+    <link rel="icon" type="image/png" href="{% static 'learning/favicon.png' %}" />
 {% endblock %}
 
 {% block content %}
