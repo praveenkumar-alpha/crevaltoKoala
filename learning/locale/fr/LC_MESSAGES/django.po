@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: learning\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-15 13:42+0100\n"
-"PO-Revision-Date: 2019-03-15 13:42+0100\n"
+"POT-Creation-Date: 2019-03-15 14:17+0100\n"
+"PO-Revision-Date: 2019-03-15 14:17+0100\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -234,7 +234,7 @@ msgid "The course “%(course_name)s” has been updated."
 msgstr "Le cours « %(course_name)s » a été mis à jour."
 
 #: learning/views.py:120
-msgid "You do not have the required permissions to access this course"
+msgid "You do not have the required permissions to access this course."
 msgstr "Vous n’avez pas les permissions requises pour consulter ce cours."
 
 #: learning/views.py:120 learning/views.py:137
@@ -242,8 +242,8 @@ msgid "Try to login, this may solve the issue."
 msgstr "Essayez de vous connecter, cela peut résoudre le problème."
 
 #: learning/views.py:137
-msgid "You do not have the required permissions to delete this course"
-msgstr "Vous n’avez pas les permissions requises pour supprimer ce cours"
+msgid "You do not have the required permissions to delete this course."
+msgstr "Vous n’avez pas les permissions requises pour supprimer ce cours."
 
 #: learning/views.py:142
 #, python-format

@@ -23,7 +23,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _, gettext
 from django.views.generic import CreateView, ListView, UpdateView, DetailView, DeleteView
 from guardian.shortcuts import assign_perm
 from guardian.utils import get_anonymous_user
@@ -117,7 +117,7 @@ class CourseDetailView(PermissionRequiredMixin, DetailView):
     def handle_no_permission(self):
         messages.error(
             self.request,
-            _("You do not have the required permissions to access this course") + _("Try to login, this may solve the issue.")
+            gettext("You do not have the required permissions to access this course.") + ' ' + gettext("Try to login, this may solve the issue.")
         )
         return redirect('learning:course/my')
 
@@ -134,7 +134,7 @@ class CourseDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     def handle_no_permission(self):
         messages.error(
             self.request,
-            _("You do not have the required permissions to delete this course") + _("Try to login, this may solve the issue.")
+            gettext("You do not have the required permissions to delete this course.") + ' ' + gettext("Try to login, this may solve the issue.")
         )
         return redirect('learning:course/detail', pk=self.kwargs['pk'])
 
