@@ -21,6 +21,7 @@
 
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import CreateView, ListView, UpdateView, DetailView
@@ -109,3 +110,9 @@ class CourseDetailView(PermissionRequiredMixin, DetailView):
     def has_permission(self):
         course = Course.objects.get(pk=self.kwargs['pk'])
         return self.request.user.has_perm('learning.view_course', course)
+
+    def handle_no_permission(self):
+        messages.error(self.request, _(
+            """You do not have the required permissions to access this course.
+             Try to login, this may solve the issue."""))
+        return redirect('learning:course/my')
