@@ -23,7 +23,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, ListView, UpdateView, DetailView
 from guardian.shortcuts import assign_perm
 from guardian.utils import get_anonymous_user
