@@ -22,18 +22,29 @@
 from django.contrib import admin
 from django.contrib.admin import StackedInline
 from guardian.admin import GuardedModelAdmin
-from guardian.shortcuts import assign_perm
+from guardian.shortcuts import assign_perm, remove_perm
 
+from accounts.models import Person
 from .models import Course, Activity, CourseActivity
 
 
+def get_perm_suffix_from_obj(obj):
+    return type(obj).__name__.lower()
+
+
 def apply_author_permissions(obj, allow_anonymous=False):
-    obj_type = type(obj).__name__.lower()
+    obj_type = get_perm_suffix_from_obj(obj)
     from guardian.utils import get_anonymous_user
     if not get_anonymous_user().has_perm('learning.view_{}'.format(obj_type), obj) and allow_anonymous:
         assign_perm('learning.view_{}'.format(obj_type), [obj.author, get_anonymous_user()], obj)
     assign_perm('learning.change_{}'.format(obj_type), obj.author, obj)
     assign_perm('learning.delete_{}'.format(obj_type), obj.author, obj)
+
+
+def remove_author_permissions(obj, old_author):
+    obj_type = get_perm_suffix_from_obj(obj)
+    for perm_type in ('add', 'view', 'change', 'delete'):
+        remove_perm('learning.{perm_type}_{obj_type}'.format(perm_type=perm_type, obj_type=obj_type), old_author, obj)
 
 
 class CourseActivityInline(StackedInline):
@@ -69,4 +80,6 @@ class CourseAdmin(GuardedModelAdmin):
 
     def save_model(self, request, obj, form, change):
         super(CourseAdmin, self).save_model(request, obj, form, change)
+        if 'author' in form.changed_data:
+            remove_author_permissions(obj, Person.objects.get(pk=form.initial['author']))
         apply_author_permissions(obj, allow_anonymous=True)
