@@ -1,0 +1,24 @@
+{% extends "learning/course/base.html" %}
+{% load i18n %}
+
+{% block courses_content %}
+    <div class="card">
+        <div class="card-header">
+            <h2 class="m-0">{% blocktrans with name=object.name %}Deleting “{{ name }}”…{% endblocktrans %}</h2>
+        </div>
+        <div class="card-body">
+            <p>{% blocktrans with name=object.name %}You are about to delete the course “{{ name }}”. This implies a lot of things, including:{% endblocktrans %}</p>
+            <ul>
+                <li>{% trans "You will not be able to recover it later." %}</li>
+                <li>{% trans "Everything will be removed from the database, student progress and so no." %}</li>
+            </ul>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger">{% trans "Ok, I understand, delete this course" %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

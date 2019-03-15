@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: learning\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-14 15:07+0100\n"
-"PO-Revision-Date: 2019-03-14 15:12+0100\n"
+"POT-Creation-Date: 2019-03-15 10:49+0100\n"
+"PO-Revision-Date: 2019-03-15 10:50+0100\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -77,16 +77,16 @@ msgctxt "Course verbose name (plural form)"
 msgid "courses"
 msgstr "cours"
 
-#: learning/templates/learning/base.html:13
+#: learning/templates/learning/base.html:17
 msgid "Courses"
 msgstr "Cours"
 
-#: learning/templates/learning/base.html:19
+#: learning/templates/learning/base.html:23
 #: learning/templates/learning/course/my.html:6
 msgid "My courses"
 msgstr "Mes cours"
 
-#: learning/templates/learning/base.html:23
+#: learning/templates/learning/base.html:27
 msgid "Create a course"
 msgstr "Créer un cours"
 
@@ -108,6 +108,34 @@ msgstr "Annuler et retourner au cours"
 #: learning/templates/learning/course/change.html:15
 msgid "Update course"
 msgstr "Mettre à jour le cours"
+
+#: learning/templates/learning/course/delete.html:7
+#, python-format
+msgid "Deleting “%(name)s”…"
+msgstr "Suppression de « %(name)s »…"
+
+#: learning/templates/learning/course/delete.html:10
+#, python-format
+msgid ""
+"You are about to delete the course “%(name)s”. This implies a lot of things, "
+"including:"
+msgstr ""
+"Vous êtes sur le point de supprimer le cours « %(name)s ». Cela implique de "
+"nombreuses choses, dont :"
+
+#: learning/templates/learning/course/delete.html:12
+msgid "You will not be able to recover it later."
+msgstr "vous ne pourrez pas le restaurer plus tard ;"
+
+#: learning/templates/learning/course/delete.html:13
+msgid ""
+"Everything will be removed from the database, student progress and so no."
+msgstr ""
+"tout sera supprimé de la base de données, la progression des étudiants, etc."
+
+#: learning/templates/learning/course/delete.html:19
+msgid "Ok, I understand, delete this course"
+msgstr "D’accord, je comprend, supprimez ce cours"
 
 #: learning/templates/learning/course/detail.html:10
 msgid "Delete"
@@ -137,7 +165,7 @@ msgstr "Écrire"
 msgid "Preview"
 msgstr "Aperçu"
 
-#: learning/views.py:57
+#: learning/views.py:58
 msgid ""
 "The user given in your response does not match with you. Are you trying to "
 "test us? Consider joining instead."
@@ -145,15 +173,29 @@ msgstr ""
 "L’utilisateur indiqué dans la réponse ne correspond pas avec vous. Vous êtes "
 "en train de nous tester ? Rejoignez-nous plutôt."
 
-#: learning/views.py:67
+#: learning/views.py:68
 #, python-format
 msgid "Course “%(course_name)s” created."
 msgstr "Cours « %(course_name)s » créé."
 
-#: learning/views.py:98
+#: learning/views.py:99
 #, python-format
 msgid "The course “%(course_name)s” has been updated."
 msgstr "Le cours « %(course_name)s » a été mis à jour."
 
-#~ msgid "Learning"
-#~ msgstr "Apprendre"
+#: learning/views.py:117
+msgid "You do not have the required permissions to access this course"
+msgstr "Vous n’avez pas les permissions requises pour consulter ce cours."
+
+#: learning/views.py:117 learning/views.py:134
+msgid "Try to login, this may solve the issue."
+msgstr "Essayez de vous connecter, cela peut résoudre le problème."
+
+#: learning/views.py:134
+msgid "You do not have the required permissions to delete this course"
+msgstr "Vous n’avez pas les permissions requises pour supprimer ce cours"
+
+#: learning/views.py:139
+#, python-format
+msgid "The course ”%(course_name)s” has been deleted"
+msgstr "Le cours « %(course_name)s » a été supprimé"

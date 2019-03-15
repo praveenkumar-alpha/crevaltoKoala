@@ -24,7 +24,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import CreateView, ListView, UpdateView, DetailView
+from django.views.generic import CreateView, ListView, UpdateView, DetailView, DeleteView
 from guardian.shortcuts import assign_perm
 from guardian.utils import get_anonymous_user
 
@@ -112,7 +112,29 @@ class CourseDetailView(PermissionRequiredMixin, DetailView):
         return self.request.user.has_perm('learning.view_course', course)
 
     def handle_no_permission(self):
-        messages.error(self.request, _(
-            """You do not have the required permissions to access this course.
-             Try to login, this may solve the issue."""))
+        messages.error(
+            self.request,
+            _("You do not have the required permissions to access this course") + _("Try to login, this may solve the issue.")
+        )
         return redirect('learning:course/my')
+
+
+class CourseDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
+    model = Course
+    success_url = reverse_lazy('learning:course/my')
+    template_name = 'learning/course/delete.html'
+
+    def has_permission(self):
+        course = Course.objects.get(pk=self.kwargs['pk'])
+        return self.request.user.has_perm('learning.delete_course', course)
+
+    def handle_no_permission(self):
+        messages.error(
+            self.request,
+            _("You do not have the required permissions to delete this course") + _("Try to login, this may solve the issue.")
+        )
+        return redirect('learning:course/detail', pk=self.kwargs['pk'])
+
+    def get_success_url(self):
+        messages.success(self.request, _('The course ”%(course_name)s” has been deleted') % {'course_name': self.object.name})
+        return super().get_success_url()
