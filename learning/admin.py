@@ -42,7 +42,7 @@ class CourseActivityInline(StackedInline):
 @admin.register(Activity)
 class ActivityAdmin(GuardedModelAdmin):
     model = Activity
-    list_display = ('id', 'name')
+    list_display = ('id', 'name', 'author')
 
     def save_model(self, request, obj, form, change):
         super(ActivityAdmin, self).save_model(request, obj, form, change)

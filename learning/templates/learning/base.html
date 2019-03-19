@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block extrahead %}{{ block.super }}
-    <link rel="icon" type="image/png" href="{% static 'learning/favicon.png' %}" />
+    <link rel="icon" type="image/png" href="{% static 'learning/favicon.png' %}"/>
 {% endblock %}
 
 {% block content %}
@@ -14,17 +14,23 @@
         <div id="learning-sidebar" class="bg-light border-right pt-2">
             <div class="ml-2 mr-2">
                 <div>
-                    <h5 class="text-center">{% trans "Courses" %}</h5>
+                    <h5 class="text-center sidebar-title">{% trans "Courses" %}</h5>
                 </div>
                 <div class="list-group list-group-flush">
-                    <a
-                            href="{% url 'learning:course/my' %}"
-                            class="list-group-item list-group-item-action {% if request.resolver_match.view_name == 'learning:course/my' %}active{% else %}bg-light{% endif %}"
+                    <a href="{% url 'learning:course/my' %}"
+                       class="list-group-item list-group-item-action {% if request.resolver_match.view_name == 'learning:course/my' %}active{% else %}bg-light{% endif %}"
                     >{% trans "My courses" %}</a>
-                    <a
-                            href="{% url 'learning:course/add' %}"
-                            class="list-group-item list-group-item-action {% if request.resolver_match.view_name == 'learning:course/add' %}active{% else %}bg-light{% endif %}"
+                    <a href="{% url 'learning:course/add' %}"
+                       class="list-group-item list-group-item-action {% if request.resolver_match.view_name == 'learning:course/add' %}active{% else %}bg-light{% endif %}"
                     >{% trans "Create a course" %}</a>
+                </div>
+                <div>
+                    <h5 class="text-center sidebar-title">{% trans "Activities" %}</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="{% url 'learning:activity/my' %}"
+                       class="list-group-item list-group-item-action {% if request.resolver_match.view_name == 'learning:activity/my' %}active{% else %}bg-light{% endif %}"
+                    >{% trans "My activities" %}</a>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 
 {% block courses_content %}
     <div class="clearfix">
-        <a href="{% url 'learning:course/detail' pk=object.id %}" class="float-left"><h2>{{ object.name }}</h2></a>
+        <a href="" class="float-left"><h2>{{ object.name }}</h2></a>
         <div class="ml-2 float-right">
             {% get_obj_perms request.user for object as "course_perms" %}
             {% if "delete_course" in course_perms %}
