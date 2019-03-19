@@ -1,0 +1,1 @@
+from learning.views.course import CourseCreateView, CourseUpdateView, CourseDeleteView, CourseDetailView, CourseListView

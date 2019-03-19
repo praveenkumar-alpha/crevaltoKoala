@@ -44,7 +44,7 @@ def update_valid_or_invalid_form_fields(form):
     return form
 
 
-class CreateCourse(LoginRequiredMixin, CreateView):
+class CourseCreateView(LoginRequiredMixin, CreateView):
     model = Course
     form_class = CourseCreateForm
     template_name = "learning/course/add.html"

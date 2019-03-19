@@ -32,7 +32,7 @@ urlpatterns = [
     path('course/my/', views.CourseListView.as_view(), name='course/my'),
 
     # Course CRUD operations
-    path('course/add/', views.CreateCourse.as_view(), name='course/add'),
+    path('course/add/', views.CourseCreateView.as_view(), name='course/add'),
     path('course/update/<pk>/', views.CourseUpdateView.as_view(), name='course/update'),
     path('course/detail/<pk>/', views.CourseDetailView.as_view(), name='course/detail'),
     path('course/delete/<pk>/', views.CourseDeleteView.as_view(), name='course/delete')

@@ -114,10 +114,6 @@ class Activity(ObjectPermissionManagerMixin, models.Model):
     def __str__(self):
         return self.name
 
-    def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
-        pass
-
     class Meta:
         ordering = ["name"]
         verbose_name = pgettext_lazy("Activity verbose name (singular form)", "activity")
