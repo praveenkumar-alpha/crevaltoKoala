@@ -1,0 +1,27 @@
+{% load i18n %}
+
+<div class="modal fade" id="delete-modal-{{ activity.id }}" tabindex="-1" role="dialog" aria-labelledby="delete-modal-{{ activity.id }}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{% blocktrans with name=activity.name %}Delete activity “{{ name }}”{% endblocktrans %}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {% blocktrans with name=activity.name %}You are about to delete the activity <strong>“{{ name }}”</strong>.<br>Maybe you just want to unlink the activity (the
+                    activity will not be accessible within this course)?<br>If you are <strong>sure</strong>, you can delete it safely.{% endblocktrans %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans "Close" %}</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal"
+                        data-target="#unlink-modal-{{ activity.id }}">{% trans "Unlink the activity" %}</button>
+                <form action="{% url 'learning:activity/delete' pk=activity.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">{% trans "Delete this activity" %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -53,12 +53,21 @@
                         <div class="float-right">
                             {% get_obj_perms request.user for activity as "activity_perms" %}
                             {% if "view_activity" in activity_perms %}
-                                <a href="" class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></a>
+                                <a href="{% url 'learning:activity/detail' pk=activity.id %}" class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></a>
                             {% endif %}
                             {% if "change_activity" in activity_perms %}
                                 <a href="" class="btn btn-sm btn-outline-primary"><i class="fa fa-pen"></i></a>
                             {% endif %}
-                            <a href="" class="btn btn-sm btn-outline-warning"><i class="fa fa-unlink"></i></a>
+                            {% if "change_course" in course_perms %}
+                                {% include 'learning/course/unlink_attached_activity_modal.html' with activity=activity course=course %}
+                                <button type="button" class="btn btn-sm btn-outline-warning"
+                                        data-toggle="modal" data-target="#unlink-modal-{{ activity.id }}"><i class="fa fa-unlink"></i></button>
+                            {% endif %}
+                            {% if "change_course" in course_perms and "delete_activity" in activity_perms %}
+                                {% include 'learning/course/delete_attached_activity_modal.html' with activity=activity %}
+                                <button type="button" class="btn btn-sm btn-outline-danger"
+                                        data-toggle="modal" data-target="#delete-modal-{{ activity.id }}"><i class="fa fa-trash"></i></button>
+                            {% endif %}
                         </div>
                     </div>
                 </td>

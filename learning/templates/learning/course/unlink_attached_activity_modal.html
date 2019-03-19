@@ -1,0 +1,25 @@
+{% load i18n %}
+
+<div class="modal fade" id="unlink-modal-{{ activity.id }}" tabindex="-1" role="dialog" aria-labelledby="unkink-modal-{{ activity.id }}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{% blocktrans with name=activity.name %}Unlink activity “{{ name }}”{% endblocktrans %}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {% blocktrans with name=activity.name %}You are about to unlink the activity <strong>“{{ name }}”</strong>. This means that the activity will remain but will no
+                    longer be associated with this course.{% endblocktrans %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans "Close" %}</button>
+                <form action="{% url 'learning:course/detail/unlink_activity' activity_pk=activity.id course_pk=course.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-warning">{% trans "Unlink the activity" %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

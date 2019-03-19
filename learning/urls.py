@@ -35,12 +35,15 @@ urlpatterns = [
     path('course/add/', views.CourseCreateView.as_view(), name='course/add'),
     path('course/update/<pk>/', views.CourseUpdateView.as_view(), name='course/update'),
     path('course/detail/<pk>/', views.CourseDetailView.as_view(), name='course/detail'),
-    path('course/detail/<pk>/activity/add', views.activity_create_on_course_view, name="course/detail/add_activity"),
+    path('course/detail/<int:pk>/activity/add', views.activity_create_on_course_view, name="course/detail/add_activity"),
+    path('course/detail/<int:course_pk>/activity/unlink/<int:activity_pk>', views.activity_on_course_unlink_view, name="course/detail/unlink_activity"),
+    path('course/detail/<int:course_pk>/activity/delete/<int:activity_pk>', views.activity_on_course_delete_view, name="course/detail/delete_activity"),
     path('course/delete/<pk>/', views.CourseDeleteView.as_view(), name='course/delete'),
 
     path('activity/my/', views.ActivityListView.as_view(), name="activity/my"),
 
     # Activity CRUD operations
     path('activity/add', views.ActivityCreateView.as_view(), name='activity/add'),
-    path('activity/detail/<pk>', views.ActivityDetailView.as_view(), name='activity/detail')
+    path('activity/detail/<pk>/', views.ActivityDetailView.as_view(), name='activity/detail'),
+    path('activity/delete/<pk>/', views.ActivityDeleteView.as_view(), name='activity/delete')
 ]

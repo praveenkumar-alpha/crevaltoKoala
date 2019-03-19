@@ -22,11 +22,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.exceptions import PermissionDenied
+from django.db.models import Max
 from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.translation import gettext
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
 
 from learning.forms import ActivityCreateForm
 from learning.forms.activity import CourseActivityForm
@@ -74,7 +75,7 @@ def activity_create_on_course_view(request, pk):
             for error in course_activity_form.errors:
                 messages.error(request, course_activity_form.errors[error])
     else:
-        rank = CourseActivity.objects.filter(course=course).count() + 1
+        rank = CourseActivity.objects.filter(course=course).aggregate(Max('rank'))['rank__max'] + 1
         course_activity_form = CourseActivityForm(prefix="course_activity", initial={'rank': rank, 'course': course})
         activity_form = ActivityCreateForm(prefix="activity_create", initial={'author': request.user})
 
@@ -83,6 +84,37 @@ def activity_create_on_course_view(request, pk):
         'activity_form': activity_form
     }
     return render(request, "learning/activity/add.html", context)
+
+
+@login_required
+def activity_on_course_unlink_view(request, course_pk, activity_pk):
+    course = get_object_or_404(Course, pk=course_pk)
+    activity = get_object_or_404(Activity, pk=activity_pk)
+    course_activity = CourseActivity.objects.filter(course=course).filter(activity=activity).get()
+    if course.user_can_change(request.user):
+        course_activity.delete()
+    else:
+        messages.error(
+            request,
+            gettext("You do not have the required permissions to unlink this activity from this course.") + ' ' + gettext("Try to login, this may solve the issue.")
+        )
+    return redirect("learning:course/detail", pk=course.id)
+
+
+@login_required
+def activity_on_course_delete_view(request, course_pk, activity_pk):
+    course = get_object_or_404(Course, pk=course_pk)
+    activity = get_object_or_404(Activity, pk=activity_pk)
+
+    if course.user_can_change(request.user):
+        activity.delete()
+    else:
+        messages.error(
+            request,
+            gettext("You do not have the required permissions to delete this activity.") + ' ' + gettext("Try to login, this may solve the issue.")
+        )
+
+    return redirect("learning:course/detail", pk=course.id)
 
 
 class ActivityListView(LoginRequiredMixin, ListView):
@@ -105,5 +137,22 @@ class ActivityDetailView(PermissionRequiredMixin, DetailView):
         messages.error(
             self.request,
             gettext("You do not have the required permissions to access this activity.") + ' ' + gettext("Try to login, this may solve the issue.")
+        )
+        return redirect('learning:activity/my')
+
+
+class ActivityDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
+    model = Activity
+    success_url = reverse_lazy('learning:activity/my')
+    template_name = 'learning/activity/delete.html'
+
+    def has_permission(self):
+        object = self.get_object()
+        return object.user_can_delete(self.request.user)
+
+    def handle_no_permission(self):
+        messages.error(
+            self.request,
+            gettext("You do not have the required permissions to delete this activity.") + ' ' + gettext("Try to login, this may solve the issue.")
         )
         return redirect('learning:activity/my')
