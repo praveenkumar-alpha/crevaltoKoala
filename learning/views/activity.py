@@ -19,12 +19,70 @@
 # We make an extensive use of the Django framework, https://www.djangoproject.com/
 #
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.shortcuts import redirect
+from django.core.exceptions import PermissionDenied
+from django.shortcuts import redirect, render, get_object_or_404
+from django.urls import reverse_lazy
 from django.utils.translation import gettext
-from django.views.generic import ListView, DetailView
+from django.utils.translation import gettext_lazy as _
+from django.views.generic import ListView, DetailView, CreateView
 
-from learning.models import Activity
+from learning.forms import ActivityCreateForm
+from learning.forms.activity import CourseActivityForm
+from learning.models import Activity, Course, CourseActivity
+from learning.views.helpers import update_valid_or_invalid_form_fields
+
+
+class ActivityCreateView(LoginRequiredMixin, CreateView):
+    model = Activity
+    form_class = ActivityCreateForm
+    template_name = "learning/activity/add.html"
+    success_url = reverse_lazy("learning:activity/my")
+
+
+@login_required
+def activity_create_on_course_view(request, pk):
+    course = get_object_or_404(Course, pk=pk)
+    if not course.user_can_change(request.user):
+        raise PermissionDenied
+
+    if request.method == "POST":
+        course_activity_form = CourseActivityForm(request.POST, prefix="course_activity")
+        activity_form = ActivityCreateForm(request.POST, prefix="activity_create")
+
+        if all([course_activity_form.is_valid(), activity_form.is_valid()]):
+
+            # Manually set the activity author to the current user
+            activity_form.instance.author = request.user
+            activity_form.save()
+            activity_form.instance.apply_author_permissions()
+
+            # Linking activity and course to the course activity instance
+            course_activity_form.instance.activity = activity_form.instance
+            course_activity_form.instance.course = course
+            course_activity_form.save()
+
+            messages.success(
+                request,
+                _('The activity “%(activity_name)s” has been added to this course.') % {'activity_name': activity_form.instance.name}
+            )
+            return redirect("learning:course/detail", pk=course.id)
+        else:
+            course_activity_form = update_valid_or_invalid_form_fields(course_activity_form)
+            activity_form = update_valid_or_invalid_form_fields(activity_form)
+            for error in course_activity_form.errors:
+                messages.error(request, course_activity_form.errors[error])
+    else:
+        rank = CourseActivity.objects.filter(course=course).count() + 1
+        course_activity_form = CourseActivityForm(prefix="course_activity", initial={'rank': rank, 'course': course})
+        activity_form = ActivityCreateForm(prefix="activity_create", initial={'author': request.user})
+
+    context = {
+        'course_activity_form': course_activity_form,
+        'activity_form': activity_form
+    }
+    return render(request, "learning/activity/add.html", context)
 
 
 class ActivityListView(LoginRequiredMixin, ListView):
@@ -38,9 +96,6 @@ class ActivityListView(LoginRequiredMixin, ListView):
 class ActivityDetailView(PermissionRequiredMixin, DetailView):
     model = Activity
     template_name = "learning/activity/detail.html"
-
-    def get_object(self, queryset=None):
-        return super().get_object()
 
     def has_permission(self):
         activity = Activity.objects.get(pk=self.kwargs['pk'])

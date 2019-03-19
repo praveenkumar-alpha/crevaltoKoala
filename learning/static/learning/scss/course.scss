@@ -1,39 +1,6 @@
-ul.errorlist {
-  li {
-    list-style: none;
-  }
-  padding-left: 2px;
-  margin-bottom: 0;
-}
-
-div.form-group > small.text-muted > ul {
-  padding-left: 1rem;
-}
-
-.tab-pane {
-  min-height: 18rem;
-  max-height: 18rem;
-  height: 18rem;
-  margin-bottom: 1rem;
-  > {
-    div.markdownx-preview {
-      height: 100% !important;
-      width: 100%;
-      overflow: scroll;
-      resize: none;
-    }
-    textarea {
-      height: 100% !important;
-      width: 100%;
-      overflow: scroll;
-      resize: none;
-      font-family: "Ubuntu Mono derivative Powerline", monospace;
-    }
-  }
-}
-
 div#my-course-card-text {
   display: flex;
+
   > div.card-text {
     max-height: 7.5rem;
     overflow: hidden;

@@ -26,7 +26,6 @@ from learning import logger
 
 
 class ObjectPermissionManagerMixin:
-
     author = None
 
     def __get_class_name(self):
@@ -73,3 +72,38 @@ class ObjectPermissionManagerMixin:
     def transfer_ownership(self, old_owner):
         self.remove_author_permissions(old_owner)
         self.apply_author_permissions()
+
+    def user_has_perms(self, user, perms):
+        has_perms = False
+        for permission in self.__make_perms(perms):
+            has_perms = user.has_perm(permission, self)
+            if not has_perms:
+                break
+        return has_perms
+
+    def anon_has_perms(self, perms):
+        return self.user_has_perms(get_anonymous_user(), perms)
+
+    def user_can_change(self, user):
+        return self.user_has_perms(user, ['change'])
+
+    def user_can_delete(self, user):
+        return self.user_has_perms(user, ['delete'])
+
+    def user_can_view(self, user):
+        return self.user_has_perms(user, ['view'])
+
+    def user_can_add(self, user):
+        return self.user_has_perms(user, ['add'])
+
+    def anon_can_change(self):
+        return self.anon_has_perms(['change'])
+
+    def anon_can_delete(self):
+        return self.anon_has_perms(['delete'])
+
+    def anon_can_view(self):
+        return self.anon_has_perms(['view'])
+
+    def anon_can_add(self):
+        return self.anon_has_perms(['add'])

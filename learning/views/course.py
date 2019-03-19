@@ -28,20 +28,7 @@ from django.views.generic import CreateView, ListView, UpdateView, DetailView, D
 
 from learning.forms import CourseCreateForm, CourseUpdateForm
 from learning.models import Course
-
-
-def update_valid_or_invalid_form_fields(form):
-    for field in form.fields:
-        try:
-            current_class = form.fields[field].widget.attrs['class']
-        except KeyError:
-            current_class = str()
-
-        if field in form.errors:
-            form.fields[field].widget.attrs.update({'class': current_class + ' ' + 'is-invalid'})
-        elif field in form.changed_data:
-            form.fields[field].widget.attrs.update({'class': current_class + ' ' + 'is-valid'})
-    return form
+from learning.views.helpers import update_valid_or_invalid_form_fields
 
 
 class CourseCreateView(LoginRequiredMixin, CreateView):

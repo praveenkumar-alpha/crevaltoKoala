@@ -35,10 +35,12 @@ urlpatterns = [
     path('course/add/', views.CourseCreateView.as_view(), name='course/add'),
     path('course/update/<pk>/', views.CourseUpdateView.as_view(), name='course/update'),
     path('course/detail/<pk>/', views.CourseDetailView.as_view(), name='course/detail'),
+    path('course/detail/<pk>/activity/add', views.activity_create_on_course_view, name="course/detail/add_activity"),
     path('course/delete/<pk>/', views.CourseDeleteView.as_view(), name='course/delete'),
 
     path('activity/my/', views.ActivityListView.as_view(), name="activity/my"),
 
     # Activity CRUD operations
+    path('activity/add', views.ActivityCreateView.as_view(), name='activity/add'),
     path('activity/detail/<pk>', views.ActivityDetailView.as_view(), name='activity/detail')
 ]

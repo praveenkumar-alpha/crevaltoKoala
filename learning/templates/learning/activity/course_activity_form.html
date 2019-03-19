@@ -1,0 +1,15 @@
+{% with course_activity_form as form %}
+    <div class="row">
+        <label>
+            <input type="{{ form.rank.field.widget.input_type }}"
+                   name="{{ form.rank.html_name }}" hidden="hidden"
+                   value="{{ form.rank.value }}"/>
+        </label>
+        <div class="col-md-6">
+            {% include "learning/partials/basic_block.html" with field=form.minimal_allowed_score %}
+        </div>
+        <div class="col-md-6">
+            {% include "learning/partials/basic_block.html" with field=form.success_score %}
+        </div>
+    </div>
+{% endwith %}
