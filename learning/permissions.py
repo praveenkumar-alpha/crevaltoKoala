@@ -20,26 +20,56 @@
 #
 
 from guardian.shortcuts import assign_perm, remove_perm
+from guardian.utils import get_anonymous_user
 
 from learning import logger
 
 
-def get_perm_suffix_from_obj(obj):
-    return type(obj).__name__.lower()
+class ObjectPermissionManagerMixin:
 
+    author = None
 
-def apply_author_permissions(obj, allow_anonymous=False):
-    logger.debug("Applying author permissions for ”{author}” on “{obj}”.".format(author=obj.author, obj=obj))
-    obj_type = get_perm_suffix_from_obj(obj)
-    from guardian.utils import get_anonymous_user
-    if not get_anonymous_user().has_perm('learning.view_{}'.format(obj_type), obj) and allow_anonymous:
-        assign_perm('learning.view_{}'.format(obj_type), get_anonymous_user(), obj)
-    for perm_type in ('add', 'view', 'change', 'delete'):
-        assign_perm('learning.{perm_type}_{obj_type}'.format(perm_type=perm_type, obj_type=obj_type), obj.author, obj)
+    def __get_class_name(self):
+        return type(self).__name__.lower()
 
+    def __apply_perms_for(self, perms, user):
+        for permission in self.__make_perms(perms):
+            assign_perm(permission, user, self)
 
-def remove_author_permissions(obj, old_author):
-    logger.debug("Removing ”{old_author}” permissions on “{obj}”.".format(old_author=old_author, obj=obj))
-    obj_type = get_perm_suffix_from_obj(obj)
-    for perm_type in ('add', 'view', 'change', 'delete'):
-        remove_perm('learning.{perm_type}_{obj_type}'.format(perm_type=perm_type, obj_type=obj_type), old_author, obj)
+    def __remove_perms_for(self, perms, user):
+        for permission in self.__make_perms(perms):
+            remove_perm(permission, user, self)
+
+    def __apply_perms_for_anonymous(self, perms):
+        anon = get_anonymous_user()
+        for permission in self.__make_perms(perms):
+            if not anon.has_perm(permission):
+                assign_perm(permission, anon, self)
+
+    def __remove_perms_for_anonymous(self, perms):
+        anon = get_anonymous_user()
+        for permission in self.__make_perms(perms):
+            if anon.has_perm(permission):
+                remove_perm(permission, anon, self)
+
+    def __make_perms(self, perms):
+        obj_type = self.__get_class_name()
+        well_perms = list()
+        for perm_type in perms:
+            well_perms.append('{perm_type}_{obj_type}'.format(perm_type=perm_type, obj_type=obj_type))
+        return well_perms
+
+    def apply_author_permissions(self, public_content=False):
+        logger.debug("Applying author permissions for ”{author}” on “{obj}”.".format(author=self.author, obj=self))
+        perms = ['add', 'view', 'change', 'delete']
+        self.__apply_perms_for(perms, self.author)
+        if public_content:
+            self.__apply_perms_for_anonymous(['view'])
+
+    def remove_author_permissions(self, old_author):
+        logger.debug("Removing ”{old_author}” permissions on “{obj}”.".format(old_author=old_author, obj=self))
+        self.__remove_perms_for(['add', 'view', 'change', 'delete'], old_author)
+
+    def transfer_ownership(self, old_owner):
+        self.remove_author_permissions(old_owner)
+        self.apply_author_permissions()

@@ -24,8 +24,14 @@ from django.contrib.admin import StackedInline
 from guardian.admin import GuardedModelAdmin
 
 from accounts.models import Person
-from learning.permissions import apply_author_permissions, remove_author_permissions
 from .models import Course, Activity, CourseActivity
+
+
+def apply_author_permissions_on_object_from_form(form, obj):
+    if 'author' in form.changed_data:
+        obj.transfer_ownership(Person.objects.get(pk=form.initial['author']))
+    else:
+        obj.apply_author_permissions(public_content=True)
 
 
 class CourseActivityInline(StackedInline):
@@ -40,7 +46,7 @@ class ActivityAdmin(GuardedModelAdmin):
 
     def save_model(self, request, obj, form, change):
         super(ActivityAdmin, self).save_model(request, obj, form, change)
-        apply_author_permissions(obj, allow_anonymous=True)
+        apply_author_permissions_on_object_from_form(form, obj)
 
 
 @admin.register(Course)
@@ -61,6 +67,5 @@ class CourseAdmin(GuardedModelAdmin):
 
     def save_model(self, request, obj, form, change):
         super(CourseAdmin, self).save_model(request, obj, form, change)
-        if 'author' in form.changed_data:
-            remove_author_permissions(obj, Person.objects.get(pk=form.initial['author']))
-        apply_author_permissions(obj, allow_anonymous=True)
+        apply_author_permissions_on_object_from_form(form, obj)
+

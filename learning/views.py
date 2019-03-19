@@ -28,7 +28,6 @@ from django.views.generic import CreateView, ListView, UpdateView, DetailView, D
 
 from learning.forms import CourseCreateForm, CourseUpdateForm
 from learning.models import Course
-from learning.permissions import apply_author_permissions
 
 
 def update_valid_or_invalid_form_fields(form):
@@ -58,7 +57,7 @@ class CreateCourse(LoginRequiredMixin, CreateView):
             return self.form_invalid(form)
         else:
             form.save()
-            apply_author_permissions(form.instance, allow_anonymous=True)
+            form.instance.apply_author_permissions(public_content=True)
             messages.success(self.request, _('Course “%(course_name)s” created.') % {'course_name': form.instance.name})
             return super().form_valid(form)
 

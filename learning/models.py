@@ -29,6 +29,7 @@ from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
 
 from accounts.models import Person
+from learning.permissions import ObjectPermissionManagerMixin
 
 
 class CourseState(Enum):
@@ -37,7 +38,7 @@ class CourseState(Enum):
     ARCHIVED = _("Archived")
 
 
-class Course(models.Model):
+class Course(ObjectPermissionManagerMixin, models.Model):
     name = models.CharField(
         max_length=255,
         verbose_name=_("Name")
@@ -83,7 +84,7 @@ class Course(models.Model):
         verbose_name_plural = pgettext_lazy("Course verbose name (plural form)", "courses")
 
 
-class Activity(models.Model):
+class Activity(ObjectPermissionManagerMixin, models.Model):
     name = models.CharField(
         max_length=255,
         verbose_name=_("Name")
@@ -112,6 +113,10 @@ class Activity(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        pass
 
     class Meta:
         ordering = ["name"]
