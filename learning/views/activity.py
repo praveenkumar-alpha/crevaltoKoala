@@ -27,7 +27,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.translation import gettext
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import ListView, DetailView, CreateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 
 from learning.forms import ActivityCreateForm
 from learning.forms.activity import CourseActivityForm
@@ -130,8 +130,7 @@ class ActivityDetailView(PermissionRequiredMixin, DetailView):
     template_name = "learning/activity/detail.html"
 
     def has_permission(self):
-        activity = Activity.objects.get(pk=self.kwargs['pk'])
-        return self.request.user.has_perm('view_activity', activity)
+        return self.get_object().user_can_view(self.request.user)
 
     def handle_no_permission(self):
         messages.error(
@@ -147,8 +146,7 @@ class ActivityDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView
     template_name = 'learning/activity/delete.html'
 
     def has_permission(self):
-        object = self.get_object()
-        return object.user_can_delete(self.request.user)
+        return self.get_object().user_can_delete(self.request.user)
 
     def handle_no_permission(self):
         messages.error(

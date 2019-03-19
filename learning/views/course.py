@@ -61,14 +61,13 @@ class CourseListView(LoginRequiredMixin, ListView):
         return Course.objects.filter(author=self.request.user).all()
 
 
-class CourseUpdateView(PermissionRequiredMixin, UpdateView):
+class CourseUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = Course
     form_class = CourseUpdateForm
     template_name = "learning/course/change.html"
 
     def has_permission(self):
-        course = Course.objects.get(pk=self.kwargs['pk'])
-        return self.request.user.has_perm('learning.change_course', course)
+        return self.get_object().user_can_change(self.request.user)
 
     def form_invalid(self, form):
         form = update_valid_or_invalid_form_fields(form)
@@ -91,8 +90,7 @@ class CourseDetailView(PermissionRequiredMixin, DetailView):
         return super().get_object()
 
     def has_permission(self):
-        course = Course.objects.get(pk=self.kwargs['pk'])
-        return self.request.user.has_perm('learning.view_course', course)
+        return self.get_object().user_can_view(self.request.user)
 
     def handle_no_permission(self):
         messages.error(
@@ -108,8 +106,7 @@ class CourseDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'learning/course/delete.html'
 
     def has_permission(self):
-        course = Course.objects.get(pk=self.kwargs['pk'])
-        return self.request.user.has_perm('learning.delete_course', course)
+        return self.get_object().user_can_delete(self.request.user)
 
     def handle_no_permission(self):
         messages.error(
