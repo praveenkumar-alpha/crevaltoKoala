@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: learning\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-15 14:17+0100\n"
-"PO-Revision-Date: 2019-03-15 14:17+0100\n"
+"POT-Creation-Date: 2019-03-20 09:30+0100\n"
+"PO-Revision-Date: 2019-03-20 09:31+0100\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -23,28 +23,28 @@ msgstr ""
 msgid "Learning management"
 msgstr "Gestion des apprentissages"
 
-#: learning/models.py:35
+#: learning/models.py:36
 msgid "Draft"
 msgstr "Brouillon"
 
-#: learning/models.py:36
+#: learning/models.py:37
 msgid "Published"
 msgstr "Publié"
 
-#: learning/models.py:37
+#: learning/models.py:38
 msgid "Archived"
 msgstr "Archivé"
 
-#: learning/models.py:43 learning/models.py:96
-#: learning/templates/learning/course/detail.html:31
+#: learning/models.py:44 learning/models.py:90
+#: learning/templates/learning/course/detail.html:41
 msgid "Name"
 msgstr "Nom"
 
-#: learning/models.py:47 learning/models.py:100
+#: learning/models.py:48 learning/models.py:94
 msgid "Description"
 msgstr "Description"
 
-#: learning/models.py:48 learning/models.py:101
+#: learning/models.py:49 learning/models.py:95
 msgid ""
 "You can use the <a href=\"https://www.markdownguide.org/basic-syntax/\" "
 "target=\"_blank\">Markdown</a> syntax here."
@@ -52,82 +52,150 @@ msgstr ""
 "Vous pouvez utilisez la syntaxe <a href=\"https://www.markdownguide.org/"
 "basic-syntax/\" target=\"_blank\">Markdown</a> ici."
 
-#: learning/models.py:54
+#: learning/models.py:55
 msgid "State"
 msgstr "État"
 
-#: learning/models.py:59 learning/models.py:106
+#: learning/models.py:60 learning/models.py:100
 msgid "Published the"
 msgstr "Publié le"
 
-#: learning/models.py:64 learning/models.py:111
+#: learning/models.py:65 learning/models.py:105
 msgid "Last updated the"
 msgstr "Mis à jour le"
 
-#: learning/models.py:70 learning/models.py:117
-#: learning/templates/learning/course/detail.html:32
+#: learning/models.py:71 learning/models.py:111
+#: learning/templates/learning/course/detail.html:42
 msgid "Author"
 msgstr "Auteur"
 
-#: learning/models.py:89
+#: learning/models.py:83
 msgctxt "Course verbose name (singular form)"
 msgid "course"
 msgstr "cours"
 
-#: learning/models.py:90
+#: learning/models.py:84
 msgctxt "Course verbose name (plural form)"
 msgid "courses"
 msgstr "cours"
 
-#: learning/models.py:125
+#: learning/models.py:119
 msgctxt "Activity verbose name (singular form)"
 msgid "activity"
 msgstr "activité"
 
-#: learning/models.py:126
+#: learning/models.py:120
 msgctxt "Activity verbose name (plural form)"
 msgid "activities"
 msgstr "activités"
 
-#: learning/models.py:131 learning/templates/learning/course/detail.html:30
+#: learning/models.py:125 learning/templates/learning/course/detail.html:40
 msgid "Rank"
 msgstr "Rang"
 
-#: learning/models.py:134
+#: learning/models.py:128
 msgid "Minimal allowed score"
 msgstr "Score minimal autorisé"
 
-#: learning/models.py:142
+#: learning/models.py:136
 msgid "Success score"
 msgstr "Score de succès"
 
-#: learning/models.py:153
+#: learning/models.py:147
 msgid "Course"
 msgstr "Cours"
 
-#: learning/models.py:159
+#: learning/models.py:153
 msgid "Activity"
 msgstr "Activité"
 
-#: learning/models.py:165
+#: learning/models.py:159
 msgid "Success score must be greater than minimal score."
 msgstr "Le score de succès doit être plus grand que le score minimal."
 
-#: learning/models.py:172
+#: learning/models.py:166
 msgctxt "Course activity verbose name (singular form)"
 msgid "course activity"
 msgstr "activité de cours"
 
-#: learning/models.py:173
+#: learning/models.py:167
 msgctxt "Course activity verbose name (plural form)"
 msgid "course activities"
 msgstr "activités de cours"
 
-#: learning/templates/learning/base.html:17
+#: learning/templates/learning/activity/add.html:5
+#: learning/templates/learning/activity/add.html:11
+#: learning/templates/learning/activity/my.html:7
+msgid "Create a new activity"
+msgstr "Créer une nouvelle activité"
+
+#: learning/templates/learning/activity/delete.html:7
+#: learning/templates/learning/course/delete.html:7
+#, python-format
+msgid "Deleting “%(name)s”…"
+msgstr "Suppression de « %(name)s »…"
+
+#: learning/templates/learning/activity/delete.html:10
+#, python-format
+msgid ""
+"You are about to delete the activity “%(name)s”. This implies a lot of "
+"things, including:"
+msgstr ""
+"Vous êtes sur le point de supprimer l’activité « %(name)s ». Cela implique "
+"de nombreuses choses, dont :"
+
+#: learning/templates/learning/activity/delete.html:12
+msgid "Every course that use this activity will no longer have access to it."
+msgstr ""
+"Tous les cours qui utilisent cette activité ne pourront plus y accéder."
+
+#: learning/templates/learning/activity/delete.html:13
+msgid "Everything will be removed from the database."
+msgstr "tout sera supprimé de la base de données."
+
+#: learning/templates/learning/activity/delete.html:19
+msgid "Ok, I understand, delete this activity"
+msgstr "D’accord, je comprend, supprimez cette activité"
+
+#: learning/templates/learning/activity/detail.html:10
+#: learning/templates/learning/course/detail.html:11
+msgid "Delete"
+msgstr "Supprimer"
+
+#: learning/templates/learning/activity/detail.html:13
+#: learning/templates/learning/course/detail.html:14
+msgid "Edit"
+msgstr "Modifier"
+
+#: learning/templates/learning/activity/my.html:6
+#: learning/templates/learning/base.html:35
+msgid "My activities"
+msgstr "Mes activités"
+
+#: learning/templates/learning/activity/my.html:17
+#: learning/templates/learning/course/my.html:23
+msgid "By:"
+msgstr "Par :"
+
+#: learning/templates/learning/activity/my.html:25
+#: learning/templates/learning/course/my.html:31
+msgid "See more"
+msgstr "Voir plus"
+
+#: learning/templates/learning/activity/update.html:5
+#, python-format
+msgid "Update activity “%(name)s”"
+msgstr "Mettre à jour l’activité « %(name)s »"
+
+#: learning/templates/learning/activity/update.html:9
+msgid "Update activity"
+msgstr "Mettre à jour l’activité"
+
+#: learning/templates/learning/base.html:19
 msgid "Courses"
 msgstr "Cours"
 
-#: learning/templates/learning/base.html:23
+#: learning/templates/learning/base.html:24
 #: learning/templates/learning/course/my.html:6
 msgid "My courses"
 msgstr "Mes cours"
@@ -135,6 +203,11 @@ msgstr "Mes cours"
 #: learning/templates/learning/base.html:27
 msgid "Create a course"
 msgstr "Créer un cours"
+
+#: learning/templates/learning/base.html:30
+#: learning/templates/learning/course/detail.html:29
+msgid "Activities"
+msgstr "Activités"
 
 #: learning/templates/learning/course/add.html:5
 #: learning/templates/learning/course/add.html:12
@@ -154,11 +227,6 @@ msgstr "Annuler et retourner au cours"
 #: learning/templates/learning/course/change.html:15
 msgid "Update course"
 msgstr "Mettre à jour le cours"
-
-#: learning/templates/learning/course/delete.html:7
-#, python-format
-msgid "Deleting “%(name)s”…"
-msgstr "Suppression de « %(name)s »…"
 
 #: learning/templates/learning/course/delete.html:10
 #, python-format
@@ -183,29 +251,73 @@ msgstr ""
 msgid "Ok, I understand, delete this course"
 msgstr "D’accord, je comprend, supprimez ce cours"
 
-#: learning/templates/learning/course/detail.html:10
-msgid "Delete"
-msgstr "Supprimer"
+#: learning/templates/learning/course/delete_attached_activity_modal.html:7
+#, python-format
+msgid "Delete activity “%(name)s”"
+msgstr "Suppression de l’activité « %(name)s »"
 
-#: learning/templates/learning/course/detail.html:13
-msgid "Edit"
-msgstr "Modifier"
+#: learning/templates/learning/course/delete_attached_activity_modal.html:13
+#, python-format
+msgid ""
+"You are about to delete the activity <strong>“%(name)s”</strong>.<br>Maybe "
+"you just want to unlink the activity (the\n"
+"                    activity will not be accessible within this course)?"
+"<br>If you are <strong>sure</strong>, you can delete it safely."
+msgstr ""
+"Vous êtes sur le point de supprimer l’activité <strong>« %(name)s »</strong>."
+"<br>Peut-être voulez vous seulement délier l’activité (l’activité ne sera "
+"plus accessible depuis ce cours) ?<br>Si vous êtes <strong>sûr</strong>, "
+"vous pouvez la supprimer."
 
-#: learning/templates/learning/course/detail.html:18
+#: learning/templates/learning/course/delete_attached_activity_modal.html:17
+#: learning/templates/learning/course/unlink_attached_activity_modal.html:17
+msgid "Close"
+msgstr "Fermer"
+
+#: learning/templates/learning/course/delete_attached_activity_modal.html:19
+#: learning/templates/learning/course/unlink_attached_activity_modal.html:20
+msgid "Unlink the activity"
+msgstr "Délier cette activité"
+
+#: learning/templates/learning/course/delete_attached_activity_modal.html:22
+msgid "Delete this activity"
+msgstr "Supprimer cette activité"
+
+#: learning/templates/learning/course/detail.html:19
 msgid "This course is:"
 msgstr "Ce cours est :"
 
-#: learning/templates/learning/course/detail.html:26
-msgid "Activities"
-msgstr "Activités"
+#: learning/templates/learning/course/detail.html:32
+msgid "Add a new activity"
+msgstr "Ajouter une nouvelle activité"
 
-#: learning/templates/learning/course/my.html:22
-msgid "By:"
-msgstr "Par :"
+#: learning/templates/learning/course/detail.html:43
+msgid "Actions"
+msgstr "Actions"
 
-#: learning/templates/learning/course/my.html:30
-msgid "See more"
-msgstr "Voir plus"
+#: learning/templates/learning/course/detail.html:58
+msgid "View course"
+msgstr "Afficher le cours"
+
+#: learning/templates/learning/course/detail.html:62
+msgid "Update the course"
+msgstr "Mettre à jour le cours"
+
+#: learning/templates/learning/course/unlink_attached_activity_modal.html:7
+#, python-format
+msgid "Unlink activity “%(name)s”"
+msgstr "Déliement de l’activité « %(name)s »"
+
+#: learning/templates/learning/course/unlink_attached_activity_modal.html:13
+#, python-format
+msgid ""
+"You are about to unlink the activity <strong>“%(name)s”</strong>. This means "
+"that the activity will remain but will no\n"
+"                    longer be associated with this course."
+msgstr ""
+"Vous êtes sur le point de délier l’activité <strong>« %(name)s »</strong>. "
+"Cela signifie que l’activité existera toujours mais ne sera plus associée à "
+"ce cours."
 
 #: learning/templates/markdownx/widget2.html:7
 msgid "Write"
@@ -215,7 +327,61 @@ msgstr "Écrire"
 msgid "Preview"
 msgstr "Aperçu"
 
-#: learning/views.py:58
+#: learning/templatetags/learning.py:47
+msgid ""
+"This course is a draft. It is not visible by others except collaborators and "
+"no one can register."
+msgstr ""
+"Ce cours est un brouillon. Il n’est pas visible par les autres sauf les "
+"collaborateurs et personne ne peut s’y inscrire."
+
+#: learning/templatetags/learning.py:49
+msgid "This course is published. Every change will be publicly available."
+msgstr "Ce cours est publié. Tout changement sera publié."
+
+#: learning/templatetags/learning.py:51
+msgid ""
+"This course is archived. Therefore, it is read-only. No one can register to "
+"the course anymore."
+msgstr ""
+"Ce cours est archivé. Par conséquent, il est en lecture-seule. Plus personne "
+"ne peut s’y inscrire."
+
+#: learning/views/activity.py:69
+#, python-format
+msgid "The activity “%(activity_name)s” has been added to this course."
+msgstr "L’activité « %(activity_name)s » a été ajoutée à ce cours."
+
+#: learning/views/activity.py:99
+msgid ""
+"You do not have the required permissions to unlink this activity from this "
+"course."
+msgstr ""
+"Vous n’avez pas les permissions requises pour délier cette activité de ce "
+"cours."
+
+#: learning/views/activity.py:99 learning/views/activity.py:114
+#: learning/views/activity.py:138 learning/views/activity.py:175
+#: learning/views/course.py:98 learning/views/course.py:114
+msgid "Try to login, this may solve the issue."
+msgstr "Essayez de vous connecter, cela peut résoudre le problème."
+
+#: learning/views/activity.py:114 learning/views/activity.py:175
+msgid "You do not have the required permissions to delete this activity."
+msgstr ""
+"Vous n’avez pas les permissions requises pour supprimer cette activité."
+
+#: learning/views/activity.py:138
+msgid "You do not have the required permissions to access this activity."
+msgstr ""
+"Vous n’avez pas les permissions requises pour consulter cette activité."
+
+#: learning/views/activity.py:157
+#, python-format
+msgid "The activity “%(activity_name)s” has been updated."
+msgstr "L’activité « %(activity_name)s » a été mise à jour."
+
+#: learning/views/course.py:43
 msgid ""
 "The user given in your response does not match with you. Are you trying to "
 "test us? Consider joining instead."
@@ -223,29 +389,25 @@ msgstr ""
 "L’utilisateur indiqué dans la réponse ne correspond pas avec vous. Vous êtes "
 "en train de nous tester ? Rejoignez-nous plutôt."
 
-#: learning/views.py:68
+#: learning/views/course.py:48
 #, python-format
 msgid "Course “%(course_name)s” created."
 msgstr "Cours « %(course_name)s » créé."
 
-#: learning/views.py:99
+#: learning/views/course.py:78
 #, python-format
 msgid "The course “%(course_name)s” has been updated."
 msgstr "Le cours « %(course_name)s » a été mis à jour."
 
-#: learning/views.py:120
+#: learning/views/course.py:98
 msgid "You do not have the required permissions to access this course."
 msgstr "Vous n’avez pas les permissions requises pour consulter ce cours."
 
-#: learning/views.py:120 learning/views.py:137
-msgid "Try to login, this may solve the issue."
-msgstr "Essayez de vous connecter, cela peut résoudre le problème."
-
-#: learning/views.py:137
+#: learning/views/course.py:114
 msgid "You do not have the required permissions to delete this course."
 msgstr "Vous n’avez pas les permissions requises pour supprimer ce cours."
 
-#: learning/views.py:142
+#: learning/views/course.py:119
 #, python-format
 msgid "The course ”%(course_name)s” has been deleted"
 msgstr "Le cours « %(course_name)s » a été supprimé"
