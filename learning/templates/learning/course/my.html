@@ -15,7 +15,8 @@
                         <div class="clearfix">
                             <h5 class="card-title float-left">{{ course.name }}</h5>
                             <div class="ml-2 float-right">
-                                <span class="badge badge-{{ course.state|get_state_badge_type }} p-2">{{ course.get_state_display }}</span>
+                                <span class="badge badge-{{ course.state|get_state_badge_type }} p-2"
+                                      data-toggle="tooltip" data-placement="top" title="{{ course.state|get_state_badge_title }}">{{ course.get_state_display }}</span>
                             </div>
                         </div>
                         <hr class="mt-2 mb-3">

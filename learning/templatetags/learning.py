@@ -21,6 +21,7 @@
 
 from django import template
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 
 from learning.models import CourseState
 
@@ -38,6 +39,19 @@ def get_state_badge_type(value):
     else:
         badge_type = 'light'
     return badge_type
+
+
+@register.filter
+def get_state_badge_title(value):
+    if value == CourseState.DRAFT.name:
+        badge_title = _("This course is a draft. It is not visible by others except collaborators and no one can register.")
+    elif value == CourseState.PUBLISHED.name:
+        badge_title = _("This course is published. Every change will be publicly available.")
+    elif value == CourseState.ARCHIVED.name:
+        badge_title = _("This course is archived. Therefore, it is read-only. No one can register to the course anymore.")
+    else:
+        badge_title = ""
+    return badge_title
 
 
 @register.filter

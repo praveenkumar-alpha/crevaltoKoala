@@ -16,7 +16,8 @@
         </div>
     </div>
     <hr>
-    <p>{% trans "This course is:" %} <span class="badge badge-{{ course.state|get_state_badge_type }}">{{ object.get_state_display }}</span></p>
+    <p>{% trans "This course is:" %} <span class="badge badge-{{ course.state|get_state_badge_type }} p-2"
+                                           data-toggle="tooltip" data-placement="top" title="{{ course.state|get_state_badge_title }}">{{ course.get_state_display }}</span>
     <hr>
     <div class="p-3" id="learning_course_description">
         {{ object.description | render_markdown }}
@@ -53,10 +54,12 @@
                         <div class="float-right">
                             {% get_obj_perms request.user for activity as "activity_perms" %}
                             {% if "view_activity" in activity_perms %}
-                                <a href="{% url 'learning:activity/detail' pk=activity.id %}" class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></a>
+                                <a href="{% url 'learning:activity/detail' pk=activity.id %}" class="btn btn-sm btn-outline-secondary"
+                                   data-toggle="tooltip" data-placement="top" title="{% trans "View course" %}"><i class="fa fa-eye"></i></a>
                             {% endif %}
                             {% if "change_activity" in activity_perms %}
-                                <a href="{% url 'learning:activity/update' pk=activity.id %}" class="btn btn-sm btn-outline-primary"><i class="fa fa-pen"></i></a>
+                                <a href="{% url 'learning:activity/update' pk=activity.id %}" class="btn btn-sm btn-outline-primary"
+                                   data-toggle="tooltip" data-placement="top" title="{% trans "Update the course" %}"><i class="fa fa-pen"></i></a>
                             {% endif %}
                             {% if "change_course" in course_perms %}
                                 {% include 'learning/course/unlink_attached_activity_modal.html' with activity=activity course=course %}
