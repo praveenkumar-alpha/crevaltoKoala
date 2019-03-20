@@ -21,14 +21,13 @@
 
 from enum import Enum
 
+from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
-
-from accounts.models import Person
 from learning.permissions import ObjectPermissionManagerMixin
 
 
@@ -65,7 +64,7 @@ class Course(ObjectPermissionManagerMixin, models.Model):
         verbose_name=_("Last updated the")
     )
     author = models.ForeignKey(
-        Person,
+        get_user_model(),
         on_delete=models.CASCADE,
         related_name="course",
         verbose_name=_("Author")
@@ -105,7 +104,7 @@ class Activity(ObjectPermissionManagerMixin, models.Model):
         verbose_name=_("Last updated the")
     )
     author = models.ForeignKey(
-        Person,
+        get_user_model(),
         on_delete=models.CASCADE,
         related_name="activities",
         verbose_name=_("Author")

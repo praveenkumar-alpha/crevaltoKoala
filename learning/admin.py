@@ -21,15 +21,14 @@
 
 from django.contrib import admin
 from django.contrib.admin import StackedInline
+from django.contrib.auth import get_user_model
 from guardian.admin import GuardedModelAdmin
-
-from accounts.models import Person
 from .models import Course, Activity, CourseActivity
 
 
 def apply_author_permissions_on_object_from_form(form, obj):
     if 'author' in form.changed_data:
-        obj.transfer_ownership(Person.objects.get(pk=form.initial['author']))
+        obj.transfer_ownership(get_user_model().objects.get(pk=form.initial['author']))
     else:
         obj.apply_author_permissions(public_content=True)
 
