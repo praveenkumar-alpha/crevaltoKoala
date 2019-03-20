@@ -30,7 +30,7 @@ from django.utils.translation import gettext_lazy as _
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 
 from learning.forms import ActivityCreateForm
-from learning.forms.activity import CourseActivityForm
+from learning.forms.activity import CourseActivityForm, ActivityUpdateForm
 from learning.models import Activity, Course, CourseActivity
 from learning.views.helpers import update_valid_or_invalid_form_fields
 
@@ -138,6 +138,27 @@ class ActivityDetailView(PermissionRequiredMixin, DetailView):
             gettext("You do not have the required permissions to access this activity.") + ' ' + gettext("Try to login, this may solve the issue.")
         )
         return redirect('learning:activity/my')
+
+
+class ActivityUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
+    model = Activity
+    form_class = ActivityUpdateForm
+    template_name = "learning/activity/update.html"
+
+    def has_permission(self):
+        return self.get_object().user_can_change(self.request.user)
+
+    def form_invalid(self, form):
+        form = update_valid_or_invalid_form_fields(form)
+        return super().form_invalid(form)
+
+    def form_valid(self, form):
+        if form.has_changed():
+            messages.success(self.request, _('The activity “%(activity_name)s” has been updated.') % {'activity_name': self.object.name})
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('learning:activity/detail', kwargs={'pk': self.object.id})
 
 
 class ActivityDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):

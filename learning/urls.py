@@ -45,5 +45,6 @@ urlpatterns = [
     # Activity CRUD operations
     path('activity/add', views.ActivityCreateView.as_view(), name='activity/add'),
     path('activity/detail/<pk>/', views.ActivityDetailView.as_view(), name='activity/detail'),
-    path('activity/delete/<pk>/', views.ActivityDeleteView.as_view(), name='activity/delete')
+    path('activity/delete/<pk>/', views.ActivityDeleteView.as_view(), name='activity/delete'),
+    path('activity/update/<pk>/', views.ActivityUpdateView.as_view(), name='activity/update'),
 ]

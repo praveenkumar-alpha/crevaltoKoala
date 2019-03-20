@@ -56,7 +56,7 @@
                                 <a href="{% url 'learning:activity/detail' pk=activity.id %}" class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></a>
                             {% endif %}
                             {% if "change_activity" in activity_perms %}
-                                <a href="" class="btn btn-sm btn-outline-primary"><i class="fa fa-pen"></i></a>
+                                <a href="{% url 'learning:activity/update' pk=activity.id %}" class="btn btn-sm btn-outline-primary"><i class="fa fa-pen"></i></a>
                             {% endif %}
                             {% if "change_course" in course_perms %}
                                 {% include 'learning/course/unlink_attached_activity_modal.html' with activity=activity course=course %}

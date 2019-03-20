@@ -1,0 +1,11 @@
+{% extends "learning/activity/base.html" %}
+{% load i18n %}
+
+{% block activity_content %}
+    <h2>{% blocktrans with name=object.name %}Update activity “{{ name }}”{% endblocktrans %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% include 'learning/activity/activity_form.html' with form=form %}
+        <button type="submit" class="btn btn-primary float-right">{% trans "Create a new activity" %}</button>
+    </form>
+{% endblock %}
