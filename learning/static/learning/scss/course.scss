@@ -1,9 +1,0 @@
-div#my-course-card-text {
-  display: flex;
-
-  > div.card-text {
-    max-height: 7.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
