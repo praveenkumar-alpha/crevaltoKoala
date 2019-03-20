@@ -6,6 +6,6 @@
     <form method="post">
         {% csrf_token %}
         {% include 'learning/activity/activity_form.html' with form=form %}
-        <button type="submit" class="btn btn-primary float-right">{% trans "Create a new activity" %}</button>
+        <button type="submit" class="btn btn-primary float-right">{% trans "Update activity" %}</button>
     </form>
 {% endblock %}
