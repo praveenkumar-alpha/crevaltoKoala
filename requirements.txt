@@ -1,6 +1,9 @@
 django>=2.1
 django-guardian
 
+# Bootstrap and fontawesome
+django-bootstrap-static
+
 # Support markdown syntax
 markdown
 django-markdownx

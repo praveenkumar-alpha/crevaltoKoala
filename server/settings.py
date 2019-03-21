@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'markdownx',  # To render Markdown documents
     'sass_processor',  # Compile stylesheet files
 
+    # Theming
+    'bootstrap',
+    'fontawesome',
+
 ]
 
 MIDDLEWARE = [
