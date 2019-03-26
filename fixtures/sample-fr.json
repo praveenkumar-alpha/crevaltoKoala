@@ -1,0 +1,386 @@
+[
+{
+  "model": "learning.courseactivity",
+  "pk": 7,
+  "fields": {
+    "rank": 1,
+    "minimal_allowed_score": 25,
+    "success_score": 50,
+    "course": 1,
+    "activity": 12
+  }
+},
+{
+  "model": "learning.courseactivity",
+  "pk": 8,
+  "fields": {
+    "rank": 2,
+    "minimal_allowed_score": 25,
+    "success_score": 50,
+    "course": 1,
+    "activity": 13
+  }
+},
+{
+  "model": "learning.courseactivity",
+  "pk": 10,
+  "fields": {
+    "rank": 3,
+    "minimal_allowed_score": 25,
+    "success_score": 50,
+    "course": 1,
+    "activity": 15
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 1,
+  "fields": {
+    "password": "!fcrcA8Pd4UWjoJAMYtZ7C0adzEHbYSJvd04lS4H2",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "AnonymousUser",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-03-25T13:51:12.902Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$uSXGAWGaqWFe$IlY9+oSW3WW05WaahalFIsATrpRpLKlP/gjZyVZ8jF0=",
+    "last_login": "2019-03-26T10:38:43.239Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-03-25T13:51:21Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$iXythDtLwjGf$79wqdFdn6PpYoEiuXfIocV9rjaQks/ksQoQ6dj3Fp6k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "victor-hugo",
+    "first_name": "Victor",
+    "last_name": "Hugo",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-03-26T09:24:22.507Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$iXythDtLwjGf$79wqdFdn6PpYoEiuXfIocV9rjaQks/ksQoQ6dj3Fp6k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "emile-zola",
+    "first_name": "\u00c9mile",
+    "last_name": "Zola",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-03-26T09:24:40.491Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$iXythDtLwjGf$79wqdFdn6PpYoEiuXfIocV9rjaQks/ksQoQ6dj3Fp6k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "guy-de-maupassant",
+    "first_name": "Guy",
+    "last_name": "De Maupassant",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-03-26T09:25:04.615Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$iXythDtLwjGf$79wqdFdn6PpYoEiuXfIocV9rjaQks/ksQoQ6dj3Fp6k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "honore-de-balzac",
+    "first_name": "Honor\u00e9",
+    "last_name": "De Balzac",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-03-26T09:26:45.623Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$iXythDtLwjGf$79wqdFdn6PpYoEiuXfIocV9rjaQks/ksQoQ6dj3Fp6k=",
+    "last_login": "2019-03-26T10:45:13.132Z",
+    "is_superuser": false,
+    "username": "charles-baudelaire",
+    "first_name": "Charles",
+    "last_name": "Baudelaire",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-03-26T09:27:48.464Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$iXythDtLwjGf$79wqdFdn6PpYoEiuXfIocV9rjaQks/ksQoQ6dj3Fp6k=",
+    "last_login": "2019-03-26T10:38:29.196Z",
+    "is_superuser": false,
+    "username": "erik-orsenna",
+    "first_name": "Erik",
+    "last_name": "Orsenna",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-03-26T09:35:38.582Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$iXythDtLwjGf$79wqdFdn6PpYoEiuXfIocV9rjaQks/ksQoQ6dj3Fp6k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "albert-einstein",
+    "first_name": "Albert",
+    "last_name": "Einstein",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-03-26T13:07:15.538Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "learning.activity",
+  "pk": 7,
+  "fields": {
+    "name": "1",
+    "description": "1",
+    "published": "2019-03-27T08:04:22.308Z",
+    "updated": "2019-03-27T08:04:22.308Z",
+    "author": 8
+  }
+},
+{
+  "model": "learning.activity",
+  "pk": 12,
+  "fields": {
+    "name": "Contexte historique",
+    "description": "Le [<abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIIe_si%C3%A8cle \"XVIIIe si\u00e8cle\") va se voir fragiliser progressivement la monarchie absolue avec la [R\u00e9gence](https://fr.wikipedia.org/wiki/R%C3%A9gence_(1715-1723) \"R\u00e9gence (1715-1723)\") de [Philippe d\u2019Orl\u00e9ans](https://fr.wikipedia.org/wiki/Philippe_d%27Orl%C3%A9ans_(1674-1723) \"Philippe d'Orl\u00e9ans (1674-1723)\"), et avec le tr\u00e8s long r\u00e8gne de [Louis XV](https://fr.wikipedia.org/wiki/Louis_XV_de_France \"Louis XV de France\") et ses guerres perdues ([guerre de Sept Ans](https://fr.wikipedia.org/wiki/Guerre_de_Sept_Ans \"Guerre de Sept Ans\") sur le continent europ\u00e9en et outre-mer, en Am\u00e9rique et en Inde particuli\u00e8rement, achev\u00e9e par le [trait\u00e9 de Paris](https://fr.wikipedia.org/wiki/Trait%C3%A9_de_Paris_(1763) \"Trait\u00e9 de Paris (1763)\") de [1763](https://fr.wikipedia.org/wiki/1763 \"1763\") qui consacre la puissance de l\u2019Angleterre et le poids de la Prusse). La monarchie mourra finalement de l\u2019impuissance de [Louis XVI](https://fr.wikipedia.org/wiki/Louis_XVI_de_France \"Louis XVI de France\") : la [R\u00e9volution de 1789](https://fr.wikipedia.org/wiki/R%C3%A9volution_fran%C3%A7aise \"R\u00e9volution fran\u00e7aise\") et ses soubresauts violents transformeront fondamentalement l\u2019Histoire de la France qui deviendra une [R\u00e9publique](https://fr.wikipedia.org/wiki/R%C3%A9publique \"R\u00e9publique\") le <time class=\"nowrap date-lien\" datetime=\"1792-09-21\" data-sort-value=\"1792-09-21\">[21](https://fr.wikipedia.org/wiki/21_septembre \"21 septembre\") [septembre](https://fr.wikipedia.org/wiki/Septembre_1792 \"Septembre 1792\") [1792](https://fr.wikipedia.org/wiki/1792 \"1792\")</time>. La naissance en [1776](https://fr.wikipedia.org/wiki/1776 \"1776\") de la R\u00e9publique des [\u00c9tats-Unis d\u2019Am\u00e9rique](https://fr.wikipedia.org/wiki/%C3%89tats-Unis \"\u00c9tats-Unis\"), soutenue par la France contre l\u2019Angleterre, symbolise aussi l\u2019entr\u00e9e dans un monde nouveau \u00e0 la veille du <abbr class=\"abbr\" title=\"19\u1d49 si\u00e8cle\"><span class=\"romain\">XIX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle o\u00f9 appara\u00eet le personnage de Bonaparte<sup id=\"cite_ref-1\" class=\"reference\">[<span class=\"cite_crochet\">[</span>1<span class=\"cite_crochet\">]</span>](#cite_note-1)</sup>.\r\n\r\nPar ailleurs, au cours du <abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle, la soci\u00e9t\u00e9 fran\u00e7aise change avec l\u2019essor d\u00e9mographique et l\u2019activit\u00e9 d\u2019une bourgeoisie d\u2019affaires et d\u2019entreprises li\u00e9e au progr\u00e8s technologique (machine \u00e0 vapeur \u2013 m\u00e9tallurgie) et au commerce avec \u00ab les Indes \u00bb, fond\u00e9 sur la traite n\u00e9gri\u00e8re. En m\u00eame temps se d\u00e9veloppent les villes avec leurs salons, leurs caf\u00e9s et leurs acad\u00e9mies qui affaiblissent le poids de l\u2019aristocratie dans le domaine culturel comme dans le domaine social o\u00f9 s\u2019affirme peu \u00e0 peu le [tiers \u00e9tat](https://fr.wikipedia.org/wiki/Tiers_%C3%A9tat \"Tiers \u00e9tat\") qui sera le vainqueur des luttes r\u00e9volutionnaires \u00e0 partir de 1789\\. Alors que la grande majorit\u00e9 des \u00e9crivains du [<abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIe_si%C3%A8cle \"XVIIe si\u00e8cle\") \u00e9taient des courtisans \u00e0 la recherche de [m\u00e9c\u00e8nes](https://fr.wikipedia.org/wiki/M%C3%A9c%C3%A9nat \"M\u00e9c\u00e9nat\") et de protecteurs, le <abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle et les si\u00e8cles suivants voient l'\u00e9mergence d'une nouvelle \u00e9thique de l'\u00e9crivain, exprim\u00e9e \u00e0 l'origine par [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\")<sup id=\"cite_ref-2\" class=\"reference\">[<span class=\"cite_crochet\">[</span>2<span class=\"cite_crochet\">]</span>](#cite_note-2)</sup>, consistant en son autonomisation progressive par rapport aux pouvoirs (politiques, religieux). Cette \u00e9thique se construit dans le cadre de la lutte pour la [libert\u00e9 d'expression](https://fr.wikipedia.org/wiki/Libert%C3%A9_d%27expression \"Libert\u00e9 d'expression\") avec en corollaire une responsabilit\u00e9 accrue de ces \u00e9crivains dont les pouvoirs veulent d\u00e9sormais qu'ils r\u00e9pondent de leurs \u0153uvres<sup id=\"cite_ref-3\" class=\"reference\">[<span class=\"cite_crochet\">[</span>3<span class=\"cite_crochet\">]</span>](#cite_note-3)</sup>.\r\n\r\nLes mentalit\u00e9s \u00e9voluent elles aussi avec le d\u00e9veloppement de l\u2019\u00e9ducation et des sciences ([Newton](https://fr.wikipedia.org/wiki/Isaac_Newton \"Isaac Newton\"), [Watt](https://fr.wikipedia.org/wiki/James_Watt \"James Watt\"), [Volta](https://fr.wikipedia.org/wiki/Alessandro_Volta \"Alessandro Volta\"), [Leibniz](https://fr.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz \"Gottfried Wilhelm Leibniz\"), [Buffon](https://fr.wikipedia.org/wiki/Georges-Louis_Leclerc,_comte_de_Buffon \"Georges-Louis Leclerc, comte de Buffon\"), [Lavoisier](https://fr.wikipedia.org/wiki/Antoine_Lavoisier \"Antoine Lavoisier\"), [Monge](https://fr.wikipedia.org/wiki/Gaspard_Monge \"Gaspard Monge\")\u2026) et la diffusion des \u0153uvres de l\u2019esprit, par le colportage et par le th\u00e9\u00e2tre. La foi dans le Progr\u00e8s que symbolisera l\u2019_[Encyclop\u00e9die](https://fr.wikipedia.org/wiki/Encyclop%C3%A9die_ou_Dictionnaire_raisonn%C3%A9_des_sciences,_des_arts_et_des_m%C3%A9tiers \"Encyclop\u00e9die ou Dictionnaire raisonn\u00e9 des sciences, des arts et des m\u00e9tiers\")_ de [Diderot](https://fr.wikipedia.org/wiki/Denis_Diderot \"Denis Diderot\") et [d\u2019Alembert](https://fr.wikipedia.org/wiki/Jean_le_Rond_d%27Alembert \"Jean le Rond d'Alembert\") correspond \u00e0 une d\u00e9christianisation progressive de la soci\u00e9t\u00e9 que r\u00e9v\u00e8lent les conflits entre le haut et le bas clerg\u00e9, ou les tensions avec les [J\u00e9suites](https://fr.wikipedia.org/wiki/J%C3%A9suite \"J\u00e9suite\") (expuls\u00e9s du royaume en 1764) ou l\u2019\u00e9volution du statut des protestants, admis \u00e0 l\u2019\u00e9tat-civil en 1787\\. Mais l\u2019\u00c9glise catholique reste un pouvoir dominant qui lutte contre les [Lumi\u00e8res](https://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie) \"Lumi\u00e8res (philosophie)\") en faisant interdire leurs \u0153uvres et en obtenant, par exemple, la condamnation \u00e0 mort du huguenot [Jean Calas](https://fr.wikipedia.org/wiki/Jean_Calas \"Jean Calas\") en 1762 ou, pour blasph\u00e8me, celle du [chevalier de La Barre](https://fr.wikipedia.org/wiki/Chevalier_de_La_Barre \"Chevalier de La Barre\") en 1766, barbaries qui susciteront l\u2019indignation de Voltaire.",
+    "published": "2019-03-27T08:28:03.654Z",
+    "updated": "2019-03-27T08:32:22.886Z",
+    "author": 8
+  }
+},
+{
+  "model": "learning.activity",
+  "pk": 13,
+  "fields": {
+    "name": "La vari\u00e9t\u00e9 litt\u00e9raire du XVIIIe si\u00e8cle",
+    "description": "Continuateurs des [libertins](https://fr.wikipedia.org/wiki/Libertin \"Libertin\") du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle et d\u2019esprits critiques comme [Bayle](https://fr.wikipedia.org/wiki/Pierre_Bayle \"Pierre Bayle\") et [Fontenelle](https://fr.wikipedia.org/wiki/Bernard_Le_Bouyer_de_Fontenelle \"Bernard Le Bouyer de Fontenelle\"), ceux que l\u2019on appellera les [Lumi\u00e8res](https://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie) \"Lumi\u00e8res (philosophie)\") d\u00e9noncent au nom de la Raison et des valeurs morales les oppressions qui perdurent \u00e0 leur \u00e9poque. Ils contestent la monarchie absolue en revendiquant un contrat social comme fondement de l\u2019autorit\u00e9 politique et une organisation plus d\u00e9mocratique des pouvoirs dans une monarchie constitutionnelle avec une s\u00e9paration des pouvoirs ex\u00e9cutifs, l\u00e9gislatif et judiciaire et militaire ([Montesquieu](https://fr.wikipedia.org/wiki/Charles_Louis_de_Secondat,_baron_de_La_Br%C3%A8de_et_de_Montesquieu \"Charles Louis de Secondat, baron de La Br\u00e8de et de Montesquieu\"), [Diderot](https://fr.wikipedia.org/wiki/Denis_Diderot \"Denis Diderot\"), [Rousseau](https://fr.wikipedia.org/wiki/Jean-Jacques_Rousseau \"Jean-Jacques Rousseau\") entre autres). [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") combat particuli\u00e8rement les abus du pouvoir (censure, [lettre de cachet](https://fr.wikipedia.org/wiki/Lettre_de_cachet \"Lettre de cachet\"), collusion avec l\u2019\u00c9glise) et r\u00eave d\u2019un [despote \u00e9clair\u00e9](https://fr.wikipedia.org/wiki/Despotisme_%C3%A9clair%C3%A9 \"Despotisme \u00e9clair\u00e9\"), conseill\u00e9 par des philosophes. Par ailleurs, les \u00ab philosophes \u00bb eux-m\u00eames, bien que n'\u00e9tant pas tous issus du [Tiers \u00e9tat](https://fr.wikipedia.org/wiki/Tiers_%C3%A9tat \"Tiers \u00e9tat\"), d\u00e9fendent une soci\u00e9t\u00e9 fond\u00e9e sur les talents et sur le m\u00e9rite qui s\u2019oppose \u00e0 une soci\u00e9t\u00e9 de classes (ou de castes) h\u00e9r\u00e9ditaires, introduisant ainsi les valeurs de libert\u00e9 et d\u2019\u00e9galit\u00e9 qu\u2019affirmera la [R\u00e9publique](https://fr.wikipedia.org/wiki/R%C3%A9gime_r%C3%A9publicain_en_France \"R\u00e9gime r\u00e9publicain en France\") \u00e0 la fin du si\u00e8cle<sup id=\"cite_ref-4\" class=\"reference\">[<span class=\"cite_crochet\">[</span>4<span class=\"cite_crochet\">]</span>](#cite_note-4)</sup>.\r\n\r\nIls d\u00e9fendent aussi la libert\u00e9 de conscience et mettent en cause le r\u00f4le des institutions religieuses dans la soci\u00e9t\u00e9. La tol\u00e9rance est une valeur fondamentale pour ceux qui <span class=\"citation\">\u00ab nous ont appris \u00e0 vivre libres \u00bb</span> comme le dit la [Convention](https://fr.wikipedia.org/wiki/Convention_nationale \"Convention nationale\") en honorant les cendres de [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") au [Panth\u00e9on](https://fr.wikipedia.org/wiki/Panth%C3%A9on \"Panth\u00e9on\").",
+    "published": "2019-03-27T08:28:24.405Z",
+    "updated": "2019-03-27T08:33:34.238Z",
+    "author": 8
+  }
+},
+{
+  "model": "learning.activity",
+  "pk": 15,
+  "fields": {
+    "name": "Le th\u00e9\u00e2tre du XVIIIe si\u00e8cle",
+    "description": "L\u2019influence des grands dramaturges du \u00ab [si\u00e8cle de Louis XIV](https://fr.wikipedia.org/wiki/XVIIe_si%C3%A8cle \"XVIIe si\u00e8cle\") \u00bb persiste sur la sc\u00e8ne de la [Com\u00e9die-Fran\u00e7aise](https://fr.wikipedia.org/wiki/Com%C3%A9die-Fran%C3%A7aise \"Com\u00e9die-Fran\u00e7aise\") mais des renouvellements apparaissent avec les trag\u00e9dies de Voltaire (1694-1778) qui introduit des sujets modernes en gardant la structure classique et l\u2019alexandrin (_[Za\u00efre](https://fr.wikipedia.org/wiki/Za%C3%AFre_(Voltaire) \"Za\u00efre (Voltaire)\")_, [1732](https://fr.wikipedia.org/wiki/1732_au_th%C3%A9%C3%A2tre \"1732 au th\u00e9\u00e2tre\"), _[Mahomet](https://fr.wikipedia.org/wiki/Le_Fanatisme_ou_Mahomet \"Le Fanatisme ou Mahomet\")_, [1741](https://fr.wikipedia.org/wiki/1741_au_th%C3%A9%C3%A2tre \"1741 au th\u00e9\u00e2tre\")) et qui obtient de grands succ\u00e8s. N\u00e9anmoins la censure est toujours active comme en t\u00e9moignent, sous [Louis XVI](https://fr.wikipedia.org/wiki/Louis_XVI_de_France \"Louis XVI de France\") encore, les difficult\u00e9s de [Beaumarchais](https://fr.wikipedia.org/wiki/Pierre-Augustin_Caron_de_Beaumarchais \"Pierre-Augustin Caron de Beaumarchais\") pour son _[Mariage de Figaro](https://fr.wikipedia.org/wiki/Le_Mariage_de_Figaro \"Le Mariage de Figaro\")_<sup id=\"cite_ref-6\" class=\"reference\">[<span class=\"cite_crochet\">[</span>6<span class=\"cite_crochet\">]</span>](#cite_note-6)</sup> .\r\n\r\nLa lib\u00e9ration des m\u0153urs de la [R\u00e9gence](https://fr.wikipedia.org/wiki/R%C3%A9gence_(1715-1723) \"R\u00e9gence (1715-1723)\") apporte un autre renouvellement du th\u00e9\u00e2tre avec le retour, d\u00e8s [1716](https://fr.wikipedia.org/wiki/1716_au_th%C3%A9%C3%A2tre \"1716 au th\u00e9\u00e2tre\"), des [Com\u00e9diens-Italiens](https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_italien_de_Paris \"Th\u00e9\u00e2tre italien de Paris\") chass\u00e9s par [Louis XIV](https://fr.wikipedia.org/wiki/Louis_XIV_de_France \"Louis XIV de France\") et le d\u00e9but d\u2019une tr\u00e8s grande vogue du spectacle th\u00e9\u00e2tral : on se presse pour admirer des acteurs r\u00e9put\u00e9s ([L\u00e9lio](https://fr.wikipedia.org/wiki/L%C3%A9lio \"L\u00e9lio\"), Flaminia, Silvia\u2026) et rire des [lazzi](https://fr.wikipedia.org/wiki/Lazzi \"Lazzi\") et du dynamisme des personnages issus de la [commedia dell'arte](https://fr.wikipedia.org/wiki/Commedia_dell%27arte \"Commedia dell'arte\") comme [Arlequin](https://fr.wikipedia.org/wiki/Arlequin \"Arlequin\"), [Colombine](https://fr.wikipedia.org/wiki/Colombine_(th%C3%A9%C3%A2tre) \"Colombine (th\u00e9\u00e2tre)\") ou [Pantalon](https://fr.wikipedia.org/wiki/Pantalon_(personnage_de_th%C3%A9%C3%A2tre) \"Pantalon (personnage de th\u00e9\u00e2tre)\"). C\u2019est dans cette lign\u00e9e que trouve place [Marivaux](https://fr.wikipedia.org/wiki/Pierre_Carlet_de_Chamblain_de_Marivaux \"Pierre Carlet de Chamblain de Marivaux\") (1688 -1763) avec ses com\u00e9dies qui associent la finesse de l\u2019analyse du sentiment amoureux et la subtilit\u00e9 verbale du [marivaudage](https://fr.wikipedia.org/wiki/Marivaudage \"Marivaudage\") aux probl\u00e8mes de soci\u00e9t\u00e9 en exploitant le th\u00e8me embl\u00e9matique du [couple ma\u00eetre-valet](https://fr.wikipedia.org/wiki/Relation_ma%C3%AEtre-valet_au_th%C3%A9%C3%A2tre \"Relation ma\u00eetre-valet au th\u00e9\u00e2tre\"). _[Les Fausses Confidences](https://fr.wikipedia.org/wiki/Les_Fausses_Confidences \"Les Fausses Confidences\")_ ([1737](https://fr.wikipedia.org/wiki/1737_au_th%C3%A9%C3%A2tre \"1737 au th\u00e9\u00e2tre\")), _[le Jeu de l'amour et du hasard](https://fr.wikipedia.org/wiki/Le_Jeu_de_l%27amour_et_du_hasard \"Le Jeu de l'amour et du hasard\")_ ([1730](https://fr.wikipedia.org/wiki/1730_au_th%C3%A9%C3%A2tre \"1730 au th\u00e9\u00e2tre\")), ou _[l'\u00cele des esclaves](https://fr.wikipedia.org/wiki/L%27%C3%8Ele_des_esclaves \"L'\u00cele des esclaves\")_ ([1725](https://fr.wikipedia.org/wiki/1725_au_th%C3%A9%C3%A2tre \"1725 au th\u00e9\u00e2tre\")) constituent quelques-unes de ses \u0153uvres majeures.",
+    "published": "2019-03-27T08:28:58.578Z",
+    "updated": "2019-03-27T08:34:24.427Z",
+    "author": 8
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 1,
+  "fields": {
+    "person": 5,
+    "course": 1,
+    "role": "TEACHER"
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 2,
+  "fields": {
+    "person": 3,
+    "course": 1,
+    "role": "NON_EDITOR_TEACHER"
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 3,
+  "fields": {
+    "person": 4,
+    "course": 1,
+    "role": "OWNER"
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 4,
+  "fields": {
+    "person": 5,
+    "course": 2,
+    "role": "NON_EDITOR_TEACHER"
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 5,
+  "fields": {
+    "person": 7,
+    "course": 1,
+    "role": "NON_EDITOR_TEACHER"
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 6,
+  "fields": {
+    "person": 8,
+    "course": 3,
+    "role": "NON_EDITOR_TEACHER"
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 7,
+  "fields": {
+    "person": 8,
+    "course": 4,
+    "role": "TEACHER"
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 1,
+  "fields": {
+    "name": "Litt\u00e9rature fran\u00e7aise du 18e si\u00e8cle",
+    "description": "La **litt\u00e9rature fran\u00e7aise du <abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle** s\u2019inscrit dans une p\u00e9riode le plus souvent d\u00e9finie par deux dates rep\u00e8res : [1715](https://fr.wikipedia.org/wiki/1715 \"1715\"), date de la mort de [Louis XIV](https://fr.wikipedia.org/wiki/Louis_XIV_de_France \"Louis XIV de France\"), et d\u2019autre part, [1799](https://fr.wikipedia.org/wiki/1799 \"1799\"), date du coup d\u2019\u00c9tat de [Bonaparte](https://fr.wikipedia.org/wiki/Napol%C3%A9on_Bonaparte \"Napol\u00e9on Bonaparte\") qui instaure le [Consulat](https://fr.wikipedia.org/wiki/Consulat_(histoire_de_France) \"Consulat (histoire de France)\") et met d\u2019une certaine fa\u00e7on fin \u00e0 la p\u00e9riode r\u00e9volutionnaire. Ce si\u00e8cle de transformations \u00e9conomiques, sociales, intellectuelles et politiques est riche d\u2019une multiplicit\u00e9 d\u2019\u0153uvres qui peuvent se rattacher, en simplifiant, \u00e0 deux orientations majeures : le mouvement des [Lumi\u00e8res](https://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie) \"Lumi\u00e8res (philosophie)\") et ses remises en cause des bases de la soci\u00e9t\u00e9 et, par ailleurs, la naissance d\u2019une sensibilit\u00e9 que l\u2019on qualifiera post\u00e9rieurement de [pr\u00e9romantique](https://fr.wikipedia.org/wiki/Pr%C3%A9romantisme \"Pr\u00e9romantisme\").\r\n\r\nLa litt\u00e9rature d'id\u00e9es est illustr\u00e9e notamment par [Montesquieu](https://fr.wikipedia.org/wiki/Montesquieu \"Montesquieu\") (_[Lettres persanes](https://fr.wikipedia.org/wiki/Lettres_persanes \"Lettres persanes\")_ en 1721), [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") ([romans philosophiques](https://fr.wikipedia.org/wiki/Roman_(litt%C3%A9rature)#Roman_philosophique \"Roman (litt\u00e9rature)\") comme _[Zadig](https://fr.wikipedia.org/wiki/Zadig \"Zadig\")_, 1747 ou _[Candide](https://fr.wikipedia.org/wiki/Candide \"Candide\")_,en 1759), [Diderot](https://fr.wikipedia.org/wiki/Diderot \"Diderot\") ou [Rousseau](https://fr.wikipedia.org/wiki/Jean-Jacques_Rousseau \"Jean-Jacques Rousseau\") que l'on d\u00e9couvre aussi comme romanciers aux c\u00f4t\u00e9s de [Pr\u00e9vost](https://fr.wikipedia.org/wiki/Antoine_Fran%C3%A7ois_Pr%C3%A9vost \"Antoine Fran\u00e7ois Pr\u00e9vost\"), [Bernardin de Saint-Pierre](https://fr.wikipedia.org/wiki/Bernardin_de_Saint-Pierre \"Bernardin de Saint-Pierre\"), [Laclos](https://fr.wikipedia.org/wiki/Pierre_Choderlos_de_Laclos \"Pierre Choderlos de Laclos\") ou [Sade](https://fr.wikipedia.org/wiki/Donatien_Alphonse_Fran%C3%A7ois_de_Sade \"Donatien Alphonse Fran\u00e7ois de Sade\") alors que le th\u00e9\u00e2tre retient en particulier [Marivaux](https://fr.wikipedia.org/wiki/Marivaux \"Marivaux\") et [Beaumarchais](https://fr.wikipedia.org/wiki/Beaumarchais \"Beaumarchais\").",
+    "state": "DRAFT",
+    "published": "2019-03-25T14:33:17.046Z",
+    "updated": "2019-03-27T08:32:45.060Z",
+    "author": 8,
+    "students": [
+      6
+    ]
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 2,
+  "fields": {
+    "name": "Litt\u00e9rature fran\u00e7aise du 19e si\u00e8cle",
+    "description": "La **litt\u00e9rature fran\u00e7aise du <abbr class=\"abbr\" title=\"19\u1d49 si\u00e8cle\"><span class=\"romain\">XIX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle** s'inscrit dans une p\u00e9riode d\u00e9finie par deux dates rep\u00e8res : [1799](https://fr.wikipedia.org/wiki/1799 \"1799\"), date du coup d'\u00c9tat de [Bonaparte](https://fr.wikipedia.org/wiki/Napol%C3%A9on_Ier \"Napol\u00e9on Ier\") qui instaure le [Consulat](https://fr.wikipedia.org/wiki/Consulat_(histoire_de_France) \"Consulat (histoire de France)\") et met d'une certaine fa\u00e7on fin \u00e0 la p\u00e9riode r\u00e9volutionnaire, et [1899](https://fr.wikipedia.org/wiki/1899 \"1899\"), moment de r\u00e9solution des tensions de l'[affaire Dreyfus](https://fr.wikipedia.org/wiki/Affaire_Dreyfus \"Affaire Dreyfus\") et de la menace du [Boulangisme](https://fr.wikipedia.org/wiki/Boulangisme \"Boulangisme\") et o\u00f9 s'imposent finalement les valeurs de la [<abbr class=\"abbr\" title=\"Troisi\u00e8me\">III<sup>e</sup></abbr> R\u00e9publique](https://fr.wikipedia.org/wiki/Troisi%C3%A8me_R%C3%A9publique_(France) \"Troisi\u00e8me R\u00e9publique (France)\").\r\n\r\nLa modernit\u00e9 litt\u00e9raire s'affirme dans ce si\u00e8cle \u00e0 l'histoire mouvement\u00e9e avec des courants marquants qui touchent tous les arts, comme le [romantisme](https://fr.wikipedia.org/wiki/Romantisme \"Romantisme\"), le [r\u00e9alisme](https://fr.wikipedia.org/wiki/R%C3%A9alisme_(litt%C3%A9rature) \"R\u00e9alisme (litt\u00e9rature)\"), le [naturalisme](https://fr.wikipedia.org/wiki/Naturalisme_(litt%C3%A9rature) \"Naturalisme (litt\u00e9rature)\") ou le [symbolisme](https://fr.wikipedia.org/wiki/Symbolisme_(art) \"Symbolisme (art)\").\r\n\r\nCertains auteurs comme [Flaubert](https://fr.wikipedia.org/wiki/Gustave_Flaubert \"Gustave Flaubert\") ou [Maupassant](https://fr.wikipedia.org/wiki/Guy_de_Maupassant \"Guy de Maupassant\") ne veulent pas appartenir \u00e0 un mouvement pr\u00e9cis, et c'est pourquoi certaines \u0153uvres se rapprochent d'un courant, et d'autres non.\r\n\r\nLes \u0153uvres de ce si\u00e8cle sont multiples, particuli\u00e8rement dans le domaine de la [po\u00e9sie](https://fr.wikipedia.org/wiki/Po%C3%A9sie \"Po\u00e9sie\") (avec [Lamartine](https://fr.wikipedia.org/wiki/Alphonse_de_Lamartine \"Alphonse de Lamartine\"), [Vigny](https://fr.wikipedia.org/wiki/Alfred_de_Vigny \"Alfred de Vigny\"), [Musset](https://fr.wikipedia.org/wiki/Alfred_de_Musset \"Alfred de Musset\"), [Hugo](https://fr.wikipedia.org/wiki/Victor_Hugo \"Victor Hugo\"), [Baudelaire](https://fr.wikipedia.org/wiki/Baudelaire \"Baudelaire\"), [Rimbaud](https://fr.wikipedia.org/wiki/Rimbaud \"Rimbaud\"), [Verlaine](https://fr.wikipedia.org/wiki/Paul_Verlaine \"Paul Verlaine\"), [Mallarm\u00e9](https://fr.wikipedia.org/wiki/St%C3%A9phane_Mallarm%C3%A9 \"St\u00e9phane Mallarm\u00e9\")\u2026) comme dans le domaine du [roman](https://fr.wikipedia.org/wiki/Roman_(litt%C3%A9rature) \"Roman (litt\u00e9rature)\") (avec [Stendhal](https://fr.wikipedia.org/wiki/Stendhal \"Stendhal\"), [Balzac](https://fr.wikipedia.org/wiki/Honor%C3%A9_de_Balzac \"Honor\u00e9 de Balzac\"), [Dumas](https://fr.wikipedia.org/wiki/Alexandre_Dumas \"Alexandre Dumas\"), [Hugo](https://fr.wikipedia.org/wiki/Victor_Hugo \"Victor Hugo\"), [Flaubert](https://fr.wikipedia.org/wiki/Flaubert \"Flaubert\"), [Zola](https://fr.wikipedia.org/wiki/Zola \"Zola\"), [Maupassant](https://fr.wikipedia.org/wiki/Maupassant \"Maupassant\"), [Verne](https://fr.wikipedia.org/wiki/Jules_Verne \"Jules Verne\")\u2026) et dans une moindre mesure au th\u00e9\u00e2tre avec le [drame romantique](https://fr.wikipedia.org/wiki/Drame_romantique \"Drame romantique\") et ses \u00e9pigones (avec [Musset](https://fr.wikipedia.org/wiki/Alfred_de_Musset \"Alfred de Musset\"), [Hugo](https://fr.wikipedia.org/wiki/Victor_Hugo \"Victor Hugo\"), [Edmond Rostand](https://fr.wikipedia.org/wiki/Edmond_Rostand \"Edmond Rostand\")\u2026).\r\n\r\nSi\u00e8cle tr\u00e8s riche aux \u0153uvres qui sont, pour certaines, parfois tr\u00e8s modernes dans leur forme (m\u00eame si c'est surtout en fin de si\u00e8cle, voire au d\u00e9but du <abbr class=\"abbr\" title=\"20\u1d49 si\u00e8cle\"><span class=\"romain\">XX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle que la forme de certaines \u0153uvres, comme les [calligrammes](https://fr.wikipedia.org/wiki/Calligramme \"Calligramme\") d\u2019[Apollinaire](https://fr.wikipedia.org/wiki/Guillaume_Apollinaire \"Guillaume Apollinaire\"), r\u00e9volutionneront l'Art) ou dans leur fond (comme l'apparition du fantastique dans certains po\u00e8mes de [G\u00e9rard de Nerval](https://fr.wikipedia.org/wiki/G%C3%A9rard_de_Nerval \"G\u00e9rard de Nerval\") ou la vision originale de Baudelaire sur les femmes ou l'automne, dans [Les Fleurs du Mal](https://fr.wikipedia.org/wiki/Les_Fleurs_du_mal \"Les Fleurs du mal\")) le <abbr class=\"abbr\" title=\"19\u1d49 si\u00e8cle\"><span class=\"romain\">XIX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle reste pour la litt\u00e9rature fran\u00e7aise un \u00e2ge d'or de la po\u00e9sie et du roman.\r\n\r\nDe tr\u00e8s nombreux chefs-d'\u0153uvre nous laissent percevoir, au-del\u00e0 des courants litt\u00e9raires qui se succ\u00e8dent, des auteurs aux fortes personnalit\u00e9s artistiques.",
+    "state": "DRAFT",
+    "published": "2019-03-26T09:46:14.342Z",
+    "updated": "2019-03-26T11:38:22.965Z",
+    "author": 8,
+    "students": []
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 3,
+  "fields": {
+    "name": "Litt\u00e9rature fran\u00e7aise du 20e si\u00e8cle",
+    "description": "La **litt\u00e9rature fran\u00e7aise du <abbr class=\"abbr\" title=\"20\u1d49 si\u00e8cle\"><span class=\"romain\">XX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle** s'inscrit dans un si\u00e8cle tumultueux marqu\u00e9 par deux [guerres mondiales](https://fr.wikipedia.org/wiki/Guerres_mondiales \"Guerres mondiales\"), par l'exp\u00e9rience des totalitarismes [fascistes](https://fr.wikipedia.org/wiki/Fascistes \"Fascistes\") et [communistes](https://fr.wikipedia.org/wiki/Communistes \"Communistes\") et par une [d\u00e9colonisation](https://fr.wikipedia.org/wiki/D%C3%A9colonisation \"D\u00e9colonisation\") difficile. La litt\u00e9rature verra aussi son statut \u00e9voluer sous l'effet des transformations technologiques comme l'apparition et le d\u00e9veloppement des \u00e9ditions de poche ou la concurrence d'autres loisirs comme le cin\u00e9ma, la t\u00e9l\u00e9vision ou la pratique informatique. On assistera parall\u00e8lement \u00e0 une dilution progressive des courants esth\u00e9tiques et intellectuels apr\u00e8s l'\u00e9poque du [surr\u00e9alisme](https://fr.wikipedia.org/wiki/Surr%C3%A9alisme \"Surr\u00e9alisme\"), de l'[existentialisme](https://fr.wikipedia.org/wiki/Existentialisme \"Existentialisme\") et du [Nouveau Roman](https://fr.wikipedia.org/wiki/Nouveau_Roman \"Nouveau Roman\").",
+    "state": "DRAFT",
+    "published": "2019-03-26T11:45:49.541Z",
+    "updated": "2019-03-26T11:46:02.422Z",
+    "author": 5,
+    "students": []
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 4,
+  "fields": {
+    "name": "Litt\u00e9rature fran\u00e7aise du 16e si\u00e8cle",
+    "description": "La **litt\u00e9rature fran\u00e7aise du <abbr class=\"abbr\" title=\"Seizi\u00e8me\">XVI<sup>e</sup></abbr> si\u00e8cle** est marqu\u00e9e par l\u2019\u00e9tablissement de la [langue fran\u00e7aise](https://fr.wikipedia.org/wiki/Fran%C3%A7ais \"Fran\u00e7ais\") comme une grande [langue litt\u00e9raire](https://fr.wikipedia.org/wiki/Langue_standard \"Langue standard\") et par d\u2019importants cr\u00e9ateurs qui fondent les principaux [genres de la litt\u00e9rature](https://fr.wikipedia.org/wiki/Genre_litt%C3%A9raire \"Genre litt\u00e9raire\") moderne en [France](https://fr.wikipedia.org/wiki/France \"France\") avec [Fran\u00e7ois Rabelais](https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Rabelais \"Fran\u00e7ois Rabelais\") pour la [prose litt\u00e9raire](https://fr.wikipedia.org/wiki/Prose \"Prose\") , [Pierre de Ronsard](https://fr.wikipedia.org/wiki/Pierre_de_Ronsard \"Pierre de Ronsard\") et [Joachim Du Bellay](https://fr.wikipedia.org/wiki/Joachim_Du_Bellay \"Joachim Du Bellay\") pour la [po\u00e9sie](https://fr.wikipedia.org/wiki/Po%C3%A9sie \"Po\u00e9sie\"), [Michel de Montaigne](https://fr.wikipedia.org/wiki/Michel_de_Montaigne \"Michel de Montaigne\") pour la litt\u00e9rature d'id\u00e9es ou [Robert Garnier](https://fr.wikipedia.org/wiki/Robert_Garnier \"Robert Garnier\") et [\u00c9tienne Jodelle](https://fr.wikipedia.org/wiki/%C3%89tienne_Jodelle \"\u00c9tienne Jodelle\") pour le [th\u00e9\u00e2tre](https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre \"Th\u00e9\u00e2tre\"). Elle s\u2019inscrit dans un si\u00e8cle de transformations multiples et fondamentales, dans tous les domaines ([croyances religieuses](https://fr.wikipedia.org/wiki/Religion \"Religion\"), d\u00e9marches intellectuelles, sciences et techniques, d\u00e9couvertes g\u00e9ographiques, transformations politiques\u2026) qu'expriment les termes de \u00ab [Renaissance](https://fr.wikipedia.org/wiki/Humanisme_de_la_Renaissance \"Humanisme de la Renaissance\") \u00bb, \u00ab [Humanisme](https://fr.wikipedia.org/wiki/Humanisme \"Humanisme\") \u00bb et de l'[\u00e9poque moderne](https://fr.wikipedia.org/wiki/%C3%89poque_moderne \"\u00c9poque moderne\").",
+    "state": "PUBLISHED",
+    "published": "2019-03-26T11:51:11.526Z",
+    "updated": "2019-03-26T11:51:35.712Z",
+    "author": 6,
+    "students": []
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 5,
+  "fields": {
+    "name": "Litt\u00e9rature fran\u00e7aise du 17e si\u00e8cle",
+    "description": "La **litt\u00e9rature fran\u00e7aise du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle** est li\u00e9e aux \u00e9volutions politiques, intellectuelles et artistiques qui se font entre 1598 \u2013 promulgation de l\u2019[\u00e9dit de Nantes](https://fr.wikipedia.org/wiki/%C3%89dit_de_Nantes \"\u00c9dit de Nantes\") d\u2019[Henri IV](https://fr.wikipedia.org/wiki/Henri_IV_de_France \"Henri IV de France\") qui met fin aux [guerres de religions](https://fr.wikipedia.org/wiki/Guerres_de_religion_(France) \"Guerres de religion (France)\") du <abbr class=\"abbr\" title=\"16\u1d49 si\u00e8cle\"><span class=\"romain\">XVI</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle \u2013, et 1715, date de la mort de [Louis XIV](https://fr.wikipedia.org/wiki/Louis_XIV_de_France \"Louis XIV de France\"), le Roi-Soleil qui a impos\u00e9 la monarchie absolue au royaume.\r\n\r\nL\u2019un des faits dominants dans le domaine culturel est la forte consolidation du pouvoir royal qui fait, \u00e0 la fin du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle, de la [Cour](https://fr.wikipedia.org/wiki/Cour_de_France \"Cour de France\") et du roi, \u00e0 [Versailles](https://fr.wikipedia.org/wiki/Versailles \"Versailles\"), les ma\u00eetres du bon go\u00fbt, m\u00eame si la \u00ab ville \u00bb et sa bourgeoisie commencent \u00e0 jouer un r\u00f4le dans le domaine des arts et de la litt\u00e9rature avec une diffusion plus large des \u0153uvres et un d\u00e9veloppement de la lecture.\r\n\r\nLe <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle est un si\u00e8cle majeur pour la langue et la litt\u00e9rature fran\u00e7aise en particulier pour les \u0153uvres du [th\u00e9\u00e2tre classique](https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_classique \"Th\u00e9\u00e2tre classique\") avec les [com\u00e9dies](https://fr.wikipedia.org/wiki/Com%C3%A9die \"Com\u00e9die\") de [Moli\u00e8re](https://fr.wikipedia.org/wiki/Moli%C3%A8re \"Moli\u00e8re\") et les [trag\u00e9dies](https://fr.wikipedia.org/wiki/Trag%C3%A9die \"Trag\u00e9die\") de [Corneille](https://fr.wikipedia.org/wiki/Pierre_Corneille \"Pierre Corneille\") et [Racine](https://fr.wikipedia.org/wiki/Jean_Racine \"Jean Racine\"), ou pour la po\u00e9sie avec [Malherbe](https://fr.wikipedia.org/wiki/Fran%C3%A7ois_de_Malherbe \"Fran\u00e7ois de Malherbe\"). Mais si le [classicisme](https://fr.wikipedia.org/wiki/Classicisme \"Classicisme\") s\u2019impose dans la seconde moiti\u00e9 du si\u00e8cle sous le r\u00e8gne de Louis XIV, les chefs-d\u2019\u0153uvre qu\u2019il a produits ne doivent pas \u00e9clipser d\u2019autres genres comme les textes des [moralistes](https://fr.wikipedia.org/wiki/Moraliste \"Moraliste\") et des [fabulistes](https://fr.wikipedia.org/wiki/Fabuliste \"Fabuliste\") ([Jean de La Fontaine](https://fr.wikipedia.org/wiki/Jean_de_La_Fontaine \"Jean de La Fontaine\")) et le genre du [roman](https://fr.wikipedia.org/wiki/Roman_(litt%C3%A9rature) \"Roman (litt\u00e9rature)\") qui s\u2019invente au cours de cette p\u00e9riode avec les [romans pr\u00e9cieux](https://fr.wikipedia.org/wiki/Pr%C3%A9ciosit%C3%A9 \"Pr\u00e9ciosit\u00e9\"), les [histoires comiques](https://fr.wikipedia.org/wiki/Histoire_comique \"Histoire comique\") et les premiers romans psychologiques comme _[la Princesse de Cl\u00e8ves](https://fr.wikipedia.org/wiki/La_Princesse_de_Cl%C3%A8ves \"La Princesse de Cl\u00e8ves\")_, ou encore la [po\u00e9sie baroque](https://fr.wikipedia.org/wiki/Litt%C3%A9rature_baroque \"Litt\u00e9rature baroque\") de la p\u00e9riode [Louis XIII](https://fr.wikipedia.org/wiki/Louis_XIII \"Louis XIII\").",
+    "state": "ARCHIVED",
+    "published": "2019-03-26T12:11:32.391Z",
+    "updated": "2019-03-26T12:11:52.798Z",
+    "author": 8,
+    "students": []
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 6,
+  "fields": {
+    "name": "Physique quantique",
+    "description": "La **physique quantique** est l'appellation g\u00e9n\u00e9rale d'un ensemble de [th\u00e9ories](https://fr.wikipedia.org/wiki/Th%C3%A9orie \"Th\u00e9orie\") [physiques](https://fr.wikipedia.org/wiki/Physique \"Physique\") n\u00e9es au <abbr class=\"abbr\" title=\"20\u1d49 si\u00e8cle\"><span class=\"romain\">XX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle qui, comme la [th\u00e9orie de la relativit\u00e9](https://fr.wikipedia.org/wiki/Th%C3%A9orie_de_la_relativit%C3%A9 \"Th\u00e9orie de la relativit\u00e9\"), marque une rupture avec ce que l'on appelle maintenant la [physique classique](https://fr.wikipedia.org/wiki/Physique_classique \"Physique classique\"), qui regroupe par d\u00e9finition les th\u00e9ories et principes physiques connus au <abbr class=\"abbr\" title=\"19\u1d49 si\u00e8cle\"><span class=\"romain\">XIX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle.\r\n\r\nLes th\u00e9ories dites \u00ab quantiques \u00bb d\u00e9crivent le comportement des [atomes](https://fr.wikipedia.org/wiki/Atome \"Atome\") et des [particules](https://fr.wikipedia.org/wiki/Physique_des_particules \"Physique des particules\") \u2014 ce que la physique classique (notamment la [m\u00e9canique newtonienne](https://fr.wikipedia.org/wiki/M%C3%A9canique_newtonienne \"M\u00e9canique newtonienne\") et la [th\u00e9orie \u00e9lectromagn\u00e9tique](https://fr.wikipedia.org/wiki/%C3%89lectromagn%C3%A9tisme \"\u00c9lectromagn\u00e9tisme\") de Maxwell) n'avait pu faire \u2014 et permettent d'\u00e9lucider en particulier certaines propri\u00e9t\u00e9s du [rayonnement \u00e9lectromagn\u00e9tique](https://fr.wikipedia.org/wiki/Rayonnement_%C3%A9lectromagn%C3%A9tique \"Rayonnement \u00e9lectromagn\u00e9tique\") qui restaient inexpliqu\u00e9es par la physique classique.",
+    "state": "PUBLISHED",
+    "published": "2019-03-26T13:07:57.263Z",
+    "updated": "2019-03-26T13:08:40.637Z",
+    "author": 9,
+    "students": [
+      8
+    ]
+  }
+}
+]
