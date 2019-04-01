@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'learning',
 
     # External dependencies
-    'guardian',  # Per instance object permissions
     'markdownx',  # To render Markdown documents
     'sass_processor',  # Compile stylesheet files
 
@@ -58,11 +57,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-    'guardian.backends.ObjectPermissionBackend',
-)
 
 ROOT_URLCONF = 'server.urls'
 
