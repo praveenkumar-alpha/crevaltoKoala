@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  demo.koala-lms.org:
+    build: .
+    image: demo.koala-lms.org
+    container_name: demo.koala-lms.org
+    hostname: demo.koala-lms.org
+    environment:
+      LANGUAGE_CODE: 'fr-FR'
+      TIME_ZONE: 'Europe/Paris'
+      FIXTURE: "./fixtures/sample-fr.json"
+    ports:
+      - 8080:8080
+    entrypoint: /koala_lms/docker-entrypoint.sh

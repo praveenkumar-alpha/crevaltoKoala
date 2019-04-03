@@ -1,3 +1,5 @@
 django>=2.1
-django-gaccounts
-django-koalalms-learning
+django-bootstrap-static
+
+git+https://framagit.org/koala-lms/django-learning.git@master#egg=django-koalalms-learning
+git+https://code.guillaume-bernard.fr/guilieb/django-gaccounts.git@master#egg=django-gaccounts
