@@ -1,4 +1,4 @@
 *.sqlite3
-prodstatic
+static
 learning
 accounts

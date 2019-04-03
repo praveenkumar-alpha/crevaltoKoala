@@ -29,7 +29,8 @@ fi
 python3 ./manage.py compilemessages
 
 # Collect static files
-python3 ./manage.py collectstatic
+python3 ./manage.py compilescss
+python3 ./manage.py collectstatic --ignore=*.scss
 
 # Run webserver
 uwsgi --ini uwsgi.ini
