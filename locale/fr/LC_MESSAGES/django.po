@@ -9,16 +9,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-15 13:42+0100\n"
-"PO-Revision-Date: 2019-03-14 09:13+0100\n"
-"Last-Translator: Guillaume Bernard <guillaume-bernard@loria.fr>\n"
+"POT-Creation-Date: 2019-04-04 08:57+0200\n"
+"PO-Revision-Date: 2019-04-04 08:58+0200\n"
+"Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: templates/base.html:29
-msgid "Learning"
-msgstr "Apprendre"
+#: templates/base.html:35
+msgid "Report an issue"
+msgstr "Signaler une erreur"
+
+#: templates/base.html:37
+msgid ""
+"When running preview, you will surely encounter bugs and other issues. This "
+"is normal and helps us to enhance Koala-LMS. Please, report any error you "
+"find."
+msgstr ""
+"Lorsque vous exécutez l’aperçu technologique, vous rencontrerez forcément "
+"des bogues et d’autres problèmes. C’est normal et cela nous aide à améliorer "
+"Koala-LMS. S’il vous plaît, rapportez toutes les erreurs que vous trouvez."
+
+#: templates/base.html:38
+msgid "Technical preview"
+msgstr "Aperçu technologique"
+
+#~ msgid "Learning"
+#~ msgstr "Apprendre"

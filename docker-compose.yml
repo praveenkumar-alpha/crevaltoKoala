@@ -11,6 +11,7 @@ services:
       LANGUAGE_CODE: 'fr-FR'
       TIME_ZONE: 'Europe/Paris'
       FIXTURE: "./fixtures/sample-fr.json"
+      DEMO: "True"
     ports:
       - 8080:8080
     entrypoint: /koala_lms/docker-entrypoint.sh

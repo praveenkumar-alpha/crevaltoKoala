@@ -9,6 +9,10 @@ fi
 # Only allow localhost, because used behind a proxy
 echo "ALLOWED_HOSTS = ['127.0.0.1']" >> "${local_settings}"
 
+if [[ ! -z "${DEMO+x}" ]]; then
+    echo "DEMO = ${DEMO}" >> "${local_settings}"
+fi
+
 if [[ ! -z "${LANGUAGE_CODE+x}" ]]; then
     echo "LANGUAGE_CODE = '${LANGUAGE_CODE}'" >> "${local_settings}"
 fi
