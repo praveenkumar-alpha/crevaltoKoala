@@ -2,10 +2,12 @@
 
 # Initialize SECRET_KEY for Django if none is already given
 local_settings="./server/local_settings.py"
-echo "ALLOWED_HOSTS = ['127.0.0.1']" > "${local_settings}"
 if ! grep 'SECRET_KEY' "${local_settings}" &> /dev/null ; then
     echo "SECRET_KEY = 'supersecretkey'" >> "${local_settings}"
 fi
+
+# Only allow localhost, because used behind a proxy
+echo "ALLOWED_HOSTS = ['127.0.0.1']" >> "${local_settings}"
 
 if [[ ! -z "${LANGUAGE_CODE+x}" ]]; then
     echo "LANGUAGE_CODE = '${LANGUAGE_CODE}'" >> "${local_settings}"
