@@ -35,17 +35,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Koala applications
-    'learning',
-
-    # External dependencies
-    'markdownx',  # To render Markdown documents
+    # Django learning applications
     'sass_processor',  # Compile stylesheet files
+    'taggit',  # Manage tags on objects
+    'learning',  # The learning application itself
+    'markdownx',  # To render Markdown documents
 
     # Theming
     'bootstrap',
     'fontawesome',
-
 ]
 
 MIDDLEWARE = [
@@ -142,6 +140,8 @@ LOGOUT_REDIRECT_URL = 'home'
 
 
 LOGGING_LEVEL = logging.INFO
+
+TAGGIT_CASE_INSENSITIVE = True
 
 try:
     from server.local_settings import *
