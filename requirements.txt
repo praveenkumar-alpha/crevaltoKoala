@@ -1,4 +1,5 @@
 django>=2.1
 django-bootstrap-static
+
 django-koalalms-learning
-git+https://code.guillaume-bernard.fr/guilieb/django-gaccounts.git@master#egg=django-gaccounts
+django-gaccounts
