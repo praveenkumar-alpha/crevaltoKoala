@@ -33,8 +33,6 @@ fi
 
 # Compile translations
 python3 ./manage.py compilemessages
-site_packages="/usr/local/lib/python3.7/site-packages"
-find "${site_packages}" -name \*.po -execdir sh -c 'msgfmt "$0" -o `basename $0 .po`.mo' '{}' \;
 
 # Collect static files
 python3 ./manage.py compilescss
