@@ -55,7 +55,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$150000$LXi6bYmCaved$5FkkuzDSeYsRvXWW8GLzxTxYbF9sgKresjHfvCROCN4=",
-    "last_login": "2019-04-09T12:12:52.466Z",
+    "last_login": "2019-04-11T07:19:21.807Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -91,7 +91,7 @@
   "pk": 4,
   "fields": {
     "password": "pbkdf2_sha256$150000$kQJnIKAdBxSa$wjoAgTKLRbbxl7om7ww6/jVFNcrkZYWNCUkFltDxM7M=",
-    "last_login": "2019-04-09T12:39:38.567Z",
+    "last_login": "2019-04-09T13:26:56.490Z",
     "is_superuser": false,
     "username": "emile-zola",
     "first_name": "\u00c9mile",
@@ -163,7 +163,7 @@
   "pk": 8,
   "fields": {
     "password": "pbkdf2_sha256$150000$9XeZIkyzVzom$iZ6kSsH8nujVR7dxgsGp+uDfBjROE+b9kB6tTvlVNZQ=",
-    "last_login": "2019-04-09T13:00:19.574Z",
+    "last_login": "2019-04-10T11:35:25.949Z",
     "is_superuser": false,
     "username": "erik-orsenna",
     "first_name": "Erik",
@@ -600,6 +600,94 @@
   "fields": {
     "name": "com\u00e9die",
     "slug": "comedie"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 52,
+  "fields": {
+    "name": "d\u2019histoire",
+    "slug": "dhistoire"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 53,
+  "fields": {
+    "name": "secrets",
+    "slug": "secrets"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 54,
+  "fields": {
+    "name": "test",
+    "slug": "test"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 55,
+  "fields": {
+    "name": "lkjh",
+    "slug": "lkjh"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 56,
+  "fields": {
+    "name": "lkj",
+    "slug": "lkj"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 57,
+  "fields": {
+    "name": "\u00f9ml",
+    "slug": "uml"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 58,
+  "fields": {
+    "name": "kjhlkjh",
+    "slug": "kjhlkjh"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 59,
+  "fields": {
+    "name": "mlk",
+    "slug": "mlk"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 60,
+  "fields": {
+    "name": "ml",
+    "slug": "ml"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 61,
+  "fields": {
+    "name": "vid\u00e9o",
+    "slug": "video"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 62,
+  "fields": {
+    "name": "R\u00e9volution fran\u00e7aise",
+    "slug": "revolution-francaise"
   }
 },
 {
@@ -1170,14 +1258,110 @@
   }
 },
 {
+  "model": "taggit.taggeditem",
+  "pk": 79,
+  "fields": {
+    "tag": 61,
+    "content_type": 13,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 81,
+  "fields": {
+    "tag": 62,
+    "content_type": 13,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 82,
+  "fields": {
+    "tag": 24,
+    "content_type": 13,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 83,
+  "fields": {
+    "tag": 49,
+    "content_type": 13,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 84,
+  "fields": {
+    "tag": 22,
+    "content_type": 13,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 85,
+  "fields": {
+    "tag": 24,
+    "content_type": 13,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 86,
+  "fields": {
+    "tag": 22,
+    "content_type": 13,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 87,
+  "fields": {
+    "tag": 24,
+    "content_type": 13,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 88,
+  "fields": {
+    "tag": 49,
+    "content_type": 13,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 89,
+  "fields": {
+    "tag": 22,
+    "content_type": 13,
+    "object_id": 4
+  }
+},
+{
   "model": "learning.activity",
   "pk": 12,
   "fields": {
     "name": "Contexte historique",
     "description": "Le [<abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIIe_si%C3%A8cle \"XVIIIe si\u00e8cle\") va se voir fragiliser progressivement la monarchie absolue avec la [R\u00e9gence](https://fr.wikipedia.org/wiki/R%C3%A9gence_(1715-1723) \"R\u00e9gence (1715-1723)\") de [Philippe d\u2019Orl\u00e9ans](https://fr.wikipedia.org/wiki/Philippe_d%27Orl%C3%A9ans_(1674-1723) \"Philippe d'Orl\u00e9ans (1674-1723)\"), et avec le tr\u00e8s long r\u00e8gne de [Louis XV](https://fr.wikipedia.org/wiki/Louis_XV_de_France \"Louis XV de France\") et ses guerres perdues ([guerre de Sept Ans](https://fr.wikipedia.org/wiki/Guerre_de_Sept_Ans \"Guerre de Sept Ans\") sur le continent europ\u00e9en et outre-mer, en Am\u00e9rique et en Inde particuli\u00e8rement, achev\u00e9e par le [trait\u00e9 de Paris](https://fr.wikipedia.org/wiki/Trait%C3%A9_de_Paris_(1763) \"Trait\u00e9 de Paris (1763)\") de [1763](https://fr.wikipedia.org/wiki/1763 \"1763\") qui consacre la puissance de l\u2019Angleterre et le poids de la Prusse). La monarchie mourra finalement de l\u2019impuissance de [Louis XVI](https://fr.wikipedia.org/wiki/Louis_XVI_de_France \"Louis XVI de France\") : la [R\u00e9volution de 1789](https://fr.wikipedia.org/wiki/R%C3%A9volution_fran%C3%A7aise \"R\u00e9volution fran\u00e7aise\") et ses soubresauts violents transformeront fondamentalement l\u2019Histoire de la France qui deviendra une [R\u00e9publique](https://fr.wikipedia.org/wiki/R%C3%A9publique \"R\u00e9publique\") le <time class=\"nowrap date-lien\" datetime=\"1792-09-21\" data-sort-value=\"1792-09-21\">[21](https://fr.wikipedia.org/wiki/21_septembre \"21 septembre\") [septembre](https://fr.wikipedia.org/wiki/Septembre_1792 \"Septembre 1792\") [1792](https://fr.wikipedia.org/wiki/1792 \"1792\")</time>. La naissance en [1776](https://fr.wikipedia.org/wiki/1776 \"1776\") de la R\u00e9publique des [\u00c9tats-Unis d\u2019Am\u00e9rique](https://fr.wikipedia.org/wiki/%C3%89tats-Unis \"\u00c9tats-Unis\"), soutenue par la France contre l\u2019Angleterre, symbolise aussi l\u2019entr\u00e9e dans un monde nouveau \u00e0 la veille du <abbr class=\"abbr\" title=\"19\u1d49 si\u00e8cle\"><span class=\"romain\">XIX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle o\u00f9 appara\u00eet le personnage de Bonaparte<sup id=\"cite_ref-1\" class=\"reference\">[<span class=\"cite_crochet\">[</span>1<span class=\"cite_crochet\">]</span>](#cite_note-1)</sup>.\r\n\r\nPar ailleurs, au cours du <abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle, la soci\u00e9t\u00e9 fran\u00e7aise change avec l\u2019essor d\u00e9mographique et l\u2019activit\u00e9 d\u2019une bourgeoisie d\u2019affaires et d\u2019entreprises li\u00e9e au progr\u00e8s technologique (machine \u00e0 vapeur \u2013 m\u00e9tallurgie) et au commerce avec \u00ab les Indes \u00bb, fond\u00e9 sur la traite n\u00e9gri\u00e8re. En m\u00eame temps se d\u00e9veloppent les villes avec leurs salons, leurs caf\u00e9s et leurs acad\u00e9mies qui affaiblissent le poids de l\u2019aristocratie dans le domaine culturel comme dans le domaine social o\u00f9 s\u2019affirme peu \u00e0 peu le [tiers \u00e9tat](https://fr.wikipedia.org/wiki/Tiers_%C3%A9tat \"Tiers \u00e9tat\") qui sera le vainqueur des luttes r\u00e9volutionnaires \u00e0 partir de 1789\\. Alors que la grande majorit\u00e9 des \u00e9crivains du [<abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIe_si%C3%A8cle \"XVIIe si\u00e8cle\") \u00e9taient des courtisans \u00e0 la recherche de [m\u00e9c\u00e8nes](https://fr.wikipedia.org/wiki/M%C3%A9c%C3%A9nat \"M\u00e9c\u00e9nat\") et de protecteurs, le <abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle et les si\u00e8cles suivants voient l'\u00e9mergence d'une nouvelle \u00e9thique de l'\u00e9crivain, exprim\u00e9e \u00e0 l'origine par [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\")<sup id=\"cite_ref-2\" class=\"reference\">[<span class=\"cite_crochet\">[</span>2<span class=\"cite_crochet\">]</span>](#cite_note-2)</sup>, consistant en son autonomisation progressive par rapport aux pouvoirs (politiques, religieux). Cette \u00e9thique se construit dans le cadre de la lutte pour la [libert\u00e9 d'expression](https://fr.wikipedia.org/wiki/Libert%C3%A9_d%27expression \"Libert\u00e9 d'expression\") avec en corollaire une responsabilit\u00e9 accrue de ces \u00e9crivains dont les pouvoirs veulent d\u00e9sormais qu'ils r\u00e9pondent de leurs \u0153uvres<sup id=\"cite_ref-3\" class=\"reference\">[<span class=\"cite_crochet\">[</span>3<span class=\"cite_crochet\">]</span>](#cite_note-3)</sup>.\r\n\r\nLes mentalit\u00e9s \u00e9voluent elles aussi avec le d\u00e9veloppement de l\u2019\u00e9ducation et des sciences ([Newton](https://fr.wikipedia.org/wiki/Isaac_Newton \"Isaac Newton\"), [Watt](https://fr.wikipedia.org/wiki/James_Watt \"James Watt\"), [Volta](https://fr.wikipedia.org/wiki/Alessandro_Volta \"Alessandro Volta\"), [Leibniz](https://fr.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz \"Gottfried Wilhelm Leibniz\"), [Buffon](https://fr.wikipedia.org/wiki/Georges-Louis_Leclerc,_comte_de_Buffon \"Georges-Louis Leclerc, comte de Buffon\"), [Lavoisier](https://fr.wikipedia.org/wiki/Antoine_Lavoisier \"Antoine Lavoisier\"), [Monge](https://fr.wikipedia.org/wiki/Gaspard_Monge \"Gaspard Monge\")\u2026) et la diffusion des \u0153uvres de l\u2019esprit, par le colportage et par le th\u00e9\u00e2tre. La foi dans le Progr\u00e8s que symbolisera l\u2019_[Encyclop\u00e9die](https://fr.wikipedia.org/wiki/Encyclop%C3%A9die_ou_Dictionnaire_raisonn%C3%A9_des_sciences,_des_arts_et_des_m%C3%A9tiers \"Encyclop\u00e9die ou Dictionnaire raisonn\u00e9 des sciences, des arts et des m\u00e9tiers\")_ de [Diderot](https://fr.wikipedia.org/wiki/Denis_Diderot \"Denis Diderot\") et [d\u2019Alembert](https://fr.wikipedia.org/wiki/Jean_le_Rond_d%27Alembert \"Jean le Rond d'Alembert\") correspond \u00e0 une d\u00e9christianisation progressive de la soci\u00e9t\u00e9 que r\u00e9v\u00e8lent les conflits entre le haut et le bas clerg\u00e9, ou les tensions avec les [J\u00e9suites](https://fr.wikipedia.org/wiki/J%C3%A9suite \"J\u00e9suite\") (expuls\u00e9s du royaume en 1764) ou l\u2019\u00e9volution du statut des protestants, admis \u00e0 l\u2019\u00e9tat-civil en 1787\\. Mais l\u2019\u00c9glise catholique reste un pouvoir dominant qui lutte contre les [Lumi\u00e8res](https://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie) \"Lumi\u00e8res (philosophie)\") en faisant interdire leurs \u0153uvres et en obtenant, par exemple, la condamnation \u00e0 mort du huguenot [Jean Calas](https://fr.wikipedia.org/wiki/Jean_Calas \"Jean Calas\") en 1762 ou, pour blasph\u00e8me, celle du [chevalier de La Barre](https://fr.wikipedia.org/wiki/Chevalier_de_La_Barre \"Chevalier de La Barre\") en 1766, barbaries qui susciteront l\u2019indignation de Voltaire.",
     "published": "2019-03-27T08:28:03.654Z",
-    "updated": "2019-04-09T13:07:54.925Z",
-    "author": 8
+    "updated": "2019-04-11T08:19:50.258Z",
+    "author": 8,
+    "resources": [
+      1,
+      2,
+      3,
+      4
+    ]
   }
 },
 {
@@ -1187,8 +1371,9 @@
     "name": "La vari\u00e9t\u00e9 litt\u00e9raire du XVIIIe si\u00e8cle",
     "description": "Continuateurs des [libertins](https://fr.wikipedia.org/wiki/Libertin \"Libertin\") du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle et d\u2019esprits critiques comme [Bayle](https://fr.wikipedia.org/wiki/Pierre_Bayle \"Pierre Bayle\") et [Fontenelle](https://fr.wikipedia.org/wiki/Bernard_Le_Bouyer_de_Fontenelle \"Bernard Le Bouyer de Fontenelle\"), ceux que l\u2019on appellera les [Lumi\u00e8res](https://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie) \"Lumi\u00e8res (philosophie)\") d\u00e9noncent au nom de la Raison et des valeurs morales les oppressions qui perdurent \u00e0 leur \u00e9poque. Ils contestent la monarchie absolue en revendiquant un contrat social comme fondement de l\u2019autorit\u00e9 politique et une organisation plus d\u00e9mocratique des pouvoirs dans une monarchie constitutionnelle avec une s\u00e9paration des pouvoirs ex\u00e9cutifs, l\u00e9gislatif et judiciaire et militaire ([Montesquieu](https://fr.wikipedia.org/wiki/Charles_Louis_de_Secondat,_baron_de_La_Br%C3%A8de_et_de_Montesquieu \"Charles Louis de Secondat, baron de La Br\u00e8de et de Montesquieu\"), [Diderot](https://fr.wikipedia.org/wiki/Denis_Diderot \"Denis Diderot\"), [Rousseau](https://fr.wikipedia.org/wiki/Jean-Jacques_Rousseau \"Jean-Jacques Rousseau\") entre autres). [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") combat particuli\u00e8rement les abus du pouvoir (censure, [lettre de cachet](https://fr.wikipedia.org/wiki/Lettre_de_cachet \"Lettre de cachet\"), collusion avec l\u2019\u00c9glise) et r\u00eave d\u2019un [despote \u00e9clair\u00e9](https://fr.wikipedia.org/wiki/Despotisme_%C3%A9clair%C3%A9 \"Despotisme \u00e9clair\u00e9\"), conseill\u00e9 par des philosophes. Par ailleurs, les \u00ab philosophes \u00bb eux-m\u00eames, bien que n'\u00e9tant pas tous issus du [Tiers \u00e9tat](https://fr.wikipedia.org/wiki/Tiers_%C3%A9tat \"Tiers \u00e9tat\"), d\u00e9fendent une soci\u00e9t\u00e9 fond\u00e9e sur les talents et sur le m\u00e9rite qui s\u2019oppose \u00e0 une soci\u00e9t\u00e9 de classes (ou de castes) h\u00e9r\u00e9ditaires, introduisant ainsi les valeurs de libert\u00e9 et d\u2019\u00e9galit\u00e9 qu\u2019affirmera la [R\u00e9publique](https://fr.wikipedia.org/wiki/R%C3%A9gime_r%C3%A9publicain_en_France \"R\u00e9gime r\u00e9publicain en France\") \u00e0 la fin du si\u00e8cle<sup id=\"cite_ref-4\" class=\"reference\">[<span class=\"cite_crochet\">[</span>4<span class=\"cite_crochet\">]</span>](#cite_note-4)</sup>.\r\n\r\nIls d\u00e9fendent aussi la libert\u00e9 de conscience et mettent en cause le r\u00f4le des institutions religieuses dans la soci\u00e9t\u00e9. La tol\u00e9rance est une valeur fondamentale pour ceux qui <span class=\"citation\">\u00ab nous ont appris \u00e0 vivre libres \u00bb</span> comme le dit la [Convention](https://fr.wikipedia.org/wiki/Convention_nationale \"Convention nationale\") en honorant les cendres de [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") au [Panth\u00e9on](https://fr.wikipedia.org/wiki/Panth%C3%A9on \"Panth\u00e9on\").",
     "published": "2019-03-27T08:28:24.405Z",
-    "updated": "2019-04-09T13:08:55.974Z",
-    "author": 8
+    "updated": "2019-04-11T08:19:53.318Z",
+    "author": 8,
+    "resources": []
   }
 },
 {
@@ -1198,7 +1383,56 @@
     "name": "Le th\u00e9\u00e2tre du XVIIIe si\u00e8cle",
     "description": "L\u2019influence des grands dramaturges du \u00ab [si\u00e8cle de Louis XIV](https://fr.wikipedia.org/wiki/XVIIe_si%C3%A8cle \"XVIIe si\u00e8cle\") \u00bb persiste sur la sc\u00e8ne de la [Com\u00e9die-Fran\u00e7aise](https://fr.wikipedia.org/wiki/Com%C3%A9die-Fran%C3%A7aise \"Com\u00e9die-Fran\u00e7aise\") mais des renouvellements apparaissent avec les trag\u00e9dies de Voltaire (1694-1778) qui introduit des sujets modernes en gardant la structure classique et l\u2019alexandrin (_[Za\u00efre](https://fr.wikipedia.org/wiki/Za%C3%AFre_(Voltaire) \"Za\u00efre (Voltaire)\")_, [1732](https://fr.wikipedia.org/wiki/1732_au_th%C3%A9%C3%A2tre \"1732 au th\u00e9\u00e2tre\"), _[Mahomet](https://fr.wikipedia.org/wiki/Le_Fanatisme_ou_Mahomet \"Le Fanatisme ou Mahomet\")_, [1741](https://fr.wikipedia.org/wiki/1741_au_th%C3%A9%C3%A2tre \"1741 au th\u00e9\u00e2tre\")) et qui obtient de grands succ\u00e8s. N\u00e9anmoins la censure est toujours active comme en t\u00e9moignent, sous [Louis XVI](https://fr.wikipedia.org/wiki/Louis_XVI_de_France \"Louis XVI de France\") encore, les difficult\u00e9s de [Beaumarchais](https://fr.wikipedia.org/wiki/Pierre-Augustin_Caron_de_Beaumarchais \"Pierre-Augustin Caron de Beaumarchais\") pour son _[Mariage de Figaro](https://fr.wikipedia.org/wiki/Le_Mariage_de_Figaro \"Le Mariage de Figaro\")_<sup id=\"cite_ref-6\" class=\"reference\">[<span class=\"cite_crochet\">[</span>6<span class=\"cite_crochet\">]</span>](#cite_note-6)</sup> .\r\n\r\nLa lib\u00e9ration des m\u0153urs de la [R\u00e9gence](https://fr.wikipedia.org/wiki/R%C3%A9gence_(1715-1723) \"R\u00e9gence (1715-1723)\") apporte un autre renouvellement du th\u00e9\u00e2tre avec le retour, d\u00e8s [1716](https://fr.wikipedia.org/wiki/1716_au_th%C3%A9%C3%A2tre \"1716 au th\u00e9\u00e2tre\"), des [Com\u00e9diens-Italiens](https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_italien_de_Paris \"Th\u00e9\u00e2tre italien de Paris\") chass\u00e9s par [Louis XIV](https://fr.wikipedia.org/wiki/Louis_XIV_de_France \"Louis XIV de France\") et le d\u00e9but d\u2019une tr\u00e8s grande vogue du spectacle th\u00e9\u00e2tral : on se presse pour admirer des acteurs r\u00e9put\u00e9s ([L\u00e9lio](https://fr.wikipedia.org/wiki/L%C3%A9lio \"L\u00e9lio\"), Flaminia, Silvia\u2026) et rire des [lazzi](https://fr.wikipedia.org/wiki/Lazzi \"Lazzi\") et du dynamisme des personnages issus de la [commedia dell'arte](https://fr.wikipedia.org/wiki/Commedia_dell%27arte \"Commedia dell'arte\") comme [Arlequin](https://fr.wikipedia.org/wiki/Arlequin \"Arlequin\"), [Colombine](https://fr.wikipedia.org/wiki/Colombine_(th%C3%A9%C3%A2tre) \"Colombine (th\u00e9\u00e2tre)\") ou [Pantalon](https://fr.wikipedia.org/wiki/Pantalon_(personnage_de_th%C3%A9%C3%A2tre) \"Pantalon (personnage de th\u00e9\u00e2tre)\"). C\u2019est dans cette lign\u00e9e que trouve place [Marivaux](https://fr.wikipedia.org/wiki/Pierre_Carlet_de_Chamblain_de_Marivaux \"Pierre Carlet de Chamblain de Marivaux\") (1688 -1763) avec ses com\u00e9dies qui associent la finesse de l\u2019analyse du sentiment amoureux et la subtilit\u00e9 verbale du [marivaudage](https://fr.wikipedia.org/wiki/Marivaudage \"Marivaudage\") aux probl\u00e8mes de soci\u00e9t\u00e9 en exploitant le th\u00e8me embl\u00e9matique du [couple ma\u00eetre-valet](https://fr.wikipedia.org/wiki/Relation_ma%C3%AEtre-valet_au_th%C3%A9%C3%A2tre \"Relation ma\u00eetre-valet au th\u00e9\u00e2tre\"). _[Les Fausses Confidences](https://fr.wikipedia.org/wiki/Les_Fausses_Confidences \"Les Fausses Confidences\")_ ([1737](https://fr.wikipedia.org/wiki/1737_au_th%C3%A9%C3%A2tre \"1737 au th\u00e9\u00e2tre\")), _[le Jeu de l'amour et du hasard](https://fr.wikipedia.org/wiki/Le_Jeu_de_l%27amour_et_du_hasard \"Le Jeu de l'amour et du hasard\")_ ([1730](https://fr.wikipedia.org/wiki/1730_au_th%C3%A9%C3%A2tre \"1730 au th\u00e9\u00e2tre\")), ou _[l'\u00cele des esclaves](https://fr.wikipedia.org/wiki/L%27%C3%8Ele_des_esclaves \"L'\u00cele des esclaves\")_ ([1725](https://fr.wikipedia.org/wiki/1725_au_th%C3%A9%C3%A2tre \"1725 au th\u00e9\u00e2tre\")) constituent quelques-unes de ses \u0153uvres majeures.",
     "published": "2019-03-27T08:28:58.578Z",
-    "updated": "2019-04-09T13:09:30.025Z",
+    "updated": "2019-04-11T08:19:56.451Z",
+    "author": 8,
+    "resources": []
+  }
+},
+{
+  "model": "learning.resource",
+  "pk": 1,
+  "fields": {
+    "name": "Les Inconnus \u2212 La r\u00e9volution",
+    "description": "Sketch des Inconnus qui traite de la r\u00e9volution fran\u00e7aise.\r\n\r\n<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pibSbfAPE-g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
+    "type": "VIDEO",
+    "published": "2019-04-11T11:48:05.248Z",
+    "updated": "2019-04-11T11:48:05.335Z",
+    "author": 8
+  }
+},
+{
+  "model": "learning.resource",
+  "pk": 2,
+  "fields": {
+    "name": "Le trait\u00e9 sur la Tol\u00e9rance",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Trait\u00e9 sur la tol\u00e9rance](http://fr.wikipedia.org/wiki/Trait%C3%A9_sur_la_tol%C3%A9rance)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](http://fr.wikipedia.org/w/index.php?title=Trait%C3%A9_sur_la_tol%C3%A9rance&action=history))\r\n\r\nLe _**Trait\u00e9 sur la tol\u00e9rance**_ est une \u0153uvre de [Voltaire](/wiki/Voltaire \"Voltaire\") publi\u00e9e en [1763](/wiki/1763 \"1763\").\r\n\r\nCe texte vise la r\u00e9habilitation de [Jean Calas](/wiki/Jean_Calas \"Jean Calas\"), [protestant](/wiki/Protestantisme \"Protestantisme\") faussement accus\u00e9 et ex\u00e9cut\u00e9 pour avoir assassin\u00e9 son fils afin d'\u00e9viter que ce dernier ne se [convertisse](/wiki/Conversion_religieuse \"Conversion religieuse\") au [catholicisme](/wiki/Catholicisme \"Catholicisme\").\r\n\r\nDans ce _Trait\u00e9 sur la Tol\u00e9rance_, Voltaire invite \u00e0 la [tol\u00e9rance](/wiki/Tol%C3%A9rance \"Tol\u00e9rance\") entre les [religions](/wiki/Religion \"Religion\") et prend pour cible le [fanatisme](/wiki/Fanatisme \"Fanatisme\") religieux (plus particuli\u00e8rement celui des [j\u00e9suites](/wiki/J%C3%A9suite \"J\u00e9suite\") chez lesquels il a fait de brillantes \u00e9tudes \u00e9tant jeune homme) et pr\u00e9sente un r\u00e9quisitoire contre les [superstitions](/wiki/Superstition \"Superstition\") accol\u00e9es aux religions.\r\n\r\n<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/v7Oqdb25hrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
+    "type": "VIDEO",
+    "published": "2019-04-11T11:52:01.402Z",
+    "updated": "2019-04-11T11:52:01.436Z",
+    "author": 8
+  }
+},
+{
+  "model": "learning.resource",
+  "pk": 3,
+  "fields": {
+    "name": "Les Lumi\u00e8res (XVIIIe si\u00e8cle)",
+    "description": "<a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.fr\">Contenu soumis \u00e0 la licence CC-BY-SA</a>. Source : Article <em><a href=\"http://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie)\">Lumi\u00e8res (philosophie)</a></em> de <a href=\"http://fr.wikipedia.org/\">Wikip\u00e9dia en fran\u00e7ais</a> (<a href=\"http://fr.wikipedia.org/w/index.php?title=Lumi%C3%A8res_(philosophie)&action=history\">auteurs</a>)\r\n\r\nLes **Lumi\u00e8res**<sup id=\"cite_ref-1\" class=\"reference\">[<span class=\"cite_crochet\">[</span>1<span class=\"cite_crochet\">]</span>](#cite_note-1)</sup> sont un mouvement culturel, philosophique, litt\u00e9raire et intellectuel qui \u00e9merge dans la seconde moiti\u00e9 du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle avec des philosophes comme [Spinoza](/wiki/Baruch_Spinoza \"Baruch Spinoza\"), [Locke](/wiki/John_Locke \"John Locke\"), [Bayle](/wiki/Pierre_Bayle \"Pierre Bayle\") et [Newton](/wiki/Isaac_Newton \"Isaac Newton\"), avant de se d\u00e9velopper dans toute l'[Europe](/wiki/Europe \"Europe\"), notamment en [France](/wiki/France \"France\"), au [<abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](/wiki/XVIIIe_si%C3%A8cle \"XVIIIe si\u00e8cle\"). Par extension, on a donn\u00e9 \u00e0 cette p\u00e9riode le nom de [si\u00e8cle des Lumi\u00e8res](/wiki/Si%C3%A8cle_des_Lumi%C3%A8res \"Si\u00e8cle des Lumi\u00e8res\").\r\n\r\n<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/A6MJ6ssXBHw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center",
+    "type": "VIDEO",
+    "published": "2019-04-11T11:54:17.795Z",
+    "updated": "2019-04-11T11:54:17.874Z",
+    "author": 8
+  }
+},
+{
+  "model": "learning.resource",
+  "pk": 4,
+  "fields": {
+    "name": "B\u00eatise de Voltaire",
+    "description": "<center>\r\n<iframe src=\"https://www.franceculture.fr/player/export-reecouter?content=745462ad-1e03-4582-a1e4-fa5d7e4bbba8\" width=\"481\" frameborder=\"0\" scrolling=\"no\" height=\"137\"></iframe>\r\n</center>",
+    "type": "AUDIO",
+    "published": "2019-04-11T11:56:59.710Z",
+    "updated": "2019-04-11T11:56:59.771Z",
     "author": 8
   }
 },
@@ -1319,8 +1553,7 @@
     "updated": "2019-04-09T13:18:24.884Z",
     "author": 5,
     "students": [
-      7,
-      8
+      7
     ]
   }
 },
