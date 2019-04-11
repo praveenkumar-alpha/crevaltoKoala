@@ -3,11 +3,11 @@
 # Initialize SECRET_KEY for Django if none is already given
 local_settings="./server/local_settings.py"
 if ! grep 'SECRET_KEY' "${local_settings}" &> /dev/null ; then
-    echo "SECRET_KEY = 'supersecretkey'" >> "${local_settings}"
+    echo "SECRET_KEY = 'supersecretkey'" > "${local_settings}"
 fi
 
 # Only allow localhost, because used behind a proxy
-echo "ALLOWED_HOSTS = ['127.0.0.1']" >> "${local_settings}"
+echo "ALLOWED_HOSTS = ['127.0.0.1', 'localhost']" >> "${local_settings}"
 
 if [[ ! -z "${DEMO+x}" ]]; then
     echo "DEMO = ${DEMO}" >> "${local_settings}"
