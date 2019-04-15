@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware'
 ]
 
 ROOT_URLCONF = 'server.urls'
@@ -112,7 +113,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
-LANGUAGE_CODE = 'en-us'
+gettext = lambda x: x
+LANGUAGE_CODE = 'en'
+LANGUAGES = (
+   ('fr', gettext('French')),
+   ('en', gettext('English')),
+)
+
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
@@ -137,7 +144,6 @@ STATICFILES_FINDERS = [
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
-
 
 LOGGING_LEVEL = logging.INFO
 
