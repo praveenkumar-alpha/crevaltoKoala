@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Django learning applications
-    'sass_processor',  # Compile stylesheet files
     'taggit',  # Manage tags on objects
     'learning',  # The learning application itself
     'markdownx',  # To render Markdown documents
@@ -132,13 +131,6 @@ LOCALE_PATHS = (
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 STATIC_ROOT = "./static"
 STATIC_URL = '/static/'
-SASS_PROCESSOR_ROOT = STATIC_ROOT
-
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
-]
 
 # Login URLs
 LOGIN_URL = 'login'
