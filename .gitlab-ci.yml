@@ -1,0 +1,11 @@
+image: alpine
+
+demo:
+  stage: deploy
+  before_script:
+    - apk add --no-cache openssh-client bash
+    - mkdir ~/.ssh
+    - echo "${DEMO_SSH_KEY}" > ~/.ssh/demo.koala-lms.org
+    - chmod go-rwx -R ~/.ssh
+  script:
+    - ssh demo@wombat.koala-lms.org -p ${DEMO_SSH_PORT} -i ~/.ssh/demo.koala-lms.org -o StrictHostKeyChecking=accept-new "git --git-dir="/home/demo/lms/.git" --work-tree="/home/demo/lms" pull origin master || git clone https://gitlab.com/koala-lms/lms.git ~/lms && cd ~/lms &&  docker-compose build --no-cache && docker-compose up -d --force-recreate"

@@ -11,6 +11,9 @@ echo "ALLOWED_HOSTS = ['127.0.0.1', 'localhost']" >> "${local_settings}"
 
 if [[ ! -z "${DEMO+x}" ]]; then
     echo "DEMO = ${DEMO}" >> "${local_settings}"
+    curl -L "https://gitlab.com/koala-lms/django-learning/-/jobs/artifacts/develop/download?job=package" -o learning.zip
+    unzip -o learning.zip
+    pip3 install --force-reinstall dist/*.tar.gz
 fi
 
 if [[ ! -z "${LANGUAGE_CODE+x}" ]]; then
@@ -35,7 +38,6 @@ fi
 python3 ./manage.py compilemessages
 
 # Collect static files
-python3 ./manage.py compilescss
 python3 ./manage.py collectstatic --ignore=*.scss
 
 # Run webserver

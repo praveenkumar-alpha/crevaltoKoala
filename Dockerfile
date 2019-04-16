@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 # Let this first for caching reasons
 RUN apt update && \
-    apt install -y gettext intltool gnome-doc-utils itstool libmariadbclient-dev libicu-dev build-essential git
+    apt install -y gettext intltool gnome-doc-utils itstool libmariadbclient-dev libicu-dev build-essential git unzip
 
 # Implicitely creates directory
 WORKDIR /koala_lms
