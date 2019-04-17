@@ -33,6 +33,28 @@
   }
 },
 {
+  "model": "learning.courseactivity",
+  "pk": 13,
+  "fields": {
+    "rank": 1,
+    "minimal_allowed_score": 25,
+    "success_score": 50,
+    "course": 3,
+    "activity": 12
+  }
+},
+{
+  "model": "learning.courseactivity",
+  "pk": 14,
+  "fields": {
+    "rank": 2,
+    "minimal_allowed_score": 25,
+    "success_score": 50,
+    "course": 3,
+    "activity": 13
+  }
+},
+{
   "model": "accounts.person",
   "pk": 1,
   "fields": {
@@ -54,8 +76,8 @@
   "model": "accounts.person",
   "pk": 2,
   "fields": {
-    "password": "pbkdf2_sha256$150000$LXi6bYmCaved$5FkkuzDSeYsRvXWW8GLzxTxYbF9sgKresjHfvCROCN4=",
-    "last_login": "2019-04-11T07:19:21.807Z",
+    "password": "pbkdf2_sha256$150000$sXQxPVVFcyNO$P9/u7Awuii5JO6i6HOnnARFQcANlN3/oObK6bazL01k=",
+    "last_login": "2019-04-17T13:16:07.157Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -163,7 +185,7 @@
   "pk": 8,
   "fields": {
     "password": "pbkdf2_sha256$150000$9XeZIkyzVzom$iZ6kSsH8nujVR7dxgsGp+uDfBjROE+b9kB6tTvlVNZQ=",
-    "last_login": "2019-04-10T11:35:25.949Z",
+    "last_login": "2019-04-17T13:17:18.153Z",
     "is_superuser": false,
     "username": "erik-orsenna",
     "first_name": "Erik",
@@ -1417,10 +1439,10 @@
   "pk": 3,
   "fields": {
     "name": "Les Lumi\u00e8res (XVIIIe si\u00e8cle)",
-    "description": "<a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.fr\">Contenu soumis \u00e0 la licence CC-BY-SA</a>. Source : Article <em><a href=\"http://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie)\">Lumi\u00e8res (philosophie)</a></em> de <a href=\"http://fr.wikipedia.org/\">Wikip\u00e9dia en fran\u00e7ais</a> (<a href=\"http://fr.wikipedia.org/w/index.php?title=Lumi%C3%A8res_(philosophie)&action=history\">auteurs</a>)\r\n\r\nLes **Lumi\u00e8res**<sup id=\"cite_ref-1\" class=\"reference\">[<span class=\"cite_crochet\">[</span>1<span class=\"cite_crochet\">]</span>](#cite_note-1)</sup> sont un mouvement culturel, philosophique, litt\u00e9raire et intellectuel qui \u00e9merge dans la seconde moiti\u00e9 du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle avec des philosophes comme [Spinoza](https://fr.wikipedia.org/wiki/Baruch_Spinoza \"Baruch Spinoza\"), [Locke](https://fr.wikipedia.org/wiki/John_Locke \"John Locke\"), [Bayle](https://fr.wikipedia.org/wiki/Pierre_Bayle \"Pierre Bayle\") et [Newton](https://fr.wikipedia.org/wiki/Isaac_Newton \"Isaac Newton\"), avant de se d\u00e9velopper dans toute l'[Europe](https://fr.wikipedia.org/wiki/Europe \"Europe\"), notamment en [France](https://fr.wikipedia.org/wiki/France \"France\"), au [<abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIIe_si%C3%A8cle \"XVIIIe si\u00e8cle\"). Par extension, on a donn\u00e9 \u00e0 cette p\u00e9riode le nom de [si\u00e8cle des Lumi\u00e8res](https://fr.wikipedia.org/wiki/Si%C3%A8cle_des_Lumi%C3%A8res \"Si\u00e8cle des Lumi\u00e8res\").\r\n\r\n<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/A6MJ6ssXBHw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center",
+    "description": "<a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.fr\">Contenu soumis \u00e0 la licence CC-BY-SA</a>. Source : Article <em><a href=\"http://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie)\">Lumi\u00e8res (philosophie)</a></em> de <a href=\"http://fr.wikipedia.org/\">Wikip\u00e9dia en fran\u00e7ais</a> (<a href=\"http://fr.wikipedia.org/w/index.php?title=Lumi%C3%A8res_(philosophie)&action=history\">auteurs</a>)\r\n\r\nLes **Lumi\u00e8res**<sup id=\"cite_ref-1\" class=\"reference\">[<span class=\"cite_crochet\">[</span>1<span class=\"cite_crochet\">]</span>](#cite_note-1)</sup> sont un mouvement culturel, philosophique, litt\u00e9raire et intellectuel qui \u00e9merge dans la seconde moiti\u00e9 du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle avec des philosophes comme [Spinoza](https://fr.wikipedia.org/wiki/Baruch_Spinoza \"Baruch Spinoza\"), [Locke](https://fr.wikipedia.org/wiki/John_Locke \"John Locke\"), [Bayle](https://fr.wikipedia.org/wiki/Pierre_Bayle \"Pierre Bayle\") et [Newton](https://fr.wikipedia.org/wiki/Isaac_Newton \"Isaac Newton\"), avant de se d\u00e9velopper dans toute l'[Europe](https://fr.wikipedia.org/wiki/Europe \"Europe\"), notamment en [France](https://fr.wikipedia.org/wiki/France \"France\"), au [<abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIIe_si%C3%A8cle \"XVIIIe si\u00e8cle\"). Par extension, on a donn\u00e9 \u00e0 cette p\u00e9riode le nom de [si\u00e8cle des Lumi\u00e8res](https://fr.wikipedia.org/wiki/Si%C3%A8cle_des_Lumi%C3%A8res \"Si\u00e8cle des Lumi\u00e8res\").\r\n\r\n<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/A6MJ6ssXBHw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
     "type": "VIDEO",
     "published": "2019-04-11T11:54:17.795Z",
-    "updated": "2019-04-11T11:54:17.874Z",
+    "updated": "2019-04-17T13:17:26.736Z",
     "author": 8
   }
 },
@@ -1509,7 +1531,7 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "published": "2019-03-25T14:33:17.046Z",
-    "updated": "2019-04-15T11:13:23.000Z",
+    "updated": "2019-04-15T11:13:23Z",
     "author": 8,
     "students": [
       4,
