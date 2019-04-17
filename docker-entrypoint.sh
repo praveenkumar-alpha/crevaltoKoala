@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Initialize SECRET_KEY for Django if none is already given
 local_settings="./server/local_settings.py"
@@ -11,7 +11,7 @@ echo "ALLOWED_HOSTS = ['127.0.0.1', 'localhost']" >> "${local_settings}"
 
 if [[ ! -z "${DEMO+x}" ]]; then
     echo "DEMO = ${DEMO}" >> "${local_settings}"
-    curl -L "https://gitlab.com/koala-lms/django-learning/-/jobs/artifacts/develop/download?job=package" -o learning.zip
+    curl -L "https://gitlab.com/koala-lms/django-learning/-/jobs/artifacts/master/download?job=package" -o learning.zip
     unzip -o learning.zip
     pip3 install --force-reinstall dist/*.tar.gz
 fi
