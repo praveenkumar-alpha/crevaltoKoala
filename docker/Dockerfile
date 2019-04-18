@@ -14,10 +14,8 @@ ADD [".", "."]
 RUN pip3 install -r requirements.txt uwsgi
 
 # Create the user that will run the application and transfer property
-RUN addgroup -S demo && adduser -S demo -G demo && chown demo:demo -R .
-RUN chmod u+x docker-entrypoint.sh
+RUN chmod u+x ./docker/docker-entrypoint.sh
 
-USER demo
 EXPOSE 8080
 
-ENTRYPOINT ["/bin/sh", "docker-entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "./docker/docker-entrypoint.sh"]
