@@ -10,6 +10,6 @@ services:
       LANGUAGE_CODE: 'fr-FR'
       TIME_ZONE: 'Europe/Paris'
       FIXTURE: "./fixtures/sample-fr.json"
-      DEMO: "True"
+      DEMO: 1
     ports:
       - 8080:8080
