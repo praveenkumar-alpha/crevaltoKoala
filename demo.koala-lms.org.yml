@@ -7,7 +7,6 @@ services:
     container_name: demo.koala-lms.org
     hostname: demo.koala-lms.org
     environment:
-      LANGUAGE_CODE: 'fr-FR'
       TIME_ZONE: 'Europe/Paris'
       FIXTURE: "./fixtures/sample-fr.json"
       DEMO: 1

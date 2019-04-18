@@ -17,9 +17,6 @@ RUN pip3 install -r requirements.txt uwsgi
 RUN addgroup -S demo && adduser -S demo -G demo && chown demo:demo -R .
 RUN chmod u+x docker-entrypoint.sh
 
-# Remove unused packages
-RUN apk del build-base linux-headers musl-dev zlib-dev
-
 USER demo
 EXPOSE 8080
 

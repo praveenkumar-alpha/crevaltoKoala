@@ -31,7 +31,7 @@ demo:
   script:
     - ssh demo@"${HOSTNAME}" -p ${DEMO_SSH_PORT} -i ~/.ssh/"${HOSTNAME}" -o StrictHostKeyChecking=accept-new
       "rm -rf ~/$CI_PROJECT_NAME && git clone https://gitlab.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME.git ~/lms && cd ~/$CI_PROJECT_NAME &&
-      docker-compose pull && docker-compose up -d --force-recreate && docker image prune -fa"
+      docker-compose -f "${HOSTNAME}".yml pull && docker-compose -f "${HOSTNAME}".yml up -d --force-recreate && docker image prune -fa"
   only:
     - master
     - tags
