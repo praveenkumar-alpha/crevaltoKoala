@@ -3,8 +3,7 @@ version: "3"
 services:
 
   demo.koala-lms.org:
-    build: .
-    image: demo.koala-lms.org
+    image: registry.gitlab.com/koala-lms/lms/demo:latest
     container_name: demo.koala-lms.org
     hostname: demo.koala-lms.org
     environment:
@@ -14,4 +13,3 @@ services:
       DEMO: "True"
     ports:
       - 8080:8080
-    entrypoint: /koala_lms/docker-entrypoint.sh
