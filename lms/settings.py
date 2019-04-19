@@ -72,11 +72,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'lms.context_processors.running_in_demo'
-            ],
-            'builtins': [
-                'django.templatetags.i18n',
-                'django.templatetags.static',
-                'lms.templatetags.common'
             ]
         },
     },
