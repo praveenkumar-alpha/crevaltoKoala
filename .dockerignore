@@ -3,4 +3,4 @@
 ./*.sqlite3
 ./*.md
 ./.*
-./server/local_settings.py
+./lms/local_settings.py

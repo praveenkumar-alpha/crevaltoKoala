@@ -1,6 +1,6 @@
 #!/bin/sh
 
-local_settings_file="./server/local_settings.py"
+local_settings_file="./lms/local_settings.py"
 uwsgi_file="docker/uwsgi.ini"
 
 echo "# This file is generated automatically, do not edit manually" > "${local_settings_file}"
