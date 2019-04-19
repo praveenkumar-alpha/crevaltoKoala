@@ -1,9 +1,15 @@
 #!/bin/sh
 
 local_settings_file="./server/local_settings.py"
-echo "# This file is generated automatically, do not edit manually"
+uwsgi_file="docker/uwsgi.ini"
+
+echo "# This file is generated automatically, do not edit manually" > "${local_settings_file}"
 echo "SECRET_KEY = '$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)'" >> "${local_settings_file}"
-echo "ALLOWED_HOSTS = ['127.0.0.1', 'localhost']" >> "${local_settings_file}"
+echo "ALLOWED_HOSTS = ['localhost', '127.0.0.1']" >> "${local_settings_file}"
+
+if [[ ! -z "${DEBUG+x}" ]]; then
+    echo "DEBUG = True" >> "${local_settings_file}"
+fi
 
 if [[ ! -z "${DEMO+x}" ]]; then
     echo "DEMO = True" >> "${local_settings_file}"
@@ -15,6 +21,11 @@ fi
 
 if [[ ! -z "${TIME_ZONE+x}" ]]; then
     echo "TIME_ZONE = '${TIME_ZONE}'" >> "${local_settings_file}"
+fi
+
+if [[ "$(id -u)" -ne 0 ]]; then
+    echo "uid=$(id -u)" >> "${uwsgi_file}"
+    echo "gid=$(id -g)" >> "${uwsgi_file}"
 fi
 
 # Prepare database migration
@@ -34,4 +45,4 @@ python3 ./manage.py compilemessages
 python3 ./manage.py collectstatic --ignore=*.scss
 
 # Run webserver
-uwsgi --ini uwsgi.ini
+uwsgi --ini "${uwsgi_file}"

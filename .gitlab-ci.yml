@@ -34,6 +34,9 @@ docker-demo:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/demo:latest -f docker/demo.koala-lms.org/Dockerfile .
     - docker push $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/demo:latest
+  environment:
+    name: demo
+    url: https://demo.koala-lms.org
 
 #################
 ## Deploy jobs ##
@@ -58,3 +61,6 @@ demo:
   only:
     - master
     - tags
+  environment:
+    name: demo
+    url: https://demo.koala-lms.org
