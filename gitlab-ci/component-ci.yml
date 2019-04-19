@@ -1,0 +1,157 @@
+image: python:alpine
+
+before_script:
+  - apk add make
+  - pip3 install -r ./requirements.txt  # Install project requirements
+
+# The default only policy includes branches, merge requests and tags
+.only-default: &only-default
+  only:
+    - branches
+    - merge_requests
+    - tags
+
+stages:
+  - build
+  - test
+  - stage
+  - deploy
+  - production
+
+################
+## Build jobs ##
+################
+pages:
+  stage: build
+  script:
+    - pip3 install -r ./docs/requirements.txt
+    - make -C docs html
+    - mv docs/build/html/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: "5 min"
+  only:
+    - master
+    - tags
+
+###############
+## Test jobs ##
+###############
+
+## Allowed to fail : jobs that do no run on master
+prospector:
+  <<: *only-default
+  stage: test
+  allow_failure: true
+  script:
+    - pip3 install prospector
+    - prospector -i "${PKG_NAME}"/demo
+  # When on master and merge_request, failure is not allowed
+  except:
+    variables:
+      - $CI_COMMIT_REF_NAME == "master"
+      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
+
+bandit:
+  <<: *only-default
+  stage: test
+  allow_failure: true
+  script:
+    - pip3 install bandit
+    - bandit -r "${PKG_NAME}" -x tests
+  # When on master and merge_request, failure is not allowed
+  except:
+    variables:
+      - $CI_COMMIT_REF_NAME == "master"
+      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
+
+## Not allowed to fail : jobs that run on master
+prospector_strict:
+  stage: test
+  script:
+    - pip3 install prospector
+    - prospector -i "${PKG_NAME}"/demo
+  only:
+    refs:
+      - master
+      - merge_requests
+    variables:
+      - $CI_COMMIT_REF_NAME == "master"
+      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
+
+bandit_strict:
+  stage: test
+  script:
+    - pip3 install bandit
+    - bandit -r "${PKG_NAME}" -x tests
+  only:
+    refs:
+      - master
+      - merge_requests
+    variables:
+      - $CI_COMMIT_REF_NAME == "master"
+      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
+
+tests:
+  <<: *only-default
+  stage: test
+  script:
+    - pip install coverage
+    - cd "${PKG_NAME}"/demo && coverage run manage.py test "${PKG_NAME}"
+    - coverage report
+
+#################
+## Deploy jobs ##
+#################
+update_demo:
+  image: alpine
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  before_script:
+    - apk add --no-cache curl
+  script:
+    - curl -X POST -F token="${DEPLOY_LMS_TOKEN}" -F ref=master https://gitlab.com/api/v4/projects/11707844/trigger/pipeline
+  only:
+    - master
+    - tags
+
+pypi:test:
+  stage: deploy
+  image: alpine
+  dependencies:
+    - package
+  variables:
+    GIT_STRATEGY: none
+    TWINE_USERNAME: $TEST_PYPI_USERNAME
+    TWINE_PASSWORD: $TEST_PYPI_PASSWORD
+  before_script:
+    - apk add --no-cache python3
+    - pip3 install twine
+  script:
+    - twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+  only:
+    - tags
+
+#####################
+## Production jobs ##
+#####################
+
+# Push the package to Pypi
+pypi:
+  stage: production
+  image: alpine
+  dependencies:
+    - package
+  variables:
+    GIT_STRATEGY: none
+    TWINE_USERNAME: $PYPI_USERNAME
+    TWINE_PASSWORD: $PYPI_PASSWORD
+  before_script:
+    - apk add --no-cache python3
+    - pip3 install twine
+  script:
+    - twine upload dist/*
+  only:
+    - tags
