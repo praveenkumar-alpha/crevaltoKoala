@@ -1,7 +1,6 @@
 image: python:alpine
 
 before_script:
-  - apk add make
   - pip3 install -r ./requirements.txt  # Install project requirements
 
 # The default only policy includes branches, merge requests and tags
@@ -24,6 +23,7 @@ stages:
 pages:
   stage: build
   script:
+    - apk add make
     - pip3 install -r ./docs/requirements.txt
     - make -C docs html
     - mv docs/build/html/ public/
@@ -74,6 +74,7 @@ prospector_strict:
     - prospector -i "${PKG_NAME}"/demo
   only:
     refs:
+      - tags
       - master
       - merge_requests
     variables:
@@ -87,6 +88,7 @@ bandit_strict:
     - bandit -r "${PKG_NAME}" -x tests
   only:
     refs:
+      - tags
       - master
       - merge_requests
     variables:
