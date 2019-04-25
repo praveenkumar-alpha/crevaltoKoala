@@ -3,13 +3,6 @@ image: python:alpine
 before_script:
   - pip3 install -r ./requirements.txt  # Install project requirements
 
-# The default only policy includes branches, merge requests and tags
-.only-default: &only-default
-  only:
-    - branches
-    - merge_requests
-    - tags
-
 stages:
   - build
   - test
@@ -17,15 +10,35 @@ stages:
   - deploy
   - production
 
-################
-## Build jobs ##
-################
+##################################################
+##                 Build jobs                   ##
+##################################################
+.package:
+  stage: build
+  image: python:latest
+  before_script:
+    - pip3 install -r ./requirements.txt setuptools wheel # Install project requirements
+    - apt update -yqq && apt install gettext -yqq  # Install system requirements
+    - find . -name \*.po -execdir sh -c 'msgfmt "$0" -o `basename $0 .po`.mo' '{}' \;  # Compile translations
+  script:
+    - echo "No action in script. Override if you wish."
+  after_script:
+    - python3 setup.py sdist bdist_wheel
+  artifacts:
+    name: $CI_PROJECT_NAME-$CI_COMMIT_REF_NAME
+    paths:
+      - dist
+
+package:
+  extends: .package
+
 pages:
   stage: build
   script:
     - apk add make
     - pip3 install -r ./docs/requirements.txt
     - make -C docs html
+  after_script:
     - mv docs/build/html/ public/
   artifacts:
     paths:
@@ -35,43 +48,24 @@ pages:
     - master
     - tags
 
-###############
-## Test jobs ##
-###############
+##################################################
+##                  Test jobs                   ##
+##################################################
 
-## Allowed to fail : jobs that do no run on master
-prospector:
-  <<: *only-default
-  stage: test
-  allow_failure: true
-  script:
-    - pip3 install prospector
-    - prospector -i "${PKG_NAME}"/demo
-  # When on master and merge_request, failure is not allowed
+# Run jobs except on master, tag or for merge requests
+# to the master branch
+.except-to-master: &except-to-master
   except:
+    refs:
+      - master
+      - tags
     variables:
       - $CI_COMMIT_REF_NAME == "master"
       - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
 
-bandit:
-  <<: *only-default
-  stage: test
-  allow_failure: true
-  script:
-    - pip3 install bandit
-    - bandit -r "${PKG_NAME}" -x tests
-  # When on master and merge_request, failure is not allowed
-  except:
-    variables:
-      - $CI_COMMIT_REF_NAME == "master"
-      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
-
-## Not allowed to fail : jobs that run on master
-prospector_strict:
-  stage: test
-  script:
-    - pip3 install prospector
-    - prospector -i "${PKG_NAME}"/demo
+# Run jobs only on master, tag or for merge requests
+# to the master branch
+.only-to-master: &only-to-master
   only:
     refs:
       - tags
@@ -81,32 +75,56 @@ prospector_strict:
       - $CI_COMMIT_REF_NAME == "master"
       - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
 
-bandit_strict:
+#######################
+## The syntax linter ##
+#######################
+.syntax-linter:
+  stage: test
+  script:
+    - pip3 install prospector
+    - prospector -i "${PKG_NAME}"/demo
+
+syntax-linter:
+  extends: .syntax-linter
+  allow_failure: true
+  <<: *except-to-master
+
+syntax-linter:strict:
+  extends: .syntax-linter
+  <<: *only-to-master
+
+#########################
+## The security linter ##
+#########################
+.security-linter:
   stage: test
   script:
     - pip3 install bandit
     - bandit -r "${PKG_NAME}" -x tests
-  only:
-    refs:
-      - tags
-      - master
-      - merge_requests
-    variables:
-      - $CI_COMMIT_REF_NAME == "master"
-      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
 
+security-linter:
+  extends: .security-linter
+  allow_failure: true
+  <<: *except-to-master
+
+security-linter:strict:
+  extends: .security-linter
+  <<: *only-to-master
+
+################
+## Unit tests ##
+################
 tests:
-  <<: *only-default
   stage: test
   script:
     - pip install coverage
     - cd "${PKG_NAME}"/demo && coverage run manage.py test "${PKG_NAME}"
     - coverage report
 
-#################
-## Deploy jobs ##
-#################
-update_demo:
+##################################################
+##                 Deploy jobs                  ##
+##################################################
+deploy_staging:
   image: alpine
   stage: deploy
   variables:
@@ -119,8 +137,7 @@ update_demo:
     - master
     - tags
 
-pypi:test:
-  stage: deploy
+.pypi:
   image: alpine
   dependencies:
     - package
@@ -131,29 +148,20 @@ pypi:test:
   before_script:
     - apk add --no-cache python3
     - pip3 install twine
+  only:
+    - tags
+
+pypi:test:
+  stage: deploy
+  extends: .pypi
   script:
     - twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-  only:
-    - tags
 
-#####################
-## Production jobs ##
-#####################
-
-# Push the package to Pypi
+##################################################
+##               Production jobs                ##
+##################################################
 pypi:
   stage: production
-  image: alpine
-  dependencies:
-    - package
-  variables:
-    GIT_STRATEGY: none
-    TWINE_USERNAME: $PYPI_USERNAME
-    TWINE_PASSWORD: $PYPI_PASSWORD
-  before_script:
-    - apk add --no-cache python3
-    - pip3 install twine
+  extends: .pypi
   script:
     - twine upload dist/*
-  only:
-    - tags
