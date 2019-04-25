@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-04 08:57+0200\n"
+"POT-Creation-Date: 2019-04-25 13:12+0200\n"
 "PO-Revision-Date: 2019-04-04 08:58+0200\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
@@ -20,11 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.2.1\n"
 
+#: lms/settings.py:114
+msgid "French"
+msgstr ""
+
+#: lms/settings.py:115
+msgid "English"
+msgstr ""
+
 #: templates/base.html:35
 msgid "Report an issue"
 msgstr "Signaler une erreur"
 
-#: templates/base.html:37
+#: templates/base.html:39
 msgid ""
 "When running preview, you will surely encounter bugs and other issues. This "
 "is normal and helps us to enhance Koala-LMS. Please, report any error you "
@@ -34,7 +42,7 @@ msgstr ""
 "des bogues et d’autres problèmes. C’est normal et cela nous aide à améliorer "
 "Koala-LMS. S’il vous plaît, rapportez toutes les erreurs que vous trouvez."
 
-#: templates/base.html:38
+#: templates/base.html:40
 msgid "Technical preview"
 msgstr "Aperçu technologique"
 

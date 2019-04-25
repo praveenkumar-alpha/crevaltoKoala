@@ -22,18 +22,16 @@ As you may know, **Django** is a super easy, extensible framework. Thanks to thi
 
 **Koala LMS** and the components run with [**Django 2.2**](https://docs.djangoproject.com/en/2.2/releases/2.2/) and [**version 3.7**](https://www.python.org/downloads/release/python-370/). Only **long term support Django releases** will be supported in the future.
 
-## :ship: Install in Docker
+## :ship: Download Docker image
 
-You need to [install `docker`](https://docs.docker.com/install/) and `docker-compose` in your system.
-
-We host the [docker image in the Gitlab Registry](https://gitlab.com/koala-lms/lms/container_registry). Its `Dockerfile` is located at `./docker/Dockerfile`. You can get the image using:
+You need to [install `docker`](https://docs.docker.com/install/) on your system. We host the [docker image in the Gitlab Registry](https://gitlab.com/koala-lms/lms/container_registry). Its `Dockerfile` is located at [`./docker/Dockerfile`](docker/Dockerfile). You can get the image (*<50MB to download*) using:
 ```bash
 docker pull registry.gitlab.com/koala-lms/lms
 ```
 
 #### Tweak Docker deployment
 
-You can tweak the `koala-lms` deployment using some variables. None is required.
+You can tweak the `koala-lms` deployment using some environment variables. None is required.
 * `LANGUAGE_CODE`: the Django corresponding setting.
 * `TIME_ZONE`: the Django corresponding setting.
 * `FIXTURE`: the fixture to load (relative to the project directory, ie: `./fixtures/sample.json`)
@@ -41,11 +39,11 @@ You can tweak the `koala-lms` deployment using some variables. None is required.
 
 #### Start the container
 
-It’s easier to manage everything through `docker-compose`. You just have to run:
+To run `koala-lms`. You just have to run:
 ```bash
-docker-compose -f docker/docker-compose.yml up -d
+docker run --name koala-lms -e FIXTURE="./fixtures/sample-fr.json" -e DEBUG=1 -p 8080:8080 registry.gitlab.com/koala-lms/lms 
 ```
-And the container will boot. By default, it’s called `koala-lms`. The application is distributed under the URL [localhost:8080](http://localhost:8080).
+And the container will boot. The application is distributed under the URL [localhost:8080](http://localhost:8080).
 
 ## :open_hands: Contributing
 
