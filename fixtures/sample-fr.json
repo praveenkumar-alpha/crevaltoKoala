@@ -55,21 +55,25 @@
   }
 },
 {
-  "model": "accounts.person",
-  "pk": 1,
+  "model": "learning.courseactivity",
+  "pk": 15,
   "fields": {
-    "password": "!fcrcA8Pd4UWjoJAMYtZ7C0adzEHbYSJvd04lS4H2",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "AnonymousUser",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2019-03-25T13:51:12.902Z",
-    "groups": [],
-    "user_permissions": []
+    "rank": 1,
+    "minimal_allowed_score": 25,
+    "success_score": 50,
+    "course": 7,
+    "activity": 18
+  }
+},
+{
+  "model": "learning.courseactivity",
+  "pk": 16,
+  "fields": {
+    "rank": 2,
+    "minimal_allowed_score": 25,
+    "success_score": 50,
+    "course": 7,
+    "activity": 19
   }
 },
 {
@@ -77,7 +81,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$150000$sXQxPVVFcyNO$P9/u7Awuii5JO6i6HOnnARFQcANlN3/oObK6bazL01k=",
-    "last_login": "2019-04-17T13:16:07.157Z",
+    "last_login": "2019-04-29T09:19:12.222Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -185,15 +189,15 @@
   "pk": 8,
   "fields": {
     "password": "pbkdf2_sha256$150000$9XeZIkyzVzom$iZ6kSsH8nujVR7dxgsGp+uDfBjROE+b9kB6tTvlVNZQ=",
-    "last_login": "2019-04-17T13:17:18.153Z",
+    "last_login": "2019-04-29T09:40:27.190Z",
     "is_superuser": false,
     "username": "erik-orsenna",
     "first_name": "Erik",
     "last_name": "Orsenna",
-    "email": "erik.orsenna@loria.fr",
+    "email": "",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2019-03-26T09:35:38.582Z",
+    "date_joined": "2019-03-26T09:35:38Z",
     "groups": [],
     "user_permissions": []
   }
@@ -212,6 +216,960 @@
     "is_staff": false,
     "is_active": true,
     "date_joined": "2019-03-26T13:07:15.538Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$ef3UqH5DiAad$TlqDX69uGHOiUbABqAJYnbv5wvSi5GoPBDFFG/CNEE8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "guillaume-apollinaire",
+    "first_name": "Guillaume",
+    "last_name": "Apollinaire",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:20:37.732Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$lQqHOSYrHgL5$RBRp4kmA9Se3thYPlSLFlvjWi4ci0wNZuegjW7ZNxKg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "louis-aragon",
+    "first_name": "Louis",
+    "last_name": "Aragon",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:20:53.306Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$QeDWhrcPSPDi$+Pv6d0ZeyFAO8OHk73+O+nABkxBoPKMdHSj7pQTl1OQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gaston-bachelard",
+    "first_name": "Gaston",
+    "last_name": "Bachelard",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:21:19.346Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$HuQwCVaO3rPd$vRl1zfhs/OXrDhAiKqDDWpuzCnGL/4kI0As8hIDItrc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "simone-de-bauvoir",
+    "first_name": "Simone",
+    "last_name": "De Bauvoir",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:21:27.326Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Gpatv5KzdAB9$ZQfWyPzXJG3D+qaR89ZrUuJPqmLVz9VSQyApkz1m4bs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "samuel-beckett",
+    "first_name": "Samuel",
+    "last_name": "Beckett",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:21:34.232Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$vjBT0myNpDrB$06p2v0xpyALRP7qBcstS++/W4XrySvLwe/gYNwrAo7w=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "georges-bernanos",
+    "first_name": "Georges",
+    "last_name": "Bernanos",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:21:43.195Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$cJumEE9yuO4N$epMTwmD5Tq/VFmDdMPAUtUlJ+/2iaQyFGpNVszNtCdY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "nicolas-boileau",
+    "first_name": "Nicolas",
+    "last_name": "Boileau",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:21:53.118Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$x3eFO1sDIEZA$Bm/+RM8uvzGzyFXcOsofrU3aYu94+6gyplxTpEU0hSw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "andre-breton",
+    "first_name": "Andr\u00e9",
+    "last_name": "Breton",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:22:00.299Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$jmTAfj8mmrx7$y/i4k4i4ycEZCMOHE2Vc962+OSteDt2vC0YyM8iTH5w=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "michel-butor",
+    "first_name": "Michel",
+    "last_name": "Butor",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:22:06.896Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$lUF5HAlUm6yV$PML34bQ5oFqN6XTfhMVUEYqs2cww8eYfPLvvq3Mik2c=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "albert-camus",
+    "first_name": "Albert",
+    "last_name": "Camus",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:22:14.760Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$GEbo9AlYmftJ$n4t+hgJUNQc30rPW6wyd62lWRO+B7NCB/6s/997CYQE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "louis-ferdinan-celine",
+    "first_name": "Louis-Ferdinan",
+    "last_name": "C\u00e9line",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:22:25.099Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$mX0ClMxWUiUu$y5XUBg80qAT5w1UyDOt1A0X3e+PHpcXgEQotTbCfeTg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "andre-chenier",
+    "first_name": "Andr\u00e9",
+    "last_name": "Chenier",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:22:32.085Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 22,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$qJ8TPH3Mhr8v$J6fppSDS9iDF4OHZFvQVIBhAy1wTYt3wBqaREob2Hv8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "paul-claudel",
+    "first_name": "Paul",
+    "last_name": "Claudel",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:22:38.117Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 23,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$ghMYysRFZ0wH$ldb2XX6+rt4ORuQt2yfJD6Ypkv8cOwceiNklBWHfRAs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pierre-corneille",
+    "first_name": "Pierre",
+    "last_name": "Corneille",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:22:44.523Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Ii8gxrQvn0ZC$RJ6EoQlyYB17PDcn49LW1IBD43E2CwOMg8p0QqzutGg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alphonse-daudet",
+    "first_name": "Alphonse",
+    "last_name": "Daudet",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:22:57.966Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$QYL1M3JgoqbD$3YHeBTfKT5oJfmfWTNGynckwk/DQu8D5Vcc1r2gG9so=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "robert-desnos",
+    "first_name": "Robert",
+    "last_name": "Desnos",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:23:04.777Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 26,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$hplovEPm52xI$xwMMx03dX3rGdPKpK+Iqav4oSEWKl5LCQdxSIINsmrw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "denis-diderot",
+    "first_name": "Denis",
+    "last_name": "Diderot",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:23:11.262Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$DNE5Brr9bqC8$rr+0jRu1B5tzYmLquw85NYbpwb/RpDfRKiObyfO570Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "joachim-du-bellay",
+    "first_name": "Joachim",
+    "last_name": "Du Bellay",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:23:23.105Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$ghARwCz2PMV0$nfdz6M5qpVnORDKchrMyGNqPoigqKMjvokdfIN8KRBA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alexandre-dumas",
+    "first_name": "Alexandre",
+    "last_name": "Dumas",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:23:29.398Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 29,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$xcvTBwmu5tO5$SJYBmRf/CPXhbJuR8mZDjlNZYZjnSo/1wjfMhBpxjxk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "paul-eluard",
+    "first_name": "Paul",
+    "last_name": "\u00c9luard",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:23:35.628Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 30,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$wD3lxTW0rLxE$7nuz+c/0Gq+YQUCY6vTA/980YezojZ6sUXwCRNJ+niM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gustave-flaubert",
+    "first_name": "Gustave",
+    "last_name": "Flaubert",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:23:42.878Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 31,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$hff2VPfUGBAq$/3S8Iq/2eRS+snN7CrBdYMpix1/kiUcmnvzbdmP0ZWY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "anatole-france",
+    "first_name": "Anatole",
+    "last_name": "France",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:23:50.925Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 32,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$GB8N9OsqpDDv$8NquzHS5fgZ3x+P/99CcEtstALttyvIExPp8YNpUOO4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "theophile-gautier",
+    "first_name": "Th\u00e9ophile",
+    "last_name": "Gautier",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:24:05.782Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$npW8yOTPW4ZL$KieQt/07A8dshPFjfy3wU9TsmipsHopc4s4SUS1XPhc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jean-giono",
+    "first_name": "Jean",
+    "last_name": "Giono",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:24:12.371Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 34,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Kd0GFue0eqba$euieXjHoPaFdVBGoxj6krYU6x/MPvGmWpSZq7T1KfLM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "andre-gide",
+    "first_name": "Andr\u00e9",
+    "last_name": "Gide",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:24:18.356Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 35,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$TElFj8NqKZI6$uU59AYAKERJoPuIA1KAwwvjWxh0s/ZSNszGxVssFDUQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jean-giraudoux",
+    "first_name": "Jean",
+    "last_name": "Giraudoux",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:24:24.303Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 36,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$YXgJ3yzeFbkW$Xm96k1wQWBw4F1/AcKDc75c6YPktS0YHr38qgXkIMJY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "eugene-ionesco",
+    "first_name": "Eug\u00e8ne",
+    "last_name": "Ionesco",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:24:34.236Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 37,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$hBKwF6EyI9PP$uhqNXlbe8tUhCs4az2iA+2hFhil7zEMlvjWH3KC3dUg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alfred-jarry",
+    "first_name": "Alfred",
+    "last_name": "Jarry",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:24:53.912Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 38,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$07wpkBfj9kz0$+hH40clSPzgbPYvpaNwhpPpLiUoZ2Gyi38bIiRXxyy4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "joseph-kessel",
+    "first_name": "Joseph",
+    "last_name": "Kessel",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:25:00.552Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 39,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$G5TFsjUJJt6O$1cjM8HYUebPR/kDGvfw+8S3N9VhrFHQOZSn47GKJ6v8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "milan-kundera",
+    "first_name": "Milan",
+    "last_name": "Kundera",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:25:06.185Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 40,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$otRHshnt6pgU$2qn95CDkGYNVIHMDF5h9MfPj914LVa4HmNZS0/LgJz0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jean-de-la-bruyere",
+    "first_name": "Jean",
+    "last_name": "De La Bruy\u00e8re",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:25:21.677Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 41,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$btwDoipgMBUk$CYRLF3ZnAyTjT/ixVsQSQN2FqlZPDlWaIRSwbdzeW7E=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "eugene-labiche",
+    "first_name": "Eug\u00e8ne",
+    "last_name": "Labiche",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:25:29.428Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 42,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$OrktLFSJy6iF$cpMlR8v4Yf/mfOgG+xQ9ywc00v/qlqh5d0RWk1UqiiI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pierre-loti",
+    "first_name": "Pierre",
+    "last_name": "Loti",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:25:35.064Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 43,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$ClXNMyKdQgZi$qyjbeRy8T2dPyu51470V3VbVmpx8jY4lvynOoABzeGc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "emile-littre",
+    "first_name": "\u00c9mile",
+    "last_name": "Littr\u00e9",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:25:46.084Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 44,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$lcDfedyAt3yl$dCJhhkUGl9zhlU2+ns5vEqU0CfKp1i7k1FKU/qKatnY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hector-malot",
+    "first_name": "Hector",
+    "last_name": "Malot",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:25:54.821Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 45,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$UngW49nVnDg3$2JVjmQbD+4ARwhk/xZRe4KhQDFDaGt+XxvcdTNARgEM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "charles-nodier",
+    "first_name": "Charles",
+    "last_name": "Nodier",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:27:17.587Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 46,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$skhaEt7IvdAJ$5KuhZjNQl0Uw1cLW/kSWmdoWvfhQa4z1QgkpsGVjR6s=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "marcel-pagnol",
+    "first_name": "Marcel",
+    "last_name": "Pagnol",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:27:36.095Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 47,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$FDAzcXfT8Q5Q$hKhSJr3MzfyymgefMrFlZ0i0agO1KOfYMzz2vEJ4Sl8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "blaise-pascal",
+    "first_name": "Blaise",
+    "last_name": "Pascal",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:27:47.504Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 48,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$TLYNiN4tu8uA$Ov+xGN/umFqKrCvG72iZfkh55qXu2wF78yCsgFyg1XM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "marcel-proust",
+    "first_name": "Marcel",
+    "last_name": "Proust",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:27:53.134Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 49,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$ZzP0Nd6R3Gvz$yrxCEkhuR1jcp4sxjq/q50qIZrr8aIcM90uo9GkZKt4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jacques-prevert",
+    "first_name": "Jacques",
+    "last_name": "Pr\u00e9vert",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:28:08.872Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 50,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$LaDmzS7vgXcV$1MhgAcpVm3xfLP1uwN4uVFnAYMFxL0Pq8QkGsqcYr/U=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "francis-ponge",
+    "first_name": "Francis",
+    "last_name": "Ponge",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:28:16.638Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 51,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$FRSx28JPCAZH$i0EOClW3hVHZO+ONgMhXROQk+j73+fjLNXQkPxUrEO4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "charles-perrault",
+    "first_name": "Charles",
+    "last_name": "Perrault",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:28:28.126Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 52,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$LnY6xR8hXra0$zf2fYFVfnAHt6zNx+ZZ8WYuY3jzRKNmF6GrbehSkYw4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "francois-rabelais",
+    "first_name": "Fran\u00e7ois",
+    "last_name": "Rabelais",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:28:40.717Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 53,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$d0YpDsIxImCt$xqyd0TiimeR06txOS4V73pE5DNL5MM2J8o6s7Lr2ZKo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jean-racine",
+    "first_name": "Jean",
+    "last_name": "Racine",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:28:45.999Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 54,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$3pDrKhY1I6Mc$Pd413pl4xDgiVF9lAZ9KjFxLagN3TVpvzmaT62e72m0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mathurin-regnier",
+    "first_name": "Mathurin",
+    "last_name": "R\u00e9gnier",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:29:01.368Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 55,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Vr0hi4ODWNLE$3tA12o7YZ9ZtiGv76dvD+5xk2iAMt9gXK8XKd1S0+GM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pierre-reverdy",
+    "first_name": "Pierre",
+    "last_name": "Reverdy",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:29:27.072Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 56,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$8BtTlWMjs1AT$hASi3EnGqY8ckS9+6eZtD59T4zL0hyB8QxPj1DP94t0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "arthur-rimbaud",
+    "first_name": "Arthur",
+    "last_name": "Rimbaud",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:30:25.097Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 57,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$2WpdIqxBpJMr$uLR9MYXVT32KNVGrrHiZFAWT9v80y83UcXXXgKHFy6E=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jean-jacques-rousseau",
+    "first_name": "Jean-Jacques",
+    "last_name": "Rousseau",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:30:32.565Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 58,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$ETdvhvm4PY2n$yNgM4glr8vFbRFTbMZDeGSzhE3NyMawdLLUo8hVV/t4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "marquis-de-sade",
+    "first_name": "Marquis",
+    "last_name": "De Sade",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:30:42.335Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 59,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$SzyftUnK5GyC$y+D0pyHroqZ0SXJaii2Y9m5EkEYBgrcXi4S0jBT/riY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "francoise-sagan",
+    "first_name": "Fran\u00e7oise",
+    "last_name": "Sagan",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:30:51.050Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 60,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$YsitqF9DJsKX$Hg/b2Cyvhbc5ZfyWJRtEzz76sVHAFAV3IWn89N1+uR4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jules-supervielle",
+    "first_name": "Jules",
+    "last_name": "Supervielle",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:31:17.426Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 61,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$4hkLGKVRzA1a$+OkDOIwVKnPam2Gw+ohDc3RmuMvwAqpKgNmfPlnZoxA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "michel-tournier",
+    "first_name": "Michel",
+    "last_name": "Tournier",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T08:31:25.527Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.person",
+  "pk": 62,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$SlXw8UBywsiv$dJPkFKJiHGgADGk7TqNSBN685z8VFesjCOyeUY/41fE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "grace-hopper",
+    "first_name": "Grace",
+    "last_name": "Hopper",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-04-29T09:51:34.365Z",
     "groups": [],
     "user_permissions": []
   }
@@ -710,6 +1668,294 @@
   "fields": {
     "name": "R\u00e9volution fran\u00e7aise",
     "slug": "revolution-francaise"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 63,
+  "fields": {
+    "name": "encyclop\u00e9die",
+    "slug": "encyclopedie"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 64,
+  "fields": {
+    "name": "D\u2019Alembert",
+    "slug": "dalembert"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 65,
+  "fields": {
+    "name": "\u0153uvres",
+    "slug": "uvres"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 66,
+  "fields": {
+    "name": "Aristote",
+    "slug": "aristote"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 67,
+  "fields": {
+    "name": "Moyen \u00c2ge",
+    "slug": "moyen-age"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 68,
+  "fields": {
+    "name": "fiction",
+    "slug": "fiction"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 69,
+  "fields": {
+    "name": "moderne",
+    "slug": "moderne"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 70,
+  "fields": {
+    "name": "litt\u00e9rature moderne",
+    "slug": "litterature-moderne"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 71,
+  "fields": {
+    "name": "Coll\u00e8ge de France",
+    "slug": "college-de-france"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 72,
+  "fields": {
+    "name": "Antoine Compagnon",
+    "slug": "antoine-compagnon"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 73,
+  "fields": {
+    "name": "Baudelaire",
+    "slug": "baudelaire"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 74,
+  "fields": {
+    "name": "grammaire",
+    "slug": "grammaire"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 75,
+  "fields": {
+    "name": "Flaubert",
+    "slug": "flaubert"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 76,
+  "fields": {
+    "name": "Thermodynamique",
+    "slug": "thermodynamique"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 77,
+  "fields": {
+    "name": "rayonnements",
+    "slug": "rayonnements"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 78,
+  "fields": {
+    "name": "particules",
+    "slug": "particules"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 79,
+  "fields": {
+    "name": "atomes",
+    "slug": "atomes"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 80,
+  "fields": {
+    "name": "mati\u00e8re",
+    "slug": "matiere"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 81,
+  "fields": {
+    "name": "informatique",
+    "slug": "informatique"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 82,
+  "fields": {
+    "name": "codage",
+    "slug": "codage"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 83,
+  "fields": {
+    "name": "programmation",
+    "slug": "programmation"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 84,
+  "fields": {
+    "name": "d\u00e9veloppement",
+    "slug": "developpement"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 85,
+  "fields": {
+    "name": "acteurs",
+    "slug": "acteurs"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 86,
+  "fields": {
+    "name": "sc\u00e8ne",
+    "slug": "scene"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 87,
+  "fields": {
+    "name": "drame",
+    "slug": "drame"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 88,
+  "fields": {
+    "name": "m\u00e9canique",
+    "slug": "mecanique"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 89,
+  "fields": {
+    "name": "fluides",
+    "slug": "fluides"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 90,
+  "fields": {
+    "name": "mol\u00e9cule",
+    "slug": "molecule"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 91,
+  "fields": {
+    "name": "m\u00e9lancolie",
+    "slug": "melancolie"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 92,
+  "fields": {
+    "name": "scultpure",
+    "slug": "scultpure"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 93,
+  "fields": {
+    "name": "sentiments",
+    "slug": "sentiments"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 94,
+  "fields": {
+    "name": "peinture",
+    "slug": "peinture"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 95,
+  "fields": {
+    "name": "chimie",
+    "slug": "chimie"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 96,
+  "fields": {
+    "name": "composition",
+    "slug": "composition"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 97,
+  "fields": {
+    "name": "\u00e9l\u00e9ments",
+    "slug": "elements"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 98,
+  "fields": {
+    "name": "compos\u00e9 organique",
+    "slug": "compose-organique"
   }
 },
 {
@@ -1370,6 +2616,492 @@
   }
 },
 {
+  "model": "taggit.taggeditem",
+  "pk": 90,
+  "fields": {
+    "tag": 64,
+    "content_type": 13,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 91,
+  "fields": {
+    "tag": 20,
+    "content_type": 13,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 92,
+  "fields": {
+    "tag": 63,
+    "content_type": 13,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 93,
+  "fields": {
+    "tag": 65,
+    "content_type": 9,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 94,
+  "fields": {
+    "tag": 66,
+    "content_type": 9,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 95,
+  "fields": {
+    "tag": 12,
+    "content_type": 9,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 96,
+  "fields": {
+    "tag": 1,
+    "content_type": 9,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 97,
+  "fields": {
+    "tag": 65,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 98,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 99,
+  "fields": {
+    "tag": 67,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 100,
+  "fields": {
+    "tag": 36,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 101,
+  "fields": {
+    "tag": 68,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 102,
+  "fields": {
+    "tag": 1,
+    "content_type": 13,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 103,
+  "fields": {
+    "tag": 69,
+    "content_type": 13,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 104,
+  "fields": {
+    "tag": 70,
+    "content_type": 13,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 105,
+  "fields": {
+    "tag": 71,
+    "content_type": 13,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 106,
+  "fields": {
+    "tag": 72,
+    "content_type": 13,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 107,
+  "fields": {
+    "tag": 1,
+    "content_type": 9,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 108,
+  "fields": {
+    "tag": 69,
+    "content_type": 9,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 109,
+  "fields": {
+    "tag": 73,
+    "content_type": 9,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 110,
+  "fields": {
+    "tag": 74,
+    "content_type": 9,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 111,
+  "fields": {
+    "tag": 75,
+    "content_type": 9,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 112,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 113,
+  "fields": {
+    "tag": 76,
+    "content_type": 10,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 114,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 115,
+  "fields": {
+    "tag": 77,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 116,
+  "fields": {
+    "tag": 78,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 117,
+  "fields": {
+    "tag": 79,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 118,
+  "fields": {
+    "tag": 80,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 119,
+  "fields": {
+    "tag": 81,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 120,
+  "fields": {
+    "tag": 82,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 121,
+  "fields": {
+    "tag": 83,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 122,
+  "fields": {
+    "tag": 84,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 123,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 124,
+  "fields": {
+    "tag": 37,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 125,
+  "fields": {
+    "tag": 51,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 126,
+  "fields": {
+    "tag": 85,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 127,
+  "fields": {
+    "tag": 86,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 128,
+  "fields": {
+    "tag": 87,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 129,
+  "fields": {
+    "tag": 88,
+    "content_type": 10,
+    "object_id": 12
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 130,
+  "fields": {
+    "tag": 89,
+    "content_type": 10,
+    "object_id": 12
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 131,
+  "fields": {
+    "tag": 90,
+    "content_type": 10,
+    "object_id": 12
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 132,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 12
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 133,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 134,
+  "fields": {
+    "tag": 14,
+    "content_type": 10,
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 135,
+  "fields": {
+    "tag": 91,
+    "content_type": 10,
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 136,
+  "fields": {
+    "tag": 92,
+    "content_type": 10,
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 137,
+  "fields": {
+    "tag": 93,
+    "content_type": 10,
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 138,
+  "fields": {
+    "tag": 94,
+    "content_type": 10,
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 139,
+  "fields": {
+    "tag": 96,
+    "content_type": 10,
+    "object_id": 14
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 140,
+  "fields": {
+    "tag": 97,
+    "content_type": 10,
+    "object_id": 14
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 141,
+  "fields": {
+    "tag": 98,
+    "content_type": 10,
+    "object_id": 14
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 142,
+  "fields": {
+    "tag": 90,
+    "content_type": 10,
+    "object_id": 14
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 143,
+  "fields": {
+    "tag": 95,
+    "content_type": 10,
+    "object_id": 14
+  }
+},
+{
   "model": "learning.activity",
   "pk": 12,
   "fields": {
@@ -1408,6 +3140,34 @@
     "updated": "2019-04-11T08:19:56.451Z",
     "author": 8,
     "resources": []
+  }
+},
+{
+  "model": "learning.activity",
+  "pk": 18,
+  "fields": {
+    "name": "\u00c9volution du sens aux XVIIe et XVIIIe si\u00e8cles",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Litt\u00e9rature](https://fr.wikipedia.org/wiki/Litt%C3%A9rature)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Litt%C3%A9rature/action=history))\r\n\r\nSelon Philippe Caron, le mot \u00ab litt\u00e9rature \u00bb garde l'acception g\u00e9n\u00e9rale de \u00ab connaissance obtenue par les livres \u00bb jusqu'au XVIIe si\u00e8cle : on dit alors \u00ab avoir de la litt\u00e9rature \u00bb comme on dit aujourd'hui \u00ab avoir de la culture \u00bb, celle-ci recouvrant tous les domaines du savoir g\u00e9n\u00e9ral ; ainsi en 1699, Fontenelle pr\u00e9sente les math\u00e9matiques comme \u00ab un genre de litt\u00e9rature \u00bb.\r\nMais dans la deuxi\u00e8me moiti\u00e9 du si\u00e8cle, parall\u00e8lement \u00e0 l'acception g\u00e9n\u00e9raliste, le mot s'applique de plus en plus \u00e0 un savoir restreint, celui des \u00ab belles-lettres \u00bb li\u00e9es au beau langage. Ce glissement s'explique par l'\u00e9volution sociale des \u00e9lites sous Louis XIV o\u00f9 s'instaure la notion de l'honn\u00eate homme, apte \u00e0 une vie sociale raffin\u00e9e faite de pratiques culturelles valoris\u00e9es comme la connaissance des \u0153uvres litt\u00e9raires, particuli\u00e8rement celles de l'Antiquit\u00e9 qui nourrissent le th\u00e9\u00e2tre classique tandis que les po\u00e8tes exploitent les genres d\u00e9finis par Aristote comme la po\u00e9sie \u00e9pique.\r\nAu XVIIIe si\u00e8cle le mot \u00ab litt\u00e9rature \u00bb est tout \u00e0 fait devenu synonyme de \u00ab belles-lettres \u00bb, c'est-\u00e0-dire d'\u0153uvres reconnues par les gens de go\u00fbt et constituant la culture mondaine de l'\u00e9poque form\u00e9e par une meilleure \u00e9ducation et par le monde des salons litt\u00e9raires et des acad\u00e9mies ; ainsi pour Voltaire : \u00ab La litt\u00e9rature d\u00e9signe dans toute l'Europe une connaissance des ouvrages de go\u00fbt \u00bb. Un autre exemple montre que le mot \u00ab litt\u00e9rature \u00bb avec son sens commun d'aujourd'hui est d\u00e9sormais bien install\u00e9 au milieu du si\u00e8cle des Lumi\u00e8res : en 1753 Charles Batteux titre son ouvrage \u00ab Cours de belles-lettres, ou Principes de la litt\u00e9rature \u00bb et le r\u00e9\u00e9dite en 1764 en ne gardant que \u00ab Principes de la litt\u00e9rature \u00bb. La m\u00eame ann\u00e9e para\u00eet \u00ab L'\u00e9cole de litt\u00e9rature \u00bb de l'abb\u00e9 Laporte dont le sous-titre de la 2e partie est sans ambigu\u00eft\u00e9 : \u00ab Des r\u00e8gles particuli\u00e8res de chaque genre de Litt\u00e9rature en Prose et en Vers \u00bb.\r\n\r\nLe mot \u00e9volue encore lentement \u00e0 partir de 1750 vers le sens plus large de \u00ab cr\u00e9ation langagi\u00e8re \u00e9crite \u00bb laissant une place grandissante au jugement subjectif lib\u00e9r\u00e9 de crit\u00e8res esth\u00e9tiques contraignants : telle sera plus tard la conception romantique du po\u00e8te cr\u00e9ateur libre m\u00eame s'il doit \u00eatre un po\u00e8te maudit, conception que pr\u00e9figurait d\u00e9j\u00e0 dans son Discours pr\u00e9liminaire de l'Encyclop\u00e9die d'Alembert affirmant que les \u0153uvres d'art rel\u00e8vent principalement \u00ab de l'invention qui ne prend gu\u00e8re ses Lois que du g\u00e9nie \u00bb. Paul-Louis Courier d\u00e9finit de la m\u00eame fa\u00e7on dans les ann\u00e9es 1820 une \u0153uvre litt\u00e9raire comme \u00ab produite par l'instinct et le sentiment du beau \u00bb donc par le sentiment de l'auteur et pas n\u00e9cessairement celui de l'establishment.",
+    "published": "2019-04-29T09:39:41.967Z",
+    "updated": "2019-04-29T09:39:41.967Z",
+    "author": 43,
+    "resources": [
+      5
+    ]
+  }
+},
+{
+  "model": "learning.activity",
+  "pk": 19,
+  "fields": {
+    "name": "Sens moderne",
+    "description": "Vers 1800 le sens moderne est devenu le sens commun : le mot \u00ab litt\u00e9rature \u00bb s'applique \u00e0 des textes auxquels \u00ab on \u00bb accorde une qualit\u00e9 esth\u00e9tique que l'on peut discuter, qu'il s'agisse du jugement d'une institution de doctes exprimant le go\u00fbt commun mais aussi de l'auteur ou du lecteur individuel : c'est l'emploi qu'en fait Madame de Sta\u00ebl dans son ouvrage embl\u00e9matique \u00ab De la litt\u00e9rature \u00bb en 1799.\r\nAu milieu du XIXe si\u00e8cle le grammairien Bernard Jullien distingue encore \u00ab litt\u00e9rature \u00bb et \u00ab grammaire \u00bb : pour lui, la pointe ultime de la \u00ab haute grammaire \u00bb d\u00e9passe depuis l'Antiquit\u00e9 la description des m\u00e9canismes de la langue pour aborder les crit\u00e8res du beau dans l'aspect formel et stylistique des textes. La litt\u00e9rature qui \u00ab classe et \u00e9tudie les ouvrages (pr\u00e9sentant un int\u00e9r\u00eat de style) \u00bb va au-del\u00e0 : elle prend en charge l'\u00e9tude et le questionnement sur le fond, sur le contenu des \u0153uvres, par exemple les th\u00e8mes abord\u00e9s et les points de vue choisis par les auteurs, ce qui n'exclut \u00e9videmment jamais les interf\u00e9rences avec la morale comme le d\u00e9montrent les proc\u00e8s faits \u00e0 la m\u00eame \u00e9poque \u00e0 Baudelaire et Flaubert pour atteinte aux bonnes m\u0153urs en 1857. Bient\u00f4t la \u00ab grammaire \u00bb se limitera \u00e0 la description de la langue, devenant un outil pour la litt\u00e9rature qui s'occupera de l'observation et \u00e0 l'appr\u00e9ciation des aspects formels comme des contenus des \u0153uvres. On peut noter que des \u00ab sciences \u00bb nouvelles comme la stylistique ou la linguistique reprendront dans la deuxi\u00e8me moiti\u00e9 du XXe si\u00e8cle ce r\u00f4le de la haute grammaire dans l'\u00e9tude des textes.\r\n\r\nFinalement, le champ de la \u00ab litt\u00e9rature \u00bb s'\u00e9largit au XXe si\u00e8cle \u00e0 toutes les productions \u00e9crites, non sans d\u00e9bats sur les canons litt\u00e9raires : on discute aussi bien les contenus (sentimentalisme des romans de gare, pornographie et \u00e9rotisme) que la forme (roman sans ponctuation, vers libre, \u00e9criture automatique). On utilise donc de plus en plus des cat\u00e9gories affin\u00e9es comme roman historique, litt\u00e9rature de science-fiction ou paralitt\u00e9rature, sans faire dispara\u00eetre les d\u00e9saccords sur la qualification litt\u00e9raire de certains types d'\u0153uvres comme le roman de gare, le roman-photo ou la bande dessin\u00e9e. On remet \u00e9galement en cause la notion de genre litt\u00e9raire et de types de texte ainsi que leur hi\u00e9rarchisation comme on r\u00e9\u00e9value les \u0153uvres du pass\u00e9 (exemple r\u00e9cent : Charles Dantzig Dictionnaire \u00e9go\u00efste de la litt\u00e9rature fran\u00e7aise, 2005). Inversement, Ivan Jablonka propose de replacer certains textes de sciences humaines et sociales dans la litt\u00e9rature, d\u00e9finie selon six crit\u00e8res (forme, imagination, polys\u00e9mie, voix singuli\u00e8re, institutionnalisation, recherche du vrai).",
+    "published": "2019-04-29T09:44:09.302Z",
+    "updated": "2019-04-29T09:44:09.302Z",
+    "author": 43,
+    "resources": [
+      6
+    ]
   }
 },
 {
@@ -1456,6 +3216,30 @@
     "published": "2019-04-11T11:56:59.710Z",
     "updated": "2019-04-11T11:56:59.771Z",
     "author": 8
+  }
+},
+{
+  "model": "learning.resource",
+  "pk": 5,
+  "fields": {
+    "name": "L\u2019encyclop\u00e9die de Diderot et d\u2019Alembert",
+    "description": "<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/B333warhGtM\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
+    "type": "VIDEO",
+    "published": "2019-04-29T09:39:39.869Z",
+    "updated": "2019-04-29T09:39:39.869Z",
+    "author": 4
+  }
+},
+{
+  "model": "learning.resource",
+  "pk": 6,
+  "fields": {
+    "name": "Litt\u00e9rature moderne",
+    "description": "<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/YZGYRlNnVyI\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
+    "type": "VIDEO",
+    "published": "2019-04-29T09:44:07.168Z",
+    "updated": "2019-04-29T09:44:07.168Z",
+    "author": 43
   }
 },
 {
@@ -1522,6 +3306,33 @@
   }
 },
 {
+  "model": "learning.coursecollaborator",
+  "pk": 9,
+  "fields": {
+    "person": 8,
+    "course": 6,
+    "role": "NON_EDITOR_TEACHER"
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 10,
+  "fields": {
+    "person": 8,
+    "course": 7,
+    "role": "OWNER"
+  }
+},
+{
+  "model": "learning.coursecollaborator",
+  "pk": 11,
+  "fields": {
+    "person": 4,
+    "course": 7,
+    "role": "NON_EDITOR_TEACHER"
+  }
+},
+{
   "model": "learning.course",
   "pk": 1,
   "fields": {
@@ -1531,11 +3342,38 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "published": "2019-03-25T14:33:17.046Z",
-    "updated": "2019-04-15T11:13:23Z",
+    "updated": "2019-04-29T09:46:13.410Z",
     "author": 8,
     "students": [
-      4,
-      6
+      49,
+      40,
+      33,
+      35,
+      57,
+      53,
+      27,
+      38,
+      60,
+      11,
+      20,
+      46,
+      48,
+      58,
+      54,
+      18,
+      61,
+      39,
+      16,
+      22,
+      29,
+      23,
+      42,
+      55,
+      25,
+      14,
+      13,
+      32,
+      3
     ]
   }
 },
@@ -1549,9 +3387,39 @@
     "access": "PUBLIC",
     "registration_enabled": false,
     "published": "2019-03-26T09:46:14.342Z",
-    "updated": "2019-04-09T13:20:12.908Z",
+    "updated": "2019-04-29T09:46:25.612Z",
     "author": 8,
-    "students": []
+    "students": [
+      49,
+      40,
+      33,
+      35,
+      57,
+      53,
+      27,
+      38,
+      60,
+      11,
+      20,
+      46,
+      48,
+      58,
+      54,
+      18,
+      61,
+      39,
+      16,
+      22,
+      29,
+      23,
+      42,
+      55,
+      25,
+      14,
+      13,
+      32,
+      3
+    ]
   }
 },
 {
@@ -1564,11 +3432,38 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "published": "2019-03-26T11:45:49.541Z",
-    "updated": "2019-04-09T13:18:24.884Z",
+    "updated": "2019-04-29T09:46:37.418Z",
     "author": 5,
     "students": [
-      7,
-      8
+      49,
+      40,
+      33,
+      35,
+      57,
+      53,
+      27,
+      38,
+      60,
+      11,
+      20,
+      46,
+      48,
+      58,
+      54,
+      18,
+      61,
+      39,
+      16,
+      22,
+      29,
+      23,
+      42,
+      55,
+      25,
+      14,
+      13,
+      32,
+      3
     ]
   }
 },
@@ -1582,9 +3477,39 @@
     "access": "COLLABORATORS_ONLY",
     "registration_enabled": false,
     "published": "2019-03-26T11:51:11.526Z",
-    "updated": "2019-04-09T13:19:04.375Z",
+    "updated": "2019-04-29T09:45:50.814Z",
     "author": 6,
-    "students": []
+    "students": [
+      49,
+      40,
+      33,
+      35,
+      57,
+      53,
+      27,
+      38,
+      60,
+      11,
+      20,
+      46,
+      48,
+      58,
+      54,
+      18,
+      61,
+      39,
+      16,
+      22,
+      29,
+      23,
+      42,
+      55,
+      25,
+      14,
+      13,
+      32,
+      3
+    ]
   }
 },
 {
@@ -1597,9 +3522,39 @@
     "access": "PRIVATE",
     "registration_enabled": false,
     "published": "2019-03-26T12:11:32.391Z",
-    "updated": "2019-04-09T13:19:31.071Z",
+    "updated": "2019-04-29T09:46:01.923Z",
     "author": 8,
-    "students": []
+    "students": [
+      49,
+      40,
+      33,
+      35,
+      57,
+      53,
+      27,
+      38,
+      60,
+      11,
+      20,
+      46,
+      48,
+      58,
+      54,
+      18,
+      61,
+      39,
+      16,
+      22,
+      29,
+      23,
+      42,
+      55,
+      25,
+      14,
+      13,
+      32,
+      3
+    ]
   }
 },
 {
@@ -1615,6 +3570,192 @@
     "updated": "2019-04-09T13:20:37.128Z",
     "author": 9,
     "students": []
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 7,
+  "fields": {
+    "name": "Litt\u00e9rature",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Litt\u00e9rature](https://fr.wikipedia.org/wiki/Litt%C3%A9rature)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Litt%C3%A9rature/action=history))\r\n\r\nLe mot litt\u00e9rature, issu du latin litteratura d\u00e9riv\u00e9 de littera (la lettre), appara\u00eet au d\u00e9but du XIIe si\u00e8cle avec un sens technique de \u00ab chose \u00e9crite \u00bb puis \u00e9volue \u00e0 la fin du Moyen \u00c2ge vers le sens de \u00ab savoir tir\u00e9 des livres \u00bb, avant d'atteindre aux XVIIe\u2009\u2013\u2009XVIIIe si\u00e8cles son sens principal actuel : ensemble des \u0153uvres \u00e9crites ou orales comportant une dimension esth\u00e9tique (ex. : \u00ab C\u2019est avec les beaux sentiments que l\u2019on fait de la mauvaise litt\u00e9rature \u00bb Andr\u00e9 Gide) ou activit\u00e9 participant \u00e0 leur \u00e9laboration (ex. : \u00ab Se consacrer \u00e0 la litt\u00e9rature \u00bb).\r\nLa litt\u00e9rature se d\u00e9finit en effet comme un aspect particulier de la communication verbale \u2014 orale ou \u00e9crite \u2014 qui met en jeu une exploitation des ressources de la langue pour multiplier les effets sur le destinataire, qu'il soit lecteur ou auditeur. La litt\u00e9rature \u2014 dont les fronti\u00e8res sont n\u00e9cessairement floues et variables selon les appr\u00e9ciations personnelles \u2014 se caract\u00e9rise donc, non par ses supports et ses genres, mais par sa fonction esth\u00e9tique : la mise en forme du message l'emporte sur le contenu, d\u00e9passant ainsi la communication utilitaire limit\u00e9e \u00e0 la transmission d'informations m\u00eame complexes. Aujourd'hui, la litt\u00e9rature est associ\u00e9e \u00e0 la civilisation des livres par lesquels nous parlent \u00e0 distance les auteurs, mais elle concerne aussi les formes diverses de l'expression orale comme le conte (en plein renouveau depuis une trentaine d'ann\u00e9es dans les pays occidentaux), la po\u00e9sie traditionnelle des peuples sans \u00e9criture \u2014 dont nos chansons sont les lointaines cousines \u2014 ou le th\u00e9\u00e2tre, destin\u00e9 \u00e0 \u00eatre re\u00e7u \u00e0 travers la voix et le corps des com\u00e9diens. La technologie num\u00e9rique est cependant peut-\u00eatre en train de transformer le support traditionnel de la litt\u00e9rature et sa nature.\r\nLe concept de litt\u00e9rature a \u00e9t\u00e9 r\u00e9guli\u00e8rement remis en question par les \u00e9crivains comme par les critiques et les th\u00e9oriciens : c'est particuli\u00e8rement vrai depuis la fin du XIXe si\u00e8cle o\u00f9 l'on a cherch\u00e9 \u00e0 red\u00e9finir - comme pour l'art - les fonctions de la litt\u00e9rature (par exemple avec la notion d'engagement pour Sartre, Qu'est-ce que la litt\u00e9rature ?) et sa nature (r\u00e9flexion sur l'\u00e9criture et la lecture de Roland Barthes ou \u00e9tudes des linguistes comme Roman Jakobson) et \u00e0 renouveler les crit\u00e8res esth\u00e9tiques (du \u00ab Il faut \u00eatre absolument moderne \u00bb de Rimbaud au nouveau roman en passant par le surr\u00e9alisme, par exemple).\r\nIl reste que, riche de sa diversit\u00e9 formelle sans limite autant que de ses sujets sans cesse revivifi\u00e9s qui disent l'humaine condition, la litt\u00e9rature est d'abord la rencontre entre celui qui, par ses mots, dit lui-m\u00eame et son monde, et celui qui re\u00e7oit et partage ce d\u00e9voilement. La litt\u00e9rature appara\u00eet donc comme une prof\u00e9ration n\u00e9cessaire, une mise en mots o\u00f9 se per\u00e7oit l'exigence profonde de l'auteur qui le conduit \u00e0 dire et se dire.",
+    "state": "PUBLISHED",
+    "access": "STUDENTS_ONLY",
+    "registration_enabled": false,
+    "published": "2019-04-29T09:39:55.314Z",
+    "updated": "2019-04-29T09:45:07.881Z",
+    "author": 43,
+    "students": [
+      49,
+      40,
+      33,
+      35,
+      57,
+      53,
+      27,
+      38,
+      60,
+      11,
+      20,
+      46,
+      48,
+      58,
+      54,
+      18,
+      61,
+      39,
+      16,
+      22,
+      29,
+      23,
+      42,
+      55,
+      25,
+      14,
+      13,
+      32,
+      3
+    ]
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 8,
+  "fields": {
+    "name": "Thermodynamique",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Thermodynamique](https://fr.wikipedia.org/wiki/Thermodynamique)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Thermodynamique/action=history))\r\n\r\nOn peut d\u00e9finir la thermodynamique de deux fa\u00e7ons simples : la science de la chaleur et des machines thermiques ou la science des grands syst\u00e8mes en \u00e9quilibre. La premi\u00e8re d\u00e9finition est aussi la premi\u00e8re dans l'histoire. La seconde est venue ensuite, gr\u00e2ce aux travaux pionniers de Ludwig Boltzmann.\r\nAvec la physique statistique, dont elle est d\u00e9sormais une partie, la thermodynamique est l'une des grandes th\u00e9ories sur lesquelles se fonde la compr\u00e9hension actuelle de la mati\u00e8re.",
+    "state": "PUBLISHED",
+    "access": "STUDENTS_ONLY",
+    "registration_enabled": false,
+    "published": "2019-04-29T09:48:33.000Z",
+    "updated": "2019-04-29T09:52:28.325Z",
+    "author": 9,
+    "students": [
+      8
+    ]
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 9,
+  "fields": {
+    "name": "Physique des particules",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Physique des particules](https://fr.wikipedia.org/wiki/Physique_des_particules)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Physique_des_particules/action=history))\r\n\r\nLa physique des particules ou la physique subatomique est la branche de la physique qui \u00e9tudie les constituants \u00e9l\u00e9mentaires de la mati\u00e8re et les rayonnements, ainsi que leurs interactions. On l'appelle aussi parfois physique des hautes \u00e9nergies car de nombreuses particules \u00e9l\u00e9mentaires, instables, n'existent pas \u00e0 l'\u00e9tat naturel et peuvent seulement \u00eatre d\u00e9tect\u00e9es lors de collisions \u00e0 hautes \u00e9nergies entre particules stables dans les acc\u00e9l\u00e9rateurs de particules.\r\nLa d\u00e9couverte du boson de Higgs a permis le consensus et la mise \u00e0 jour en 2014 du tableau des composants de la mati\u00e8re qui avait \u00e9t\u00e9 \u00e9tabli en 2005 \u00e0 l'occasion de l'ann\u00e9e mondiale de la physique.",
+    "state": "ARCHIVED",
+    "access": "STUDENTS_ONLY",
+    "registration_enabled": false,
+    "published": "2019-04-29T09:50:10.300Z",
+    "updated": "2019-04-29T09:50:28.997Z",
+    "author": 9,
+    "students": [
+      8
+    ]
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 10,
+  "fields": {
+    "name": "Programmation informatique",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Programmation informatique](https://fr.wikipedia.org/wiki/Programmation_informatique)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Programmation_informatique/action=history))\r\n\r\nDans le domaine de l'informatique, la programmation, appel\u00e9e aussi codage, est l'ensemble des activit\u00e9s qui permettent l'\u00e9criture des programmes informatiques. C'est une \u00e9tape importante du d\u00e9veloppement de logiciels (voire de mat\u00e9riel).\r\nPour \u00e9crire un programme, on utilise un langage de programmation. Un logiciel est un ensemble de programmes (qui peuvent \u00eatre \u00e9crits dans des langages de programmation diff\u00e9rents) d\u00e9di\u00e9 \u00e0 la r\u00e9alisation de certaines t\u00e2ches par un (ou plusieurs) utilisateurs du logiciel.\r\nLa programmation repr\u00e9sente donc ici la r\u00e9daction du (ou des) code source d'un logiciel. On utilise plut\u00f4t le terme d\u00e9veloppement pour d\u00e9noter l'ensemble des activit\u00e9s li\u00e9es \u00e0 la cr\u00e9ation d'un logiciel et des programmes qui le composent. Cela inclut la sp\u00e9cification du logiciel, sa conception, puis son impl\u00e9mentation proprement dite au sens de l'\u00e9criture des programmes dans un langage de programmation bien d\u00e9fini et aussi la v\u00e9rification de sa correction, etc.",
+    "state": "PUBLISHED",
+    "access": "PUBLIC",
+    "registration_enabled": true,
+    "published": "2019-04-29T09:51:56.174Z",
+    "updated": "2019-04-29T09:51:56.174Z",
+    "author": 62,
+    "students": []
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 11,
+  "fields": {
+    "name": "Th\u00e9\u00e2tre",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Th\u00e9\u00e2tre](https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre/action=history))\r\n\r\nLe th\u00e9\u00e2tre () est \u00e0 la fois l'art de la repr\u00e9sentation d'un drame ou d'une com\u00e9die, un genre litt\u00e9raire particulier, et l'\u00e9difice dans lequel se d\u00e9roulent les spectacles de th\u00e9\u00e2tre. On parle aussi de genre dramatique.\r\nJadis, le mot en grec ancien : \u03b8\u03ad\u03b1\u03c4\u03c1\u03bf\u03bd, \"theatron\", d\u00e9signait \u00e9galement la sc\u00e8ne ou le plateau, c'est-\u00e0-dire toute la partie cach\u00e9e au public par le rideau.\r\nAu sens figur\u00e9, \u00ab th\u00e9\u00e2tre \u00bb d\u00e9signe un lieu o\u00f9 se d\u00e9roule une action importante (par exemple, un th\u00e9\u00e2tre d'op\u00e9rations militaires).\r\nAujourd'hui, \u00e0 l'heure des arts dits pluridisciplinaires, la d\u00e9finition de l'art du th\u00e9\u00e2tre est de plus en plus large (jusqu'\u00e0 se confondre avec l'expression spectacle vivant), si bien que certains grands metteurs en sc\u00e8ne n'h\u00e9sitent pas \u00e0 dire que pour qu'il y ait th\u00e9\u00e2tre, il suffit d'avoir un lieu, un temps, un acte et un public.\r\nIl s'agit de spectacles dans lesquels des com\u00e9diens, mis dans les circonstances et les situations cr\u00e9\u00e9es par un texte et la vision d'un metteur en sc\u00e8ne/r\u00e9alisateur, incarnent des personnages pour un regard ext\u00e9rieur (le public), dans un temps et un espace limit\u00e9. Les dialogues \u00e9crits sont appel\u00e9s pi\u00e8ces de th\u00e9\u00e2tre, mais il peut y avoir \u00e9galement du th\u00e9\u00e2tre sans texte \u00e9crit ou m\u00eame sans aucune parole. Il existe aussi des \u0153uvres de th\u00e9\u00e2tre musical, le genre \u00e9tant particuli\u00e8rement repr\u00e9sent\u00e9 dans les c\u00e9l\u00e8bres quartiers de Broadway aux \u00c9tats-Unis ou du West End \u00e0 Londres, mais aussi de plus en plus autour des Grands boulevards \u00e0 Paris.\r\nDans la cr\u00e9ation contemporaine, les fronti\u00e8res entre les diff\u00e9rents arts de la sc\u00e8ne (th\u00e9\u00e2tre, mime, cirque, danse...) sont de plus en plus t\u00e9nues, si bien que certains professionnels n'h\u00e9sitent pas \u00e0 remplacer le mot th\u00e9\u00e2tre par les mots spectacle pluridisciplinaire ou spectacle vivant, mettant ainsi l'accent sur le m\u00e9tissage des disciplines.",
+    "state": "PUBLISHED",
+    "access": "PUBLIC",
+    "registration_enabled": false,
+    "published": "2019-04-29T09:53:19.914Z",
+    "updated": "2019-04-29T09:53:51.680Z",
+    "author": 43,
+    "students": []
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 12,
+  "fields": {
+    "name": "M\u00e9canique des fluides",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[M\u00e9canique des fluides](https://fr.wikipedia.org/wiki/M%C3%A9canique_des_fluides)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/M%C3%A9canique_des_fluides/action=history))\r\n\r\nLa m\u00e9canique des fluides est un domaine de la physique consacr\u00e9 \u00e0 l\u2019\u00e9tude du comportement des fluides (liquides, gaz et plasmas) et des forces internes associ\u00e9es. C\u2019est une branche de la m\u00e9canique des milieux continus qui mod\u00e9lise la mati\u00e8re \u00e0 l\u2019aide de particules assez petites pour relever de l\u2019analyse math\u00e9matique mais assez grandes par rapport aux mol\u00e9cules pour \u00eatre d\u00e9crites par des fonctions continues.\r\nElle se divise en deux parties, la statique des fluides qui est l\u2019\u00e9tude des fluides au repos et la dynamique des fluides, qui est l\u2019\u00e9tude des fluides en mouvement.\r\nAujourd\u2019hui, la dynamique des fluides est un domaine actif de la recherche avec de nombreux probl\u00e8mes non r\u00e9solus ou partiellement r\u00e9solus. Elle utilise syst\u00e9matiquement des m\u00e9thodes num\u00e9riques appel\u00e9es \u00ab m\u00e9canique des fluides num\u00e9rique \u00bb (MFN), ou en anglais computational fluid dynamics (CFD).",
+    "state": "PUBLISHED",
+    "access": "PUBLIC",
+    "registration_enabled": true,
+    "published": "2019-04-29T09:54:59.004Z",
+    "updated": "2019-04-29T09:54:59.004Z",
+    "author": 9,
+    "students": []
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 13,
+  "fields": {
+    "name": "Romantisme",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Romantisme](https://fr.wikipedia.org/wiki/Romantisme)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Romantisme/action=history))\r\n\r\nLe romantisme est un mouvement culturel apparu \u00e0 la fin du XVIIIe si\u00e8cle en Allemagne et en Angleterre et se diffusant \u00e0 toute l\u2019Europe au cours du XIXe si\u00e8cle, jusqu\u2019aux ann\u00e9es 1850. Il s\u2019exprime dans la litt\u00e9rature, la peinture, la sculpture, la musique, la politique et la danse et se caract\u00e9rise par une volont\u00e9 de l'artiste d'explorer toutes les possibilit\u00e9s de l'art afin d'exprimer ses \u00e9tats d'\u00e2me : il est ainsi une r\u00e9action du sentiment contre la raison, exaltant le myst\u00e8re et le fantastique et cherchant l'\u00e9vasion et le ravissement dans le r\u00eave, le morbide et le sublime, l'exotisme et le pass\u00e9, l'id\u00e9al ou le cauchemar d'une sensibilit\u00e9 passionn\u00e9e et m\u00e9lancolique. Ses valeurs esth\u00e9tiques et morales, ses id\u00e9es et th\u00e9matiques nouvelles ne tard\u00e8rent pas \u00e0 influencer d'autres domaines, en particulier la peinture et la musique.",
+    "state": "PUBLISHED",
+    "access": "PUBLIC",
+    "registration_enabled": true,
+    "published": "2019-04-29T09:56:48.083Z",
+    "updated": "2019-04-29T09:57:12.448Z",
+    "author": 4,
+    "students": [
+      8
+    ]
+  }
+},
+{
+  "model": "learning.course",
+  "pk": 14,
+  "fields": {
+    "name": "Chimie organique",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Chimie organique](https://fr.wikipedia.org/wiki/Chimie_organique)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Chimie_organique/action=history))\r\n\r\nLa chimie organique est la chimie du carbone et de ses compos\u00e9s, naturels ou synth\u00e9tiques. Certains compos\u00e9s du carbone peuvent faire exception, ils sont examin\u00e9s dans l\u2019article \u00ab compos\u00e9 organique \u00bb.\r\nUne caract\u00e9ristique du carbone consiste en l\u2019aptitude qu\u2019ont ses atomes \u00e0 s\u2019encha\u00eener les uns aux autres, par des liaisons covalentes, d'une fa\u00e7on presque ind\u00e9finie, pour former des cha\u00eenes carbon\u00e9es d\u2019une grande diversit\u00e9. Les compos\u00e9s organiques sont ainsi constitu\u00e9s de mol\u00e9cules caract\u00e9ris\u00e9es par des encha\u00eenements carbon\u00e9s propres aux mol\u00e9cules dites \u00ab organiques \u00bb.\r\nL'aptitude caract\u00e9ristique du carbone implique qu'\u00ab il suffit alors de quelques autres \u00e9l\u00e9ments \\[...\\] pour former avec lui des millions de mol\u00e9cules diff\u00e9rentes, dont la masse mol\u00e9culaire peut atteindre 100 000 ou m\u00eame 1 000 000 ; on parle alors de macromol\u00e9cules \u00bb.\r\nLes mol\u00e9cules organiques contiennent fr\u00e9quemment des atomes d\u2019hydrog\u00e8ne et souvent des atomes d'oxyg\u00e8ne ou d'azote et les mol\u00e9cules synth\u00e9tiques proviennent souvent du p\u00e9trole.\r\nLa chimie organique \u00e9tudie en particulier leur structure chimique, leurs propri\u00e9t\u00e9s, leurs caract\u00e9ristiques, leur composition chimique, leurs r\u00e9actions chimiques et leur pr\u00e9paration (par synth\u00e8se ou autres moyens). Ces compos\u00e9s peuvent comprendre d'autres \u00e9l\u00e9ments chimiques, comme les halog\u00e8nes (fluor, chlore, brome, iode) ainsi que le bore, le silicium, le phosphore, le soufre ; plus rarement, le lithium, le sodium, le magn\u00e9sium, le cuivre, le titane, le potassium, le fer, le cobalt, le zinc et le plomb. Cette derni\u00e8re est appel\u00e9e chimie organom\u00e9tallique.\r\nLa premi\u00e8re d\u00e9finition de la chimie \u00ab organique \u00bb par Nicolas L\u00e9mery dans son Cours de chimie publi\u00e9 en 1690, \u00e9tait due \u00e0 la conception erron\u00e9e selon laquelle les compos\u00e9s organiques seraient les seuls entrant en jeu dans les processus du vivant. Cependant, les mol\u00e9cules organiques peuvent \u00eatre produites par des processus sans rapport avec le vivant et le vivant d\u00e9pend aussi de la chimie inorganique. Par exemple, de nombreuses enzymes ont besoin de m\u00e9taux de transition comme le fer ou le cuivre pour \u00eatre actifs ; et des mat\u00e9riaux comme les coquillages, les dents ou les os sont constitu\u00e9s en partie de compos\u00e9s organiques et en partie de mati\u00e8re inorganique (min\u00e9rale).\r\nBien qu'il y ait un recouvrement avec la biochimie, cette derni\u00e8re s'int\u00e9resse sp\u00e9cifiquement aux mol\u00e9cules fabriqu\u00e9es par les organismes vivants qui appartiennent aux grands groupes classiques (lipides, glucides, protides, acides nucl\u00e9iques) ainsi qu'aux petites mol\u00e9cules produites par le m\u00e9tabolisme. Les compos\u00e9s organiques sont donc au c\u0153ur de ces disciplines. On les d\u00e9signera sous le terme g\u00e9n\u00e9ral de \u00ab substances \u00bb organiques qui inclut des macromol\u00e9cules comme les prot\u00e9ines (polym\u00e8res polypeptidiques).",
+    "state": "PUBLISHED",
+    "access": "PUBLIC",
+    "registration_enabled": true,
+    "published": "2019-04-29T09:58:54.685Z",
+    "updated": "2019-04-29T09:58:54.685Z",
+    "author": 9,
+    "students": [
+      49,
+      40,
+      33,
+      35,
+      57,
+      53,
+      27,
+      38,
+      60,
+      11,
+      20,
+      46,
+      48,
+      58,
+      54,
+      18,
+      61,
+      39,
+      16,
+      22,
+      29,
+      23,
+      42,
+      55,
+      25,
+      14,
+      13,
+      32,
+      3
+    ]
   }
 }
 ]
