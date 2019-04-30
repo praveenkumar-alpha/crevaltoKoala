@@ -1,8 +1,10 @@
 FROM registry.gitlab.com/koala-lms/lms:latest
 
 RUN apk add --no-cache curl build-base zlib-dev linux-headers musl-dev unzip && \
-    curl -L "https://gitlab.com/koala-lms/django-learning/-/jobs/artifacts/master/download?job=package" -o learning.zip && \
-    mkdir learning && unzip -o learning.zip -d ./learning && pip install --no-cache-dir learning/dist/*.tar.gz && rm -rf learning && rm learning.zip && \
+    for project in "django-learning" "django-accounts"; do \
+        curl -L "https://gitlab.com/koala-lms/${project}/-/jobs/artifacts/develop/download?job=package" -o "${project}".zip && \
+        mkdir "${project}" && unzip -o "${project}".zip -d ./"${project}" && pip install --no-cache-dir "${project}"/dist/*.tar.gz && rm -rf "${project}" && rm "${project}".zip; \
+    done && \
     apk del curl build-base zlib-dev linux-headers musl-dev unzip
 
 USER "${USER}"
