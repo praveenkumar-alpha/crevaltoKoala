@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'learning',  # The learning application itself
     'markdownx',  # To render Markdown documents
     'django_bootstrap_breadcrumbs',  # Display breadcrumbs using bootstrap
+    'django_countries',  # Mainly to display country flags
 
     # Theming
     'bootstrap',
