@@ -100,7 +100,8 @@ syntax-linter:strict:
   stage: test
   script:
     - pip3 install bandit
-    - bandit -r "${PKG_NAME}" -x tests
+    - bandit -r "${PKG_NAME}" -x "*/tests/*","*/demo/*"
+
 
 security-linter:
   extends: .security-linter
