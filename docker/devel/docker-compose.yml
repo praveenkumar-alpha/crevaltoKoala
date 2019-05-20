@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+
+  koala-lms-devel:
+    build:
+      context: ../..
+      dockerfile: ./docker/devel/Dockerfile
+    image: "registry.gitlab.com/koala-lms/lms:devel"

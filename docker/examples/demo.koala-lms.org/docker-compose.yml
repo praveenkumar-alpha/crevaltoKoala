@@ -3,10 +3,7 @@ version: "3"
 services:
 
   demo.koala-lms.org:
-    build:
-      context: ../../
-      dockerfile: ./docker/demo.koala-lms.org/Dockerfile
-    image: "registry.gitlab.com/koala-lms/lms/demo:latest"
+    image: "registry.gitlab.com/koala-lms/lms:devel"
     container_name: demo.koala-lms.org
     hostname: demo.koala-lms.org
     environment:

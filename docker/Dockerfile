@@ -13,9 +13,9 @@ ENV USER=uwsgi
 # Add Koala-LMS code to workdir
 ADD [".", "."]
 
-RUN apk add --no-cache gettext build-base zlib-dev jpeg-dev linux-headers musl-dev && \
+RUN apk add --no-cache gettext build-base zlib-dev jpeg-dev linux-headers musl-dev mariadb-connector-c-dev && \
     # Install Python requirements
-    pip3 install --no-cache-dir -r requirements.txt uwsgi && \
+    pip3 install --no-cache-dir -r requirements.txt uwsgi mysqlclient && \
     # Remove unused dependencies
     apk del build-base zlib-dev linux-headers musl-dev && \
     # Create the user that will run the application and transfer property

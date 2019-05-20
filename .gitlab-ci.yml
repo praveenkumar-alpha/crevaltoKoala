@@ -13,7 +13,7 @@ stages:
 ####################
 ## Pre-build jobs ##
 ####################
-docker-lms:
+docker-stable:
   <<: *only-default
   stage: pre_build
   image: docker:stable
@@ -30,7 +30,7 @@ docker-lms:
 ################
 ## Build jobs ##
 ################
-docker-demo:
+docker-devel:
   <<: *only-default
   stage: build
   image: docker:stable
@@ -41,8 +41,8 @@ docker-demo:
     DOCKER_DRIVER: overlay2
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/demo:latest -f docker/demo.koala-lms.org/Dockerfile .
-    - docker push $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/demo:latest
+    - docker build -t $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:devel -f docker/devel/Dockerfile .
+    - docker push $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:devel
   environment:
     name: demo
     url: https://demo.koala-lms.org
@@ -65,8 +65,8 @@ demo:
   script:
     - ssh demo@"${HOSTNAME}" -p ${DEMO_SSH_PORT} -i ~/.ssh/"${HOSTNAME}" -o StrictHostKeyChecking=accept-new
       "rm -rf ~/$CI_PROJECT_NAME && git clone https://gitlab.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME.git ~/lms && cd ~/$CI_PROJECT_NAME &&
-      docker-compose -f docker/"${HOSTNAME}"/docker-compose.yml pull &&
-      docker-compose -f docker/"${HOSTNAME}"/docker-compose.yml up -d --force-recreate &&
+      docker-compose -f docker/examples/"${HOSTNAME}"/docker-compose.yml pull &&
+      docker-compose -f docker/examples/"${HOSTNAME}"/docker-compose.yml up -d --force-recreate &&
       docker image prune -fa"
   environment:
     name: demo

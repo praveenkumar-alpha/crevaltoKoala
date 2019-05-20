@@ -3,9 +3,17 @@
 local_settings_file="./lms/local_settings.py"
 uwsgi_file="docker/uwsgi.ini"
 
-echo "# This file is generated automatically, do not edit manually" > "${local_settings_file}"
-echo "SECRET_KEY = '$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)'" >> "${local_settings_file}"
-echo "ALLOWED_HOSTS = ['localhost', '127.0.0.1']" >> "${local_settings_file}"
+if [[ ! -f "${local_settings_file}" ]]; then
+    echo "# This file is generated automatically, do not edit manually" > "${local_settings_file}"
+fi
+
+if ! grep SECRET_KEY "${local_settings_file}"; then
+    echo "SECRET_KEY = '$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)'" >> "${local_settings_file}"
+fi
+
+if ! grep ALLOWED_HOSTS "${local_settings_file}"; then
+    echo "ALLOWED_HOSTS = ['localhost', '127.0.0.1']" >> "${local_settings_file}"
+fi
 
 if [[ ! -z "${DEBUG+x}" ]]; then
     echo "DEBUG = True" >> "${local_settings_file}"
