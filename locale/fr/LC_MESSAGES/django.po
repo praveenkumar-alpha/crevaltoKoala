@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-25 13:12+0200\n"
-"PO-Revision-Date: 2019-04-04 08:58+0200\n"
+"POT-Creation-Date: 2019-05-21 12:52+0200\n"
+"PO-Revision-Date: 2019-05-21 12:54+0200\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: lms/settings.py:114
+#: lms/settings.py:117
 msgid "French"
-msgstr ""
+msgstr "Français"
 
-#: lms/settings.py:115
+#: lms/settings.py:118
 msgid "English"
-msgstr ""
+msgstr "Anglais"
 
 #: templates/base.html:35
 msgid "Report an issue"
@@ -45,6 +45,22 @@ msgstr ""
 #: templates/base.html:40
 msgid "Technical preview"
 msgstr "Aperçu technologique"
+
+#: templates/home.html:10
+msgid "Learning application"
+msgstr "Application d’apprentissage"
+
+#: templates/home.html:11
+msgid ""
+"Learn courses you subscribed in and write your own courses, activities and "
+"educational resources."
+msgstr ""
+"Apprenez les cours auxquels vous vous êtes inscrit et écriez vos propres "
+"cours, activités et ressources pédagogiques."
+
+#: templates/home.html:12
+msgid "Go to learning application"
+msgstr "Aller à l’application d’apprentissage"
 
 #~ msgid "Learning"
 #~ msgstr "Apprendre"
