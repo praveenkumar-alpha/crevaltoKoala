@@ -26,12 +26,13 @@ docker-stable:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest -f docker/Dockerfile .
     - docker push $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
+  except:
+    - develop
 
 ################
 ## Build jobs ##
 ################
 docker-devel:
-  <<: *only-default
   stage: build
   image: docker:stable
   services:
@@ -46,12 +47,13 @@ docker-devel:
   environment:
     name: demo
     url: https://demo.koala-lms.org
+  only:
+    - develop
 
 #################
 ## Deploy jobs ##
 #################
 demo:
-  <<: *only-default
   stage: deploy
   image: alpine
   variables:
@@ -71,3 +73,5 @@ demo:
   environment:
     name: demo
     url: https://demo.koala-lms.org
+  only:
+    - develop
