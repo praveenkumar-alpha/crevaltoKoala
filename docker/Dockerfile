@@ -17,7 +17,7 @@ RUN apk add --no-cache gettext build-base zlib-dev jpeg-dev linux-headers musl-d
     # Install Python requirements
     pip3 install --no-cache-dir -r requirements.txt uwsgi mysqlclient && \
     # Remove unused dependencies
-    apk del build-base zlib-dev linux-headers musl-dev && \
+    apk del build-base zlib-dev linux-headers musl-dev mariadb-connector-c-dev && \
     # Create the user that will run the application and transfer property
     chmod u+x ./docker/docker-entrypoint.sh && \
     # Create the user that will be able to run the container

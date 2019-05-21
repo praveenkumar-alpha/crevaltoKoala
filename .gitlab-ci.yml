@@ -2,19 +2,12 @@ stages:
   - pre_build
   - build
   - deploy
+  - production
 
-.only-default: &only-default
-  only:
-    - triggers
-    - web
-    - schedules
-    - tags
-
-####################
-## Pre-build jobs ##
-####################
-docker-stable:
-  <<: *only-default
+##################################################
+##               Pre-Build jobs                 ##
+##################################################
+docker-build:stable:
   stage: pre_build
   image: docker:stable
   services:
@@ -26,13 +19,18 @@ docker-stable:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest -f docker/Dockerfile .
     - docker push $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
-  except:
-    - develop
+  only:
+    refs:
+      - web
+      - triggers
+      - schedules
+    variables:
+      - $CI_COMMIT_REF_NAME == "master"
 
-################
-## Build jobs ##
-################
-docker-devel:
+##################################################
+##                 Build jobs                   ##
+##################################################
+docker-build:devel:
   stage: build
   image: docker:stable
   services:
@@ -48,13 +46,18 @@ docker-devel:
     name: demo
     url: https://demo.koala-lms.org
   only:
-    - develop
+    refs:
+      - web
+      - triggers
+      - schedules
+    variables:
+      - $CI_COMMIT_REF_NAME == "develop"
 
-#################
-## Deploy jobs ##
-#################
+##################################################
+##               Production jobs                ##
+##################################################
 demo:
-  stage: deploy
+  stage: production
   image: alpine
   variables:
     GIT_STRATEGY: none
@@ -66,7 +69,7 @@ demo:
     - chmod go-rwx -R ~/.ssh
   script:
     - ssh demo@"${HOSTNAME}" -p ${DEMO_SSH_PORT} -i ~/.ssh/"${HOSTNAME}" -o StrictHostKeyChecking=accept-new
-      "rm -rf ~/$CI_PROJECT_NAME && git clone https://gitlab.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME.git ~/lms && cd ~/$CI_PROJECT_NAME &&
+      "rm -rf ~/$CI_PROJECT_NAME && git clone https://gitlab.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME.git ~/$CI_PROJECT_NAME && cd ~/$CI_PROJECT_NAME &&
       docker-compose -f docker/examples/"${HOSTNAME}"/docker-compose.yml pull &&
       docker-compose -f docker/examples/"${HOSTNAME}"/docker-compose.yml up -d --force-recreate &&
       docker image prune -fa"
@@ -74,4 +77,9 @@ demo:
     name: demo
     url: https://demo.koala-lms.org
   only:
-    - develop
+    refs:
+      - web
+      - triggers
+      - schedules
+    variables:
+      - $CI_COMMIT_REF_NAME == "develop"
