@@ -112,7 +112,7 @@
   "pk": 8,
   "fields": {
     "password": "pbkdf2_sha256$150000$9XeZIkyzVzom$iZ6kSsH8nujVR7dxgsGp+uDfBjROE+b9kB6tTvlVNZQ=",
-    "last_login": "2019-05-17T08:06:05.199Z",
+    "last_login": "2019-05-23T13:04:56.815Z",
     "is_superuser": false,
     "username": "erik-orsenna",
     "first_name": "Erik",
@@ -1109,7 +1109,7 @@
     "consultationtime": "TEN_OR_LESS",
     "licence": "CC_0",
     "access": "PUBLIC",
-    "reusability": "NO_RESTRICTION",
+    "reuse": "ONLY_AUTHOR",
     "published": "2019-04-11T11:48:05.248Z",
     "updated": "2019-05-20T06:51:25.915Z"
   }
@@ -1126,7 +1126,7 @@
     "consultationtime": "TWENTY_OR_LESS",
     "licence": "CC_0",
     "access": "PUBLIC",
-    "reusability": "NO_RESTRICTION",
+    "reuse": "ONLY_AUTHOR",
     "published": "2019-04-11T11:52:01.402Z",
     "updated": "2019-05-20T06:51:10.098Z"
   }
@@ -1143,7 +1143,7 @@
     "consultationtime": "FIVE_OR_LESS",
     "licence": "CC_0",
     "access": "PUBLIC",
-    "reusability": "NO_RESTRICTION",
+    "reuse": "ONLY_AUTHOR",
     "published": "2019-04-11T11:54:17.795Z",
     "updated": "2019-05-20T06:45:48.755Z"
   }
@@ -1160,7 +1160,7 @@
     "consultationtime": "FIVE_OR_LESS",
     "licence": "CC_0",
     "access": "PUBLIC",
-    "reusability": "NO_RESTRICTION",
+    "reuse": "ONLY_AUTHOR",
     "published": "2019-04-11T11:56:59.710Z",
     "updated": "2019-05-20T06:51:34.893Z"
   }
@@ -1177,7 +1177,7 @@
     "consultationtime": "NOT_SPECIFIED",
     "licence": "CC_0",
     "access": "PUBLIC",
-    "reusability": "NO_RESTRICTION",
+    "reuse": "ONLY_AUTHOR",
     "published": "2019-04-29T09:39:39.869Z",
     "updated": "2019-04-29T09:39:39.869Z"
   }
@@ -1194,7 +1194,7 @@
     "consultationtime": "NOT_SPECIFIED",
     "licence": "CC_0",
     "access": "PUBLIC",
-    "reusability": "NO_RESTRICTION",
+    "reuse": "ONLY_AUTHOR",
     "published": "2019-04-29T09:44:07.168Z",
     "updated": "2019-04-29T09:44:07.168Z"
   }
@@ -1207,7 +1207,7 @@
     "description": "Le [<abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIIe_si%C3%A8cle \"XVIIIe si\u00e8cle\") va se voir fragiliser progressivement la monarchie absolue avec la [R\u00e9gence](https://fr.wikipedia.org/wiki/R%C3%A9gence_(1715-1723) \"R\u00e9gence (1715-1723)\") de [Philippe d\u2019Orl\u00e9ans](https://fr.wikipedia.org/wiki/Philippe_d%27Orl%C3%A9ans_(1674-1723) \"Philippe d'Orl\u00e9ans (1674-1723)\"), et avec le tr\u00e8s long r\u00e8gne de [Louis XV](https://fr.wikipedia.org/wiki/Louis_XV_de_France \"Louis XV de France\") et ses guerres perdues ([guerre de Sept Ans](https://fr.wikipedia.org/wiki/Guerre_de_Sept_Ans \"Guerre de Sept Ans\") sur le continent europ\u00e9en et outre-mer, en Am\u00e9rique et en Inde particuli\u00e8rement, achev\u00e9e par le [trait\u00e9 de Paris](https://fr.wikipedia.org/wiki/Trait%C3%A9_de_Paris_(1763) \"Trait\u00e9 de Paris (1763)\") de [1763](https://fr.wikipedia.org/wiki/1763 \"1763\") qui consacre la puissance de l\u2019Angleterre et le poids de la Prusse). La monarchie mourra finalement de l\u2019impuissance de [Louis XVI](https://fr.wikipedia.org/wiki/Louis_XVI_de_France \"Louis XVI de France\") : la [R\u00e9volution de 1789](https://fr.wikipedia.org/wiki/R%C3%A9volution_fran%C3%A7aise \"R\u00e9volution fran\u00e7aise\") et ses soubresauts violents transformeront fondamentalement l\u2019Histoire de la France qui deviendra une [R\u00e9publique](https://fr.wikipedia.org/wiki/R%C3%A9publique \"R\u00e9publique\") le <time class=\"nowrap date-lien\" datetime=\"1792-09-21\" data-sort-value=\"1792-09-21\">[21](https://fr.wikipedia.org/wiki/21_septembre \"21 septembre\") [septembre](https://fr.wikipedia.org/wiki/Septembre_1792 \"Septembre 1792\") [1792](https://fr.wikipedia.org/wiki/1792 \"1792\")</time>. La naissance en [1776](https://fr.wikipedia.org/wiki/1776 \"1776\") de la R\u00e9publique des [\u00c9tats-Unis d\u2019Am\u00e9rique](https://fr.wikipedia.org/wiki/%C3%89tats-Unis \"\u00c9tats-Unis\"), soutenue par la France contre l\u2019Angleterre, symbolise aussi l\u2019entr\u00e9e dans un monde nouveau \u00e0 la veille du <abbr class=\"abbr\" title=\"19\u1d49 si\u00e8cle\"><span class=\"romain\">XIX</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle o\u00f9 appara\u00eet le personnage de Bonaparte<sup id=\"cite_ref-1\" class=\"reference\">[<span class=\"cite_crochet\">[</span>1<span class=\"cite_crochet\">]</span>](#cite_note-1)</sup>.",
     "language": "fr",
     "access": "PUBLIC",
-    "reusability": "NO_RESTRICTION",
+    "reuse": "ONLY_AUTHOR",
     "author": 8,
     "published": "2019-03-27T08:28:03.654Z",
     "updated": "2019-05-17T08:00:24.307Z",
@@ -1227,7 +1227,7 @@
     "description": "Continuateurs des [libertins](https://fr.wikipedia.org/wiki/Libertin \"Libertin\") du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle et d\u2019esprits critiques comme [Bayle](https://fr.wikipedia.org/wiki/Pierre_Bayle \"Pierre Bayle\") et [Fontenelle](https://fr.wikipedia.org/wiki/Bernard_Le_Bouyer_de_Fontenelle \"Bernard Le Bouyer de Fontenelle\"), ceux que l\u2019on appellera les [Lumi\u00e8res](https://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie) \"Lumi\u00e8res (philosophie)\") d\u00e9noncent au nom de la Raison et des valeurs morales les oppressions qui perdurent \u00e0 leur \u00e9poque. Ils contestent la monarchie absolue en revendiquant un contrat social comme fondement de l\u2019autorit\u00e9 politique et une organisation plus d\u00e9mocratique des pouvoirs dans une monarchie constitutionnelle avec une s\u00e9paration des pouvoirs ex\u00e9cutifs, l\u00e9gislatif et judiciaire et militaire ([Montesquieu](https://fr.wikipedia.org/wiki/Charles_Louis_de_Secondat,_baron_de_La_Br%C3%A8de_et_de_Montesquieu \"Charles Louis de Secondat, baron de La Br\u00e8de et de Montesquieu\"), [Diderot](https://fr.wikipedia.org/wiki/Denis_Diderot \"Denis Diderot\"), [Rousseau](https://fr.wikipedia.org/wiki/Jean-Jacques_Rousseau \"Jean-Jacques Rousseau\") entre autres). [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") combat particuli\u00e8rement les abus du pouvoir (censure, [lettre de cachet](https://fr.wikipedia.org/wiki/Lettre_de_cachet \"Lettre de cachet\"), collusion avec l\u2019\u00c9glise) et r\u00eave d\u2019un [despote \u00e9clair\u00e9](https://fr.wikipedia.org/wiki/Despotisme_%C3%A9clair%C3%A9 \"Despotisme \u00e9clair\u00e9\"), conseill\u00e9 par des philosophes. Par ailleurs, les \u00ab philosophes \u00bb eux-m\u00eames, bien que n'\u00e9tant pas tous issus du [Tiers \u00e9tat](https://fr.wikipedia.org/wiki/Tiers_%C3%A9tat \"Tiers \u00e9tat\"), d\u00e9fendent une soci\u00e9t\u00e9 fond\u00e9e sur les talents et sur le m\u00e9rite qui s\u2019oppose \u00e0 une soci\u00e9t\u00e9 de classes (ou de castes) h\u00e9r\u00e9ditaires, introduisant ainsi les valeurs de libert\u00e9 et d\u2019\u00e9galit\u00e9 qu\u2019affirmera la [R\u00e9publique](https://fr.wikipedia.org/wiki/R%C3%A9gime_r%C3%A9publicain_en_France \"R\u00e9gime r\u00e9publicain en France\") \u00e0 la fin du si\u00e8cle<sup id=\"cite_ref-4\" class=\"reference\">[<span class=\"cite_crochet\">[</span>4<span class=\"cite_crochet\">]</span>](#cite_note-4)</sup>.\r\n\r\nIls d\u00e9fendent aussi la libert\u00e9 de conscience et mettent en cause le r\u00f4le des institutions religieuses dans la soci\u00e9t\u00e9. La tol\u00e9rance est une valeur fondamentale pour ceux qui <span class=\"citation\">\u00ab nous ont appris \u00e0 vivre libres \u00bb</span> comme le dit la [Convention](https://fr.wikipedia.org/wiki/Convention_nationale \"Convention nationale\") en honorant les cendres de [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") au [Panth\u00e9on](https://fr.wikipedia.org/wiki/Panth%C3%A9on \"Panth\u00e9on\").",
     "language": "fr",
     "access": "PUBLIC",
-    "reusability": "ONLY_AUTHOR",
+    "reuse": "ONLY_AUTHOR",
     "author": 8,
     "published": "2019-03-27T08:28:24.405Z",
     "updated": "2019-05-17T07:58:55.733Z",
@@ -1245,11 +1245,15 @@
     "description": "L\u2019influence des grands dramaturges du \u00ab [si\u00e8cle de Louis XIV](https://fr.wikipedia.org/wiki/XVIIe_si%C3%A8cle \"XVIIe si\u00e8cle\") \u00bb persiste sur la sc\u00e8ne de la [Com\u00e9die-Fran\u00e7aise](https://fr.wikipedia.org/wiki/Com%C3%A9die-Fran%C3%A7aise \"Com\u00e9die-Fran\u00e7aise\") mais des renouvellements apparaissent avec les trag\u00e9dies de Voltaire (1694-1778) qui introduit des sujets modernes en gardant la structure classique et l\u2019alexandrin (_[Za\u00efre](https://fr.wikipedia.org/wiki/Za%C3%AFre_(Voltaire) \"Za\u00efre (Voltaire)\")_, [1732](https://fr.wikipedia.org/wiki/1732_au_th%C3%A9%C3%A2tre \"1732 au th\u00e9\u00e2tre\"), _[Mahomet](https://fr.wikipedia.org/wiki/Le_Fanatisme_ou_Mahomet \"Le Fanatisme ou Mahomet\")_, [1741](https://fr.wikipedia.org/wiki/1741_au_th%C3%A9%C3%A2tre \"1741 au th\u00e9\u00e2tre\")) et qui obtient de grands succ\u00e8s. N\u00e9anmoins la censure est toujours active comme en t\u00e9moignent, sous [Louis XVI](https://fr.wikipedia.org/wiki/Louis_XVI_de_France \"Louis XVI de France\") encore, les difficult\u00e9s de [Beaumarchais](https://fr.wikipedia.org/wiki/Pierre-Augustin_Caron_de_Beaumarchais \"Pierre-Augustin Caron de Beaumarchais\") pour son _[Mariage de Figaro](https://fr.wikipedia.org/wiki/Le_Mariage_de_Figaro \"Le Mariage de Figaro\")_<sup id=\"cite_ref-6\" class=\"reference\">[<span class=\"cite_crochet\">[</span>6<span class=\"cite_crochet\">]</span>](#cite_note-6)</sup> .\r\n\r\nLa lib\u00e9ration des m\u0153urs de la [R\u00e9gence](https://fr.wikipedia.org/wiki/R%C3%A9gence_(1715-1723) \"R\u00e9gence (1715-1723)\") apporte un autre renouvellement du th\u00e9\u00e2tre avec le retour, d\u00e8s [1716](https://fr.wikipedia.org/wiki/1716_au_th%C3%A9%C3%A2tre \"1716 au th\u00e9\u00e2tre\"), des [Com\u00e9diens-Italiens](https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_italien_de_Paris \"Th\u00e9\u00e2tre italien de Paris\") chass\u00e9s par [Louis XIV](https://fr.wikipedia.org/wiki/Louis_XIV_de_France \"Louis XIV de France\") et le d\u00e9but d\u2019une tr\u00e8s grande vogue du spectacle th\u00e9\u00e2tral : on se presse pour admirer des acteurs r\u00e9put\u00e9s ([L\u00e9lio](https://fr.wikipedia.org/wiki/L%C3%A9lio \"L\u00e9lio\"), Flaminia, Silvia\u2026) et rire des [lazzi](https://fr.wikipedia.org/wiki/Lazzi \"Lazzi\") et du dynamisme des personnages issus de la [commedia dell'arte](https://fr.wikipedia.org/wiki/Commedia_dell%27arte \"Commedia dell'arte\") comme [Arlequin](https://fr.wikipedia.org/wiki/Arlequin \"Arlequin\"), [Colombine](https://fr.wikipedia.org/wiki/Colombine_(th%C3%A9%C3%A2tre) \"Colombine (th\u00e9\u00e2tre)\") ou [Pantalon](https://fr.wikipedia.org/wiki/Pantalon_(personnage_de_th%C3%A9%C3%A2tre) \"Pantalon (personnage de th\u00e9\u00e2tre)\"). C\u2019est dans cette lign\u00e9e que trouve place [Marivaux](https://fr.wikipedia.org/wiki/Pierre_Carlet_de_Chamblain_de_Marivaux \"Pierre Carlet de Chamblain de Marivaux\") (1688 -1763) avec ses com\u00e9dies qui associent la finesse de l\u2019analyse du sentiment amoureux et la subtilit\u00e9 verbale du [marivaudage](https://fr.wikipedia.org/wiki/Marivaudage \"Marivaudage\") aux probl\u00e8mes de soci\u00e9t\u00e9 en exploitant le th\u00e8me embl\u00e9matique du [couple ma\u00eetre-valet](https://fr.wikipedia.org/wiki/Relation_ma%C3%AEtre-valet_au_th%C3%A9%C3%A2tre \"Relation ma\u00eetre-valet au th\u00e9\u00e2tre\"). _[Les Fausses Confidences](https://fr.wikipedia.org/wiki/Les_Fausses_Confidences \"Les Fausses Confidences\")_ ([1737](https://fr.wikipedia.org/wiki/1737_au_th%C3%A9%C3%A2tre \"1737 au th\u00e9\u00e2tre\")), _[le Jeu de l'amour et du hasard](https://fr.wikipedia.org/wiki/Le_Jeu_de_l%27amour_et_du_hasard \"Le Jeu de l'amour et du hasard\")_ ([1730](https://fr.wikipedia.org/wiki/1730_au_th%C3%A9%C3%A2tre \"1730 au th\u00e9\u00e2tre\")), ou _[l'\u00cele des esclaves](https://fr.wikipedia.org/wiki/L%27%C3%8Ele_des_esclaves \"L'\u00cele des esclaves\")_ ([1725](https://fr.wikipedia.org/wiki/1725_au_th%C3%A9%C3%A2tre \"1725 au th\u00e9\u00e2tre\")) constituent quelques-unes de ses \u0153uvres majeures.",
     "language": "fr",
     "access": "PUBLIC",
-    "reusability": "ONLY_AUTHOR",
+    "reuse": "ONLY_AUTHOR",
     "author": 8,
     "published": "2019-03-27T08:28:58.578Z",
     "updated": "2019-05-17T07:59:45.369Z",
-    "resources": []
+    "resources": [
+      1,
+      2,
+      6
+    ]
   }
 },
 {
@@ -1260,7 +1264,7 @@
     "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Litt\u00e9rature](https://fr.wikipedia.org/wiki/Litt%C3%A9rature)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](https://fr.wikipedia.org/wiki/Litt%C3%A9rature/action=history))\r\n\r\nSelon Philippe Caron, le mot \u00ab litt\u00e9rature \u00bb garde l'acception g\u00e9n\u00e9rale de \u00ab connaissance obtenue par les livres \u00bb jusqu'au XVIIe si\u00e8cle : on dit alors \u00ab avoir de la litt\u00e9rature \u00bb comme on dit aujourd'hui \u00ab avoir de la culture \u00bb, celle-ci recouvrant tous les domaines du savoir g\u00e9n\u00e9ral ; ainsi en 1699, Fontenelle pr\u00e9sente les math\u00e9matiques comme \u00ab un genre de litt\u00e9rature \u00bb.\r\nMais dans la deuxi\u00e8me moiti\u00e9 du si\u00e8cle, parall\u00e8lement \u00e0 l'acception g\u00e9n\u00e9raliste, le mot s'applique de plus en plus \u00e0 un savoir restreint, celui des \u00ab belles-lettres \u00bb li\u00e9es au beau langage. Ce glissement s'explique par l'\u00e9volution sociale des \u00e9lites sous Louis XIV o\u00f9 s'instaure la notion de l'honn\u00eate homme, apte \u00e0 une vie sociale raffin\u00e9e faite de pratiques culturelles valoris\u00e9es comme la connaissance des \u0153uvres litt\u00e9raires, particuli\u00e8rement celles de l'Antiquit\u00e9 qui nourrissent le th\u00e9\u00e2tre classique tandis que les po\u00e8tes exploitent les genres d\u00e9finis par Aristote comme la po\u00e9sie \u00e9pique.\r\nAu XVIIIe si\u00e8cle le mot \u00ab litt\u00e9rature \u00bb est tout \u00e0 fait devenu synonyme de \u00ab belles-lettres \u00bb, c'est-\u00e0-dire d'\u0153uvres reconnues par les gens de go\u00fbt et constituant la culture mondaine de l'\u00e9poque form\u00e9e par une meilleure \u00e9ducation et par le monde des salons litt\u00e9raires et des acad\u00e9mies ; ainsi pour Voltaire : \u00ab La litt\u00e9rature d\u00e9signe dans toute l'Europe une connaissance des ouvrages de go\u00fbt \u00bb. Un autre exemple montre que le mot \u00ab litt\u00e9rature \u00bb avec son sens commun d'aujourd'hui est d\u00e9sormais bien install\u00e9 au milieu du si\u00e8cle des Lumi\u00e8res : en 1753 Charles Batteux titre son ouvrage \u00ab Cours de belles-lettres, ou Principes de la litt\u00e9rature \u00bb et le r\u00e9\u00e9dite en 1764 en ne gardant que \u00ab Principes de la litt\u00e9rature \u00bb. La m\u00eame ann\u00e9e para\u00eet \u00ab L'\u00e9cole de litt\u00e9rature \u00bb de l'abb\u00e9 Laporte dont le sous-titre de la 2e partie est sans ambigu\u00eft\u00e9 : \u00ab Des r\u00e8gles particuli\u00e8res de chaque genre de Litt\u00e9rature en Prose et en Vers \u00bb.\r\n\r\nLe mot \u00e9volue encore lentement \u00e0 partir de 1750 vers le sens plus large de \u00ab cr\u00e9ation langagi\u00e8re \u00e9crite \u00bb laissant une place grandissante au jugement subjectif lib\u00e9r\u00e9 de crit\u00e8res esth\u00e9tiques contraignants : telle sera plus tard la conception romantique du po\u00e8te cr\u00e9ateur libre m\u00eame s'il doit \u00eatre un po\u00e8te maudit, conception que pr\u00e9figurait d\u00e9j\u00e0 dans son Discours pr\u00e9liminaire de l'Encyclop\u00e9die d'Alembert affirmant que les \u0153uvres d'art rel\u00e8vent principalement \u00ab de l'invention qui ne prend gu\u00e8re ses Lois que du g\u00e9nie \u00bb. Paul-Louis Courier d\u00e9finit de la m\u00eame fa\u00e7on dans les ann\u00e9es 1820 une \u0153uvre litt\u00e9raire comme \u00ab produite par l'instinct et le sentiment du beau \u00bb donc par le sentiment de l'auteur et pas n\u00e9cessairement celui de l'establishment.",
     "language": "fr",
     "access": "PUBLIC",
-    "reusability": "NO_RESTRICTION",
+    "reuse": "ONLY_AUTHOR",
     "author": 43,
     "published": "2019-04-29T09:39:41.967Z",
     "updated": "2019-05-17T13:18:36.079Z",
@@ -1277,7 +1281,7 @@
     "description": "Vers 1800 le sens moderne est devenu le sens commun : le mot \u00ab litt\u00e9rature \u00bb s'applique \u00e0 des textes auxquels \u00ab on \u00bb accorde une qualit\u00e9 esth\u00e9tique que l'on peut discuter, qu'il s'agisse du jugement d'une institution de doctes exprimant le go\u00fbt commun mais aussi de l'auteur ou du lecteur individuel : c'est l'emploi qu'en fait Madame de Sta\u00ebl dans son ouvrage embl\u00e9matique \u00ab De la litt\u00e9rature \u00bb en 1799.\r\nAu milieu du XIXe si\u00e8cle le grammairien Bernard Jullien distingue encore \u00ab litt\u00e9rature \u00bb et \u00ab grammaire \u00bb : pour lui, la pointe ultime de la \u00ab haute grammaire \u00bb d\u00e9passe depuis l'Antiquit\u00e9 la description des m\u00e9canismes de la langue pour aborder les crit\u00e8res du beau dans l'aspect formel et stylistique des textes. La litt\u00e9rature qui \u00ab classe et \u00e9tudie les ouvrages (pr\u00e9sentant un int\u00e9r\u00eat de style) \u00bb va au-del\u00e0 : elle prend en charge l'\u00e9tude et le questionnement sur le fond, sur le contenu des \u0153uvres, par exemple les th\u00e8mes abord\u00e9s et les points de vue choisis par les auteurs, ce qui n'exclut \u00e9videmment jamais les interf\u00e9rences avec la morale comme le d\u00e9montrent les proc\u00e8s faits \u00e0 la m\u00eame \u00e9poque \u00e0 Baudelaire et Flaubert pour atteinte aux bonnes m\u0153urs en 1857. Bient\u00f4t la \u00ab grammaire \u00bb se limitera \u00e0 la description de la langue, devenant un outil pour la litt\u00e9rature qui s'occupera de l'observation et \u00e0 l'appr\u00e9ciation des aspects formels comme des contenus des \u0153uvres. On peut noter que des \u00ab sciences \u00bb nouvelles comme la stylistique ou la linguistique reprendront dans la deuxi\u00e8me moiti\u00e9 du XXe si\u00e8cle ce r\u00f4le de la haute grammaire dans l'\u00e9tude des textes.\r\n\r\nFinalement, le champ de la \u00ab litt\u00e9rature \u00bb s'\u00e9largit au XXe si\u00e8cle \u00e0 toutes les productions \u00e9crites, non sans d\u00e9bats sur les canons litt\u00e9raires : on discute aussi bien les contenus (sentimentalisme des romans de gare, pornographie et \u00e9rotisme) que la forme (roman sans ponctuation, vers libre, \u00e9criture automatique). On utilise donc de plus en plus des cat\u00e9gories affin\u00e9es comme roman historique, litt\u00e9rature de science-fiction ou paralitt\u00e9rature, sans faire dispara\u00eetre les d\u00e9saccords sur la qualification litt\u00e9raire de certains types d'\u0153uvres comme le roman de gare, le roman-photo ou la bande dessin\u00e9e. On remet \u00e9galement en cause la notion de genre litt\u00e9raire et de types de texte ainsi que leur hi\u00e9rarchisation comme on r\u00e9\u00e9value les \u0153uvres du pass\u00e9 (exemple r\u00e9cent : Charles Dantzig Dictionnaire \u00e9go\u00efste de la litt\u00e9rature fran\u00e7aise, 2005). Inversement, Ivan Jablonka propose de replacer certains textes de sciences humaines et sociales dans la litt\u00e9rature, d\u00e9finie selon six crit\u00e8res (forme, imagination, polys\u00e9mie, voix singuli\u00e8re, institutionnalisation, recherche du vrai).",
     "language": "fr",
     "access": "PUBLIC",
-    "reusability": "NON_REUSABLE",
+    "reuse": "ONLY_AUTHOR",
     "author": 43,
     "published": "2019-04-29T09:44:09.302Z",
     "updated": "2019-05-17T09:57:34.765Z",
@@ -1294,7 +1298,7 @@
     "description": "Le roman du XVIIIe si\u00e8cle est marqu\u00e9 par le renouvellement des formes et des contenus qui pr\u00e9figurent le roman moderne consid\u00e9r\u00e9 comme une \u0153uvre de fiction en prose, racontant les aventures et l\u2019\u00e9volution d\u2019un ou de plusieurs personnages. Le genre, en pleine croissance avec un lectorat \u00e9largi, est marqu\u00e9 par le d\u00e9veloppement de la sensibilit\u00e9, par le souci d'une apparente d'authenticit\u00e9 (avec le proc\u00e9d\u00e9 du manuscrit trouv\u00e9, l\u2019emploi de la premi\u00e8re personne, de l\u2019\u00e9change \u00e9pistolaire ou des dialogues) et par l\u2019esprit des Lumi\u00e8res en prenant en compte les valeurs nouvelles d\u2019une soci\u00e9t\u00e9 qui \u00e9volue. L\u2019influence de la litt\u00e9rature anglaise est \u00e9galement sensible \u00e0 travers la traduction des \u0153uvres de Richardson, Swift ou Daniel Defoe. N\u00e9anmoins le roman restera, au cours du XVIIIe si\u00e8cle, un genre en qu\u00eate de l\u00e9gitimation et de d\u00e9finition, comme le montrent les nombreuses r\u00e9flexions sur le roman au XVIIIe si\u00e8cle.\r\n\r\nLe roman de ce si\u00e8cle tr\u00e8s riche explore toutes les possibilit\u00e9s romanesques : question du narrateur, \u00e9clatement du r\u00e9cit, engagement, analyse psychologique minutieuse, peinture r\u00e9aliste du monde, imagination et confidence, apprentissage, souci de la forme\u2026 et les textes sont difficilement r\u00e9ductibles \u00e0 des cat\u00e9gories indiscutables ; on peut cependant risquer un regroupement par sous-genre10.",
     "language": "fr",
     "access": "PRIVATE",
-    "reusability": "ONLY_AUTHOR",
+    "reuse": "ONLY_AUTHOR",
     "author": 8,
     "published": "2019-05-15T08:21:40.491Z",
     "updated": "2019-05-17T13:17:13.448Z",
@@ -1613,7 +1617,7 @@
   "fields": {
     "person": 3,
     "course": 1,
-    "role": "NON_EDITOR_TEACHER"
+    "role": "OWNER"
   }
 },
 {
@@ -1631,7 +1635,7 @@
   "fields": {
     "person": 7,
     "course": 1,
-    "role": "NON_EDITOR_TEACHER"
+    "role": "TEACHER"
   }
 },
 {
@@ -2872,6 +2876,14 @@
   }
 },
 {
+  "model": "taggit.tag",
+  "pk": 130,
+  "fields": {
+    "name": "lkjlkj",
+    "slug": "lkjlkj"
+  }
+},
+{
   "model": "taggit.taggeditem",
   "pk": 1,
   "fields": {
@@ -3535,51 +3547,6 @@
     "tag": 1,
     "content_type": 9,
     "object_id": 18
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 97,
-  "fields": {
-    "tag": 65,
-    "content_type": 10,
-    "object_id": 7
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 98,
-  "fields": {
-    "tag": 1,
-    "content_type": 10,
-    "object_id": 7
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 99,
-  "fields": {
-    "tag": 67,
-    "content_type": 10,
-    "object_id": 7
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 100,
-  "fields": {
-    "tag": 36,
-    "content_type": 10,
-    "object_id": 7
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 101,
-  "fields": {
-    "tag": 68,
-    "content_type": 10,
-    "object_id": 7
   }
 },
 {
@@ -4785,6 +4752,15 @@
   "fields": {
     "tag": 1,
     "content_type": 9,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 238,
+  "fields": {
+    "tag": 130,
+    "content_type": 10,
     "object_id": 7
   }
 }
