@@ -4,7 +4,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$150000$sXQxPVVFcyNO$P9/u7Awuii5JO6i6HOnnARFQcANlN3/oObK6bazL01k=",
-    "last_login": "2019-05-17T08:02:32.043Z",
+    "last_login": "2019-05-24T09:35:53.000Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -1981,14 +1981,6 @@
 },
 {
   "model": "taggit.tag",
-  "pk": 18,
-  "fields": {
-    "name": "litterature",
-    "slug": "litterature_1"
-  }
-},
-{
-  "model": "taggit.tag",
   "pk": 19,
   "fields": {
     "name": "empire",
@@ -2273,54 +2265,6 @@
   "fields": {
     "name": "test",
     "slug": "test"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 55,
-  "fields": {
-    "name": "lkjh",
-    "slug": "lkjh"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 56,
-  "fields": {
-    "name": "lkj",
-    "slug": "lkj"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 57,
-  "fields": {
-    "name": "\u00f9ml",
-    "slug": "uml"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 58,
-  "fields": {
-    "name": "kjhlkjh",
-    "slug": "kjhlkjh"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 59,
-  "fields": {
-    "name": "mlk",
-    "slug": "mlk"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 60,
-  "fields": {
-    "name": "ml",
-    "slug": "ml"
   }
 },
 {
@@ -2693,14 +2637,6 @@
 },
 {
   "model": "taggit.tag",
-  "pk": 107,
-  "fields": {
-    "name": "gramaire",
-    "slug": "gramaire"
-  }
-},
-{
-  "model": "taggit.tag",
   "pk": 108,
   "fields": {
     "name": "belles-lettres",
@@ -2873,14 +2809,6 @@
   "fields": {
     "name": "Napol\u00e9on",
     "slug": "napoleon"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 130,
-  "fields": {
-    "name": "lkjlkj",
-    "slug": "lkjlkj"
   }
 },
 {
@@ -3068,15 +2996,6 @@
   "pk": 23,
   "fields": {
     "tag": 17,
-    "content_type": 10,
-    "object_id": 2
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 24,
-  "fields": {
-    "tag": 18,
     "content_type": 10,
     "object_id": 2
   }
@@ -4163,15 +4082,6 @@
 },
 {
   "model": "taggit.taggeditem",
-  "pk": 172,
-  "fields": {
-    "tag": 107,
-    "content_type": 12,
-    "object_id": 19
-  }
-},
-{
-  "model": "taggit.taggeditem",
   "pk": 173,
   "fields": {
     "tag": 1,
@@ -4752,15 +4662,6 @@
   "fields": {
     "tag": 1,
     "content_type": 9,
-    "object_id": 7
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 238,
-  "fields": {
-    "tag": 130,
-    "content_type": 10,
     "object_id": 7
   }
 }

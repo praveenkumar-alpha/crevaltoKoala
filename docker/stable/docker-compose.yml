@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  koala-lms-stable:
+    build:
+      context: ../..
+      dockerfile: ./docker/stable/Dockerfile
+    image: "registry.gitlab.com/koala-lms/lms:latest"
+    container_name: koala-lms-stable
+    hostname: koala-lms-stable
+    environment:
+      DEBUG: 1
+    ports:
+      - 8080:8080

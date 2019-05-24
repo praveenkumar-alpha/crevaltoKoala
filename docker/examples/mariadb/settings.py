@@ -6,6 +6,6 @@ DATABASES = {
         'NAME': 'koala',
         'USER': 'koala',
         'PASSWORD': 'koala',
-        'HOST': 'mdb_db-koala-lms',
+        'HOST': 'db',
     }
 }

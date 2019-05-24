@@ -24,7 +24,7 @@ As you may know, **Django** is a super easy, extensible framework. Thanks to thi
 
 ## :ship: Download Docker image
 
-You need to [install `docker`](https://docs.docker.com/install/) on your system. We host the [docker image in the Gitlab Registry](https://gitlab.com/koala-lms/lms/container_registry). Its `Dockerfile` is located at [`./docker/Dockerfile`](docker/Dockerfile). You can get the image (*<50MB to download*) using:
+You need to [install `docker`](https://docs.docker.com/install/) on your system. We host the [docker image in the Gitlab Registry](https://gitlab.com/koala-lms/lms/container_registry). Its `Dockerfile` is located at [`./docker/stable/Dockerfile`](docker/stable/Dockerfile). You can get the image (*<50MB to download*) using:
 ```bash
 docker pull registry.gitlab.com/koala-lms/lms
 ```

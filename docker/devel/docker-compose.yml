@@ -7,3 +7,9 @@ services:
       context: ../..
       dockerfile: ./docker/devel/Dockerfile
     image: "registry.gitlab.com/koala-lms/lms:devel"
+    container_name: koala-lms-devel
+    hostname: koala-lms-devel
+    environment:
+      DEBUG: 1
+    ports:
+      - 8080:8080

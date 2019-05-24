@@ -2,30 +2,28 @@ version: "3"
 
 services:
 
-  mdb-koala-lms:
+  koala-lms:
     image: "registry.gitlab.com/koala-lms/lms:devel"
-    container_name: mdb-koala-lms
-    hostname: mdb-koala-lms
+    container_name: koala-lms
+    hostname: koala-lms
+    restart: always
     links:
-      - mdb_db-koala-lms
+      - db
+    environment:
+      FIXTURE: "./fixtures/sample-fr.json"
     ports:
-      - 8081:8080
+      - 8080:8080
     volumes:
       - ./settings.py:/koala_lms/lms/local_settings.py
 
-  mdb_db-koala-lms:
-     image: mariadb:latest
-     container_name: mdb_db-koala-lms
-     volumes:
-       - mdb_db-koala-lms:/var/lib/mysql
-     restart: always
-     command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800]
-     hostname: mdb_db-koala-lms
-     environment:
-       MYSQL_ROOT_PASSWORD: koala
-       MYSQL_DATABASE: koala
-       MYSQL_USER: koala
-       MYSQL_PASSWORD: koala
-
-volumes:
-    mdb_db-koala-lms:
+  db:
+    image: mariadb:latest
+    container_name: db
+    hostname: db
+    restart: always
+    command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800]
+    environment:
+      MYSQL_ROOT_PASSWORD: koala
+      MYSQL_DATABASE: koala
+      MYSQL_USER: koala
+      MYSQL_PASSWORD: koala
