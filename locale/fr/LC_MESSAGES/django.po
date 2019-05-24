@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 12:52+0200\n"
-"PO-Revision-Date: 2019-05-21 12:54+0200\n"
+"POT-Creation-Date: 2019-05-24 09:32+0200\n"
+"PO-Revision-Date: 2019-05-24 09:33+0200\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -27,6 +27,43 @@ msgstr "Français"
 #: lms/settings.py:118
 msgid "English"
 msgstr "Anglais"
+
+#: templates/403.html:7
+msgid "You are not authorized to see this page (Error n°403)."
+msgstr "Vous n’êtes pas autorisé à consulter cette page (Erreur n°403)."
+
+#: templates/403.html:10
+msgid "Oops, you do not have enough rights to see this page."
+msgstr "Oups, vous n’avez pas les droits suffisants pour consulter cette page."
+
+#: templates/403.html:15 templates/404.html:16 templates/500.html:15
+msgid "Go back to previous page."
+msgstr "Retourner à la page précédente."
+
+#: templates/404.html:7
+#, fuzzy
+msgid "The requested page was not found (Error n°404)."
+msgstr "La page demandée n’a pas été trouvée (Erreur n°404)."
+
+#: templates/404.html:10
+msgid "Oops, the page you requested was not found on this server."
+msgstr ""
+"Oups, la page que vous avez demandé n’as pas été trouvée sur le serveur."
+
+#: templates/404.html:11
+msgid "It may be because the page was moved or is no longer available."
+msgstr ""
+"Cela peut être parce que la page a été déplacée ou n’est plus disponible."
+
+#: templates/500.html:7
+msgid "Something went wrong (Error n°500)."
+msgstr "Quelque chose s’est mal passé (Erreur n°500)."
+
+#: templates/500.html:10
+msgid "Oops, something went wrong and it seems page you request crashed."
+msgstr ""
+"Oups, quelque chose s’est mal passé et il semble que la page que vous avez "
+"demandé a crashé."
 
 #: templates/base.html:35
 msgid "Report an issue"
