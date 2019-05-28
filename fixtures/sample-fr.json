@@ -4,7 +4,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$150000$sXQxPVVFcyNO$P9/u7Awuii5JO6i6HOnnARFQcANlN3/oObK6bazL01k=",
-    "last_login": "2019-05-24T09:35:53.000Z",
+    "last_login": "2019-05-28T15:38:22.551Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -1110,6 +1110,7 @@
     "licence": "CC_0",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
+    "media": "",
     "published": "2019-04-11T11:48:05.248Z",
     "updated": "2019-05-20T06:51:25.915Z"
   }
@@ -1127,6 +1128,7 @@
     "licence": "CC_0",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
+    "media": "",
     "published": "2019-04-11T11:52:01.402Z",
     "updated": "2019-05-20T06:51:10.098Z"
   }
@@ -1144,6 +1146,7 @@
     "licence": "CC_0",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
+    "media": "",
     "published": "2019-04-11T11:54:17.795Z",
     "updated": "2019-05-20T06:45:48.755Z"
   }
@@ -1161,6 +1164,7 @@
     "licence": "CC_0",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
+    "media": "",
     "published": "2019-04-11T11:56:59.710Z",
     "updated": "2019-05-20T06:51:34.893Z"
   }
@@ -1178,6 +1182,7 @@
     "licence": "CC_0",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
+    "media": "",
     "published": "2019-04-29T09:39:39.869Z",
     "updated": "2019-04-29T09:39:39.869Z"
   }
@@ -1195,6 +1200,7 @@
     "licence": "CC_0",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
+    "media": "",
     "published": "2019-04-29T09:44:07.168Z",
     "updated": "2019-04-29T09:44:07.168Z"
   }
@@ -2812,6 +2818,14 @@
   }
 },
 {
+  "model": "taggit.tag",
+  "pk": 131,
+  "fields": {
+    "name": "ml",
+    "slug": "ml"
+  }
+},
+{
   "model": "taggit.taggeditem",
   "pk": 1,
   "fields": {
@@ -3556,195 +3570,6 @@
     "tag": 75,
     "content_type": 9,
     "object_id": 19
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 112,
-  "fields": {
-    "tag": 3,
-    "content_type": 10,
-    "object_id": 8
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 113,
-  "fields": {
-    "tag": 76,
-    "content_type": 10,
-    "object_id": 8
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 114,
-  "fields": {
-    "tag": 3,
-    "content_type": 10,
-    "object_id": 9
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 115,
-  "fields": {
-    "tag": 77,
-    "content_type": 10,
-    "object_id": 9
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 116,
-  "fields": {
-    "tag": 78,
-    "content_type": 10,
-    "object_id": 9
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 117,
-  "fields": {
-    "tag": 79,
-    "content_type": 10,
-    "object_id": 9
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 118,
-  "fields": {
-    "tag": 80,
-    "content_type": 10,
-    "object_id": 9
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 119,
-  "fields": {
-    "tag": 81,
-    "content_type": 10,
-    "object_id": 10
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 120,
-  "fields": {
-    "tag": 82,
-    "content_type": 10,
-    "object_id": 10
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 121,
-  "fields": {
-    "tag": 83,
-    "content_type": 10,
-    "object_id": 10
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 122,
-  "fields": {
-    "tag": 84,
-    "content_type": 10,
-    "object_id": 10
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 123,
-  "fields": {
-    "tag": 1,
-    "content_type": 10,
-    "object_id": 11
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 124,
-  "fields": {
-    "tag": 37,
-    "content_type": 10,
-    "object_id": 11
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 125,
-  "fields": {
-    "tag": 51,
-    "content_type": 10,
-    "object_id": 11
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 126,
-  "fields": {
-    "tag": 85,
-    "content_type": 10,
-    "object_id": 11
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 127,
-  "fields": {
-    "tag": 86,
-    "content_type": 10,
-    "object_id": 11
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 128,
-  "fields": {
-    "tag": 87,
-    "content_type": 10,
-    "object_id": 11
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 129,
-  "fields": {
-    "tag": 88,
-    "content_type": 10,
-    "object_id": 12
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 130,
-  "fields": {
-    "tag": 89,
-    "content_type": 10,
-    "object_id": 12
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 131,
-  "fields": {
-    "tag": 90,
-    "content_type": 10,
-    "object_id": 12
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 132,
-  "fields": {
-    "tag": 3,
-    "content_type": 10,
-    "object_id": 12
   }
 },
 {
