@@ -1,12 +1,6 @@
 {% extends "base.html" %}
 {% load i18n static %}
 
-{% block extrahead %}{{ block.super }}
-  <link rel="stylesheet" href="{% static 'lms/css/lms.css' %}">
-  <script defer src="{% static 'lms/fonts/fontawesome.js' %}"></script>
-  <script defer src="{% static 'lms/js/lms.js' %}"></script>
-{% endblock %}
-
 {% block content %}
   <div class="container mt-4">
     <div class="col-lg-6 col-md-6">
