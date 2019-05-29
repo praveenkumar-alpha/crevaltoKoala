@@ -4,7 +4,6 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block extrastyle %}{{ block.super }}
-  <link rel="shortcut icon" href="{% static 'accounts/images/favicon.png' %}" type="image/x-icon">
   <link rel="stylesheet" href="{% static 'accounts/style.css' %}"/>
   <script defer src="{% static 'accounts/fonts/fontawesome.js' %}"></script>
 {% endblock %}
@@ -13,7 +12,7 @@
   <div class="container-fluid">
     <div class="row mt-3 mb-3">
       <div class="col-12 col-sm-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
-        {% include "accounts/partials/messages.html" %}
+        {% include "accounts/_includes/messages.html" %}
         {% block accounts_content %}{% endblock %}
       </div>
     </div>
