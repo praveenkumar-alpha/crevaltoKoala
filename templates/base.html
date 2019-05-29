@@ -21,14 +21,14 @@
   {% block extrahead %}{% endblock %}
 
   {# When using official Koala-LMS, favicon is the Koala Logo #}
-  <link rel="icon" type="image/png" href="{% static 'lms/img/logo.png' %}"/>
+  <link rel="icon" type="image/png" href="{% static 'lms/img/logo-tiny.png' %}"/>
 
 </head>
 
 <body>
 <header>
   <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand navbar-light bg-light border-bottom">
-    <a class="navbar-brand" href="{% url 'home' %}"><img height="30" src="{% static 'lms/img/banner.png' %}"></a>
+    <a class="navbar-brand" href="{% url 'home' %}"><img height="30" src="{% static 'lms/img/banner-tiny.png' %}"></a>
     <ul class="navbar-nav">
       <li class="nav-item">
         {% include 'learning/dropdown.html' %}

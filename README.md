@@ -1,3 +1,5 @@
+[![Koala LMS logo](static/lms/img/banner-sm.png)](https://www.koala-lms.org)
+  
 # :koala: Koala, Learning Management system
 
 ## :school: What is Koala LMS?
