@@ -1,5 +1,5 @@
 *.sqlite3
-static
+prodstatic
 media
 learning
 accounts

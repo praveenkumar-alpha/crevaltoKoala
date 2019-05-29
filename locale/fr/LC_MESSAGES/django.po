@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-24 09:32+0200\n"
-"PO-Revision-Date: 2019-05-24 09:33+0200\n"
+"POT-Creation-Date: 2019-05-29 08:58+0200\n"
+"PO-Revision-Date: 2019-05-29 08:59+0200\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
-#: lms/settings.py:117
+#: lms/settings.py:118
 msgid "French"
 msgstr "Français"
 
-#: lms/settings.py:118
+#: lms/settings.py:119
 msgid "English"
 msgstr "Anglais"
 
@@ -41,7 +41,6 @@ msgid "Go back to previous page."
 msgstr "Retourner à la page précédente."
 
 #: templates/404.html:7
-#, fuzzy
 msgid "The requested page was not found (Error n°404)."
 msgstr "La page demandée n’a pas été trouvée (Erreur n°404)."
 
@@ -83,11 +82,19 @@ msgstr ""
 msgid "Technical preview"
 msgstr "Aperçu technologique"
 
-#: templates/home.html:10
+#: templates/home.html:17
+msgid ""
+"This image “Closed book”, is a work called “Closed Book Icon” by Boca Tutor, "
+"available on Wikimedia Commons under CC-BY-SA 3.0."
+msgstr ""
+"Cette image « Livre fermé » est un travail appelé « Closed Book Icon » par "
+"Boca Tutor, disponible sur Wikimédia Commons sous la licence CC-BY-SA 3.0."
+
+#: templates/home.html:24
 msgid "Learning application"
 msgstr "Application d’apprentissage"
 
-#: templates/home.html:11
+#: templates/home.html:26
 msgid ""
 "Learn courses you subscribed in and write your own courses, activities and "
 "educational resources."
@@ -95,7 +102,7 @@ msgstr ""
 "Apprenez les cours auxquels vous vous êtes inscrit et écriez vos propres "
 "cours, activités et ressources pédagogiques."
 
-#: templates/home.html:12
+#: templates/home.html:28
 msgid "Go to learning application"
 msgstr "Aller à l’application d’apprentissage"
 
