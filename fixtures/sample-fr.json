@@ -4,7 +4,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$150000$sXQxPVVFcyNO$P9/u7Awuii5JO6i6HOnnARFQcANlN3/oObK6bazL01k=",
-    "last_login": "2019-05-28T15:38:22.551Z",
+    "last_login": "2019-06-03T10:52:31.625Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -112,7 +112,7 @@
   "pk": 8,
   "fields": {
     "password": "pbkdf2_sha256$150000$9XeZIkyzVzom$iZ6kSsH8nujVR7dxgsGp+uDfBjROE+b9kB6tTvlVNZQ=",
-    "last_login": "2019-05-23T13:43:32.888Z",
+    "last_login": "2019-06-03T11:17:44.485Z",
     "is_superuser": false,
     "username": "erik-orsenna",
     "first_name": "Erik",
@@ -1111,8 +1111,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
+    "slug": "les-inconnus-la-revolution",
     "published": "2019-04-11T11:48:05.248Z",
-    "updated": "2019-05-20T06:51:25.915Z"
+    "updated": "2019-06-03T12:00:00.833Z"
   }
 },
 {
@@ -1129,8 +1130,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
+    "slug": "le-traite-sur-la-tolerance",
     "published": "2019-04-11T11:52:01.402Z",
-    "updated": "2019-05-20T06:51:10.098Z"
+    "updated": "2019-06-03T12:00:04.599Z"
   }
 },
 {
@@ -1147,8 +1149,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
+    "slug": "les-lumieres-xviiie-siecle",
     "published": "2019-04-11T11:54:17.795Z",
-    "updated": "2019-05-20T06:45:48.755Z"
+    "updated": "2019-06-03T12:00:08.226Z"
   }
 },
 {
@@ -1165,8 +1168,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
+    "slug": "betise-de-voltaire",
     "published": "2019-04-11T11:56:59.710Z",
-    "updated": "2019-05-20T06:51:34.893Z"
+    "updated": "2019-06-03T12:00:11.169Z"
   }
 },
 {
@@ -1183,8 +1187,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
+    "slug": "lencyclopedie-de-diderot-et-dalembert",
     "published": "2019-04-29T09:39:39.869Z",
-    "updated": "2019-04-29T09:39:39.869Z"
+    "updated": "2019-06-03T12:00:13.826Z"
   }
 },
 {
@@ -1201,8 +1206,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
+    "slug": "litterature-moderne",
     "published": "2019-04-29T09:44:07.168Z",
-    "updated": "2019-04-29T09:44:07.168Z"
+    "updated": "2019-06-03T12:00:16.508Z"
   }
 },
 {
@@ -1215,8 +1221,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "author": 8,
+    "slug": "contexte-historique",
     "published": "2019-03-27T08:28:03.654Z",
-    "updated": "2019-05-17T08:00:24.307Z",
+    "updated": "2019-06-03T11:56:52.949Z",
     "resources": [
       1,
       2,
@@ -1235,8 +1242,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "author": 8,
+    "slug": "la-variete-litteraire-du-xviiie-siecle",
     "published": "2019-03-27T08:28:24.405Z",
-    "updated": "2019-05-17T07:58:55.733Z",
+    "updated": "2019-06-03T11:56:58.289Z",
     "resources": [
       2,
       3
@@ -1253,8 +1261,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "author": 8,
+    "slug": "le-theatre-du-xviiie-siecle",
     "published": "2019-03-27T08:28:58.578Z",
-    "updated": "2019-05-17T07:59:45.369Z",
+    "updated": "2019-06-03T11:57:12.131Z",
     "resources": [
       1,
       2,
@@ -1272,8 +1281,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "author": 43,
+    "slug": "evolution-du-sens-aux-xviie-et-xviiie-siecles",
     "published": "2019-04-29T09:39:41.967Z",
-    "updated": "2019-05-17T13:18:36.079Z",
+    "updated": "2019-06-03T11:57:43.659Z",
     "resources": [
       5
     ]
@@ -1289,8 +1299,9 @@
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "author": 43,
+    "slug": "sens-moderne",
     "published": "2019-04-29T09:44:09.302Z",
-    "updated": "2019-05-17T09:57:34.765Z",
+    "updated": "2019-06-03T11:57:33.434Z",
     "resources": [
       6
     ]
@@ -1306,8 +1317,9 @@
     "access": "PRIVATE",
     "reuse": "ONLY_AUTHOR",
     "author": 8,
+    "slug": "le-roman-du-18e-siecle",
     "published": "2019-05-15T08:21:40.491Z",
-    "updated": "2019-05-17T13:17:13.448Z",
+    "updated": "2019-06-03T11:57:04.774Z",
     "resources": [
       6
     ]
@@ -1324,8 +1336,9 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "author": 8,
+    "slug": "litterature-francaise-du-18e-siecle",
     "published": "2019-03-25T14:33:17.046Z",
-    "updated": "2019-05-17T13:17:38.193Z",
+    "updated": "2019-06-03T11:58:28.048Z",
     "students": [
       4
     ]
@@ -1342,8 +1355,9 @@
     "access": "PUBLIC",
     "registration_enabled": false,
     "author": 8,
+    "slug": "litterature-francaise-du-19e-siecle",
     "published": "2019-03-26T09:46:14.342Z",
-    "updated": "2019-05-17T08:44:35.888Z",
+    "updated": "2019-06-03T11:58:34.714Z",
     "students": []
   }
 },
@@ -1358,8 +1372,9 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "author": 5,
+    "slug": "litterature-francaise-du-20e-siecle",
     "published": "2019-03-26T11:45:49.541Z",
-    "updated": "2019-05-17T08:16:07.508Z",
+    "updated": "2019-06-03T11:58:38.056Z",
     "students": [
       7,
       8
@@ -1377,8 +1392,9 @@
     "access": "COLLABORATORS_ONLY",
     "registration_enabled": false,
     "author": 6,
+    "slug": "litterature-francaise-du-16e-siecle",
     "published": "2019-03-26T11:51:11.526Z",
-    "updated": "2019-05-17T08:19:19.132Z",
+    "updated": "2019-06-03T11:58:20.339Z",
     "students": []
   }
 },
@@ -1393,8 +1409,9 @@
     "access": "PRIVATE",
     "registration_enabled": false,
     "author": 8,
+    "slug": "litterature-francaise-du-17e-siecle",
     "published": "2019-03-26T12:11:32.391Z",
-    "updated": "2019-05-17T08:44:25.780Z",
+    "updated": "2019-06-03T11:58:23.237Z",
     "students": []
   }
 },
@@ -1409,8 +1426,9 @@
     "access": "STUDENTS_ONLY",
     "registration_enabled": true,
     "author": 9,
+    "slug": "physique-quantique",
     "published": "2019-03-26T13:07:57.263Z",
-    "updated": "2019-05-17T08:13:21.165Z",
+    "updated": "2019-06-03T11:58:51.810Z",
     "students": []
   }
 },
@@ -1425,8 +1443,9 @@
     "access": "STUDENTS_ONLY",
     "registration_enabled": false,
     "author": 43,
+    "slug": "litterature",
     "published": "2019-04-29T09:39:55.314Z",
-    "updated": "2019-05-17T08:19:24.208Z",
+    "updated": "2019-06-03T11:58:17.147Z",
     "students": [
       49,
       40,
@@ -1471,8 +1490,9 @@
     "access": "STUDENTS_ONLY",
     "registration_enabled": false,
     "author": 9,
+    "slug": "thermodynamique",
     "published": "2019-04-29T09:48:33Z",
-    "updated": "2019-05-17T08:11:23.516Z",
+    "updated": "2019-06-03T11:59:01.385Z",
     "students": [
       8
     ]
@@ -1489,8 +1509,9 @@
     "access": "STUDENTS_ONLY",
     "registration_enabled": false,
     "author": 9,
+    "slug": "physique-des-particules",
     "published": "2019-04-29T09:50:10.300Z",
-    "updated": "2019-05-17T08:15:02.382Z",
+    "updated": "2019-06-03T11:58:48.572Z",
     "students": [
       8
     ]
@@ -1507,8 +1528,9 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "author": 62,
+    "slug": "programmation-informatique",
     "published": "2019-04-29T09:51:56.174Z",
-    "updated": "2019-05-17T08:11:49.325Z",
+    "updated": "2019-06-03T11:58:55.317Z",
     "students": []
   }
 },
@@ -1523,8 +1545,9 @@
     "access": "PUBLIC",
     "registration_enabled": false,
     "author": 43,
+    "slug": "theatre",
     "published": "2019-04-29T09:53:19.914Z",
-    "updated": "2019-05-17T08:09:52.386Z",
+    "updated": "2019-06-03T11:59:04.547Z",
     "students": []
   }
 },
@@ -1539,8 +1562,9 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "author": 9,
+    "slug": "mecanique-des-fluides",
     "published": "2019-04-29T09:54:59.004Z",
-    "updated": "2019-05-17T08:15:32.123Z",
+    "updated": "2019-06-03T11:58:41.786Z",
     "students": []
   }
 },
@@ -1555,8 +1579,9 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "author": 4,
+    "slug": "romantisme",
     "published": "2019-04-29T09:56:48.083Z",
-    "updated": "2019-04-29T09:57:12.448Z",
+    "updated": "2019-06-03T11:58:58.709Z",
     "students": [
       8
     ]
@@ -1573,8 +1598,9 @@
     "access": "PUBLIC",
     "registration_enabled": true,
     "author": 9,
+    "slug": "chimie-organique",
     "published": "2019-04-29T09:58:54.685Z",
-    "updated": "2019-05-17T08:12:26.153Z",
+    "updated": "2019-06-03T11:58:10.428Z",
     "students": [
       49,
       40,
