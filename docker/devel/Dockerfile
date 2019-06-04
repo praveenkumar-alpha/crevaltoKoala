@@ -10,7 +10,7 @@ RUN \
     # Install Koala-LMS official applications manually
     sh docker/devel/django-accounts.sh && \
     sh docker/devel/django-learning.sh && \
-    # Give execution right to entrypoint
+    # Change owner of Koala-LMS files
     chown ${USER}:${USER} -R .
 
 USER "${USER}"

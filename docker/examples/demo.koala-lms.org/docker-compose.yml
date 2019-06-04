@@ -10,5 +10,7 @@ services:
       TIME_ZONE: 'Europe/Paris'
       FIXTURE: "./fixtures/sample-fr.json"
       DEMO: 1
+      DEMONSTRATION_LOGIN: "erik-orsenna"
+      DEMONSTRATION_PASSWORD: "koala-lms"
     ports:
       - 8080:8080
