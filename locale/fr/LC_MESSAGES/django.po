@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Guillaume Bernard <guillaume-bernard@loria.fr>
+# Guillaume Bernard <guillaume-bernard@koala-lms.org>
 #
 msgid ""
 msgstr ""

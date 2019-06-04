@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Guillaume Bernard <guillaume.bernard@loria.fr>
+# Copyright (C) 2019 Guillaume Bernard <guillaume.bernard@koala-lms.org>
 #
 # This file is part of Koala LMS (Learning Management system)
 
