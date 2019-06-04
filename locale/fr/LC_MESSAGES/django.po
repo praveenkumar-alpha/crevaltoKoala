@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-29 08:58+0200\n"
-"PO-Revision-Date: 2019-05-29 08:59+0200\n"
-"Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
+"POT-Creation-Date: 2019-06-04 14:22+0200\n"
+"PO-Revision-Date: 2019-06-04 14:23+0200\n"
+"Last-Translator: Guillaume Bernard <guillaume.bernard@koala-lms.org>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.2.3\n"
 
-#: lms/settings.py:118
+#: lms/settings.py:121
 msgid "French"
 msgstr "Français"
 
-#: lms/settings.py:119
+#: lms/settings.py:122
 msgid "English"
 msgstr "Anglais"
 
@@ -64,11 +64,11 @@ msgstr ""
 "Oups, quelque chose s’est mal passé et il semble que la page que vous avez "
 "demandé a crashé."
 
-#: templates/base.html:35
+#: templates/base.html:40
 msgid "Report an issue"
 msgstr "Signaler une erreur"
 
-#: templates/base.html:39
+#: templates/base.html:44
 msgid ""
 "When running preview, you will surely encounter bugs and other issues. This "
 "is normal and helps us to enhance Koala-LMS. Please, report any error you "
@@ -78,11 +78,22 @@ msgstr ""
 "des bogues et d’autres problèmes. C’est normal et cela nous aide à améliorer "
 "Koala-LMS. S’il vous plaît, rapportez toutes les erreurs que vous trouvez."
 
-#: templates/base.html:40
+#: templates/base.html:45
 msgid "Technical preview"
 msgstr "Aperçu technologique"
 
-#: templates/home.html:17
+#: templates/base.html:59
+msgid ""
+"You are running a preview of Koala LMS. You have been automatically logged "
+"in as a demonstration user that owns courses, activities and resources to "
+"let you discover how Koala LMS works."
+msgstr ""
+"Vous exécutez une pré-version de Koala-LMS. Vous avez été connecté "
+"automatiquement en tant qu’utilisateur de démonstration possédant des cours, "
+"activités et ressources pour vous permettre de découvrir comment Koala-LMS "
+"fonctionne."
+
+#: templates/home.html:11
 msgid ""
 "This image “Closed book”, is a work called “Closed Book Icon” by Boca Tutor, "
 "available on Wikimedia Commons under CC-BY-SA 3.0."
@@ -90,11 +101,11 @@ msgstr ""
 "Cette image « Livre fermé » est un travail appelé « Closed Book Icon » par "
 "Boca Tutor, disponible sur Wikimédia Commons sous la licence CC-BY-SA 3.0."
 
-#: templates/home.html:24
+#: templates/home.html:18
 msgid "Learning application"
 msgstr "Application d’apprentissage"
 
-#: templates/home.html:26
+#: templates/home.html:20
 msgid ""
 "Learn courses you subscribed in and write your own courses, activities and "
 "educational resources."
@@ -102,7 +113,7 @@ msgstr ""
 "Apprenez les cours auxquels vous vous êtes inscrit et écriez vos propres "
 "cours, activités et ressources pédagogiques."
 
-#: templates/home.html:28
+#: templates/home.html:22
 msgid "Go to learning application"
 msgstr "Aller à l’application d’apprentissage"
 

@@ -55,7 +55,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware'
+    'django.middleware.locale.LocaleMiddleware',
+
+    # Backend to automatically authenticate a demonstration user
+    'lms.middleware.AutoAuthenticationOnDemonstration',
 ]
 
 ROOT_URLCONF = 'lms.urls'
@@ -132,6 +135,8 @@ LOCALE_PATHS = (
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+# noinspection PyUnresolvedReferences
 STATIC_ROOT = os.path.join(BASE_DIR, "prodstatic")
 STATIC_URL = '/static/'
 
