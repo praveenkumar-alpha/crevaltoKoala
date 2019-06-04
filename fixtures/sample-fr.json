@@ -112,7 +112,7 @@
   "pk": 8,
   "fields": {
     "password": "pbkdf2_sha256$150000$9XeZIkyzVzom$iZ6kSsH8nujVR7dxgsGp+uDfBjROE+b9kB6tTvlVNZQ=",
-    "last_login": "2019-06-03T11:17:44.485Z",
+    "last_login": "2019-06-04T12:30:50.592Z",
     "is_superuser": false,
     "username": "erik-orsenna",
     "first_name": "Erik",
@@ -1106,14 +1106,14 @@
     "language": "fr",
     "type": "VIDEO",
     "author": 8,
-    "duration": "NOT_SPECIFIED",
-    "licence": "CC_0",
+    "duration": "TWENTY_OR_LESS",
+    "licence": "ALL_RIGHTS_RESERVED",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
     "slug": "les-inconnus-la-revolution",
     "published": "2019-04-11T11:48:05.248Z",
-    "updated": "2019-06-03T12:00:00.833Z"
+    "updated": "2019-06-04T12:28:51.420Z"
   }
 },
 {
@@ -1125,14 +1125,14 @@
     "language": "fr",
     "type": "VIDEO",
     "author": 8,
-    "duration": "NOT_SPECIFIED",
-    "licence": "CC_0",
-    "access": "PUBLIC",
-    "reuse": "ONLY_AUTHOR",
+    "duration": "FIFTEEN_OR_LESS",
+    "licence": "CC_BY_SA",
+    "access": "EXISTING_ACTIVITIES",
+    "reuse": "NO_RESTRICTION",
     "media": "",
     "slug": "le-traite-sur-la-tolerance",
     "published": "2019-04-11T11:52:01.402Z",
-    "updated": "2019-06-03T12:00:04.599Z"
+    "updated": "2019-06-04T12:30:02.467Z"
   }
 },
 {
@@ -1144,14 +1144,14 @@
     "language": "fr",
     "type": "VIDEO",
     "author": 8,
-    "duration": "NOT_SPECIFIED",
+    "duration": "FIFTEEN_OR_LESS",
     "licence": "CC_0",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
     "slug": "les-lumieres-xviiie-siecle",
     "published": "2019-04-11T11:54:17.795Z",
-    "updated": "2019-06-03T12:00:08.226Z"
+    "updated": "2019-06-04T12:28:23.398Z"
   }
 },
 {
@@ -1163,14 +1163,14 @@
     "language": "fr",
     "type": "AUDIO",
     "author": 8,
-    "duration": "NOT_SPECIFIED",
+    "duration": "FIVE_OR_LESS",
     "licence": "CC_0",
-    "access": "PUBLIC",
+    "access": "EXISTING_ACTIVITIES",
     "reuse": "ONLY_AUTHOR",
     "media": "",
     "slug": "betise-de-voltaire",
     "published": "2019-04-11T11:56:59.710Z",
-    "updated": "2019-06-03T12:00:11.169Z"
+    "updated": "2019-06-04T12:28:35.179Z"
   }
 },
 {
@@ -1182,14 +1182,14 @@
     "language": "fr",
     "type": "VIDEO",
     "author": 4,
-    "duration": "NOT_SPECIFIED",
-    "licence": "CC_0",
+    "duration": "TWENTY_OR_LESS",
+    "licence": "CC_BY",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
     "slug": "lencyclopedie-de-diderot-et-dalembert",
     "published": "2019-04-29T09:39:39.869Z",
-    "updated": "2019-06-03T12:00:13.826Z"
+    "updated": "2019-06-04T12:28:46.419Z"
   }
 },
 {
@@ -1201,14 +1201,14 @@
     "language": "fr",
     "type": "VIDEO",
     "author": 43,
-    "duration": "NOT_SPECIFIED",
-    "licence": "CC_0",
+    "duration": "FIFTEEN_OR_LESS",
+    "licence": "ALL_RIGHTS_RESERVED",
     "access": "PUBLIC",
     "reuse": "ONLY_AUTHOR",
     "media": "",
     "slug": "litterature-moderne",
     "published": "2019-04-29T09:44:07.168Z",
-    "updated": "2019-06-03T12:00:16.508Z"
+    "updated": "2019-06-04T12:29:10.180Z"
   }
 },
 {
@@ -1802,7 +1802,7 @@
   "model": "learning.courseactivity",
   "pk": 8,
   "fields": {
-    "rank": 2,
+    "rank": 4,
     "minimal_allowed_score": 25,
     "success_score": 50,
     "course": 1,
@@ -1868,7 +1868,7 @@
   "model": "learning.courseactivity",
   "pk": 29,
   "fields": {
-    "rank": 4,
+    "rank": 2,
     "minimal_allowed_score": 25,
     "success_score": 50,
     "course": 1,
@@ -2849,6 +2849,14 @@
   "fields": {
     "name": "ml",
     "slug": "ml"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 132,
+  "fields": {
+    "name": "trsst",
+    "slug": "trsst"
   }
 },
 {
