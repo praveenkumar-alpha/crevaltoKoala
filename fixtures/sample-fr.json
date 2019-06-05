@@ -1792,8 +1792,6 @@
   "pk": 7,
   "fields": {
     "rank": 1,
-    "minimal_allowed_score": 25,
-    "success_score": 50,
     "course": 1,
     "activity": 12
   }
@@ -1803,8 +1801,6 @@
   "pk": 8,
   "fields": {
     "rank": 4,
-    "minimal_allowed_score": 25,
-    "success_score": 50,
     "course": 1,
     "activity": 13
   }
@@ -1814,8 +1810,6 @@
   "pk": 10,
   "fields": {
     "rank": 3,
-    "minimal_allowed_score": 25,
-    "success_score": 50,
     "course": 1,
     "activity": 15
   }
@@ -1825,8 +1819,6 @@
   "pk": 13,
   "fields": {
     "rank": 1,
-    "minimal_allowed_score": 25,
-    "success_score": 50,
     "course": 3,
     "activity": 12
   }
@@ -1836,8 +1828,6 @@
   "pk": 14,
   "fields": {
     "rank": 2,
-    "minimal_allowed_score": 25,
-    "success_score": 50,
     "course": 3,
     "activity": 13
   }
@@ -1847,8 +1837,6 @@
   "pk": 15,
   "fields": {
     "rank": 1,
-    "minimal_allowed_score": 25,
-    "success_score": 50,
     "course": 7,
     "activity": 18
   }
@@ -1858,8 +1846,6 @@
   "pk": 16,
   "fields": {
     "rank": 2,
-    "minimal_allowed_score": 25,
-    "success_score": 50,
     "course": 7,
     "activity": 19
   }
@@ -1869,8 +1855,6 @@
   "pk": 29,
   "fields": {
     "rank": 2,
-    "minimal_allowed_score": 25,
-    "success_score": 50,
     "course": 1,
     "activity": 20
   }
