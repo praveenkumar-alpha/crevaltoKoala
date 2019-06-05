@@ -23,6 +23,8 @@
 def running_in_demo(request):
     try:
         from django.conf import settings
-        return {'running_in_demo': settings.DEMO}
+        if settings.DEMO and request.user.username == settings.DEMONSTRATION_LOGIN:
+            return {'running_in_demo': settings.DEMO}
     except (ImportError, AttributeError):
-        return {'running_in_demo': False}
+        pass
+    return {'running_in_demo': False}
