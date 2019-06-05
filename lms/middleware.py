@@ -20,12 +20,12 @@
 #
 
 from django.conf import settings
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import get_user_model
 
 from lms import logger
 
 
-class AutoAuthenticationOnDemonstration:
+class DemonstrationUserAuthentication:
     """
     Automatically login the demonstration user, if any
     """
@@ -33,39 +33,20 @@ class AutoAuthenticationOnDemonstration:
     def __init__(self, get_response):
         self.get_response = get_response
         self.demo = getattr(settings, 'DEMO', False)
-        if self.demo and hasattr(settings, 'DEMONSTRATION_LOGIN') and hasattr(settings, 'DEMONSTRATION_PASSWORD'):
-            self.login = getattr(settings, 'DEMONSTRATION_LOGIN')
-            self.password = getattr(settings, 'DEMONSTRATION_PASSWORD')
+        if self.demo and hasattr(settings, 'DEMONSTRATION_LOGIN'):
+            self.user = get_user_model().objects.filter(username=getattr(settings, 'DEMONSTRATION_LOGIN')).get()
         else:
             raise ValueError("When you enable the demonstration server, you must provide "
-                             "credentials of a user that will be connected automatically."
+                             "the login of the user that will be connected automatically."
                              "You have to provide the login using the DEMONSTRATION_LOGIN "
-                             "key in your settings and DEMONSTRATION_PASSWORD for the password.")
+                             "key in your settings")
 
     def __call__(self, request):
-        response = self.get_response(request)
         # This works only when running a demonstration server
         if self.demo:
             # If the user is already connected, it is not necessary to go further
-            if request.user.is_anonymous:
-                logger.debug("The demonstration user is set and will be logged in.")
-                # noinspection PyBroadException
-                try:
-                    user = authenticate(request, username=self.login, password=self.password)
-                    if user is not None:
-                        login(request, user)
-                        logger.info("User identified by %s is now connected.", self.login)
-                    else:
-                        logger.error(
-                            "Unable to connect the demo user identified by %s, %s.",
-                            self.login, self.password
-                        )
-                except Exception as ex:
-                    logger.error(
-                        "Unable to connect the demo user identified by %s, %s. Reason is %s.",
-                        self.login, self.password, str(ex)
-                    )
-                    raise
+            if not request.user.is_authenticated:
+                request.user = self.user
         else:
             logger.warning("Automatic login works only when running the demonstration mode.")
-        return response
+        return self.get_response(request)

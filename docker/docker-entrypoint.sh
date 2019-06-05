@@ -25,10 +25,6 @@ if [[ ! -z "${DEMO+x}" ]]; then
     if [[ ! -z "${DEMONSTRATION_LOGIN+x}" ]]; then
         echo "DEMONSTRATION_LOGIN = '${DEMONSTRATION_LOGIN}'" >> "${local_settings_file}"
     fi
-
-    if [[ ! -z "${DEMONSTRATION_PASSWORD+x}" ]]; then
-        echo "DEMONSTRATION_PASSWORD = '${DEMONSTRATION_PASSWORD}'" >> "${local_settings_file}"
-    fi
 fi
 
 if [[ ! -z "${LANGUAGE_CODE+x}" ]]; then

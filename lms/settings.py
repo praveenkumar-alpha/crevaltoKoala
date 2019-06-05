@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
 
     # Backend to automatically authenticate a demonstration user
-    'lms.middleware.AutoAuthenticationOnDemonstration',
+    'lms.middleware.DemonstrationUserAuthentication',
 ]
 
 ROOT_URLCONF = 'lms.urls'
