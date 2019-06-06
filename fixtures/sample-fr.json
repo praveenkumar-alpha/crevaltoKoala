@@ -111,13 +111,13 @@
   "model": "accounts.person",
   "pk": 8,
   "fields": {
-    "password": "pbkdf2_sha256$150000$9XeZIkyzVzom$iZ6kSsH8nujVR7dxgsGp+uDfBjROE+b9kB6tTvlVNZQ=",
-    "last_login": "2019-06-04T12:30:50.592Z",
+    "password": "pbkdf2_sha256$150000$B8bzIoavJo8D$7c1gNDfqzbyaiwNX5i/Jodi3AlHyS9eXKCNlHCKsHiw=",
+    "last_login": "2019-06-05T17:43:12.359Z",
     "is_superuser": false,
     "username": "erik-orsenna",
     "first_name": "Erik",
     "last_name": "Orsenna",
-    "email": "",
+    "email": "erik.orsenna@koala-lms.org",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2019-03-26T09:35:38Z",
@@ -1102,7 +1102,7 @@
   "pk": 1,
   "fields": {
     "name": "Les Inconnus \u2212 La r\u00e9volution",
-    "description": "Sketch des Inconnus qui traite de la r\u00e9volution fran\u00e7aise.\r\n\r\n<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pibSbfAPE-g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
+    "description": "Sketch des Inconnus qui traite de la r\u00e9volution fran\u00e7aise.\r\n\r\n<center>\r\n<iframe src=\"https://www.youtube.com/embed/pibSbfAPE-g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
     "language": "fr",
     "type": "VIDEO",
     "author": 8,
@@ -1113,7 +1113,7 @@
     "media": "",
     "slug": "les-inconnus-la-revolution",
     "published": "2019-04-11T11:48:05.248Z",
-    "updated": "2019-06-04T12:28:51.420Z"
+    "updated": "2019-06-06T06:23:29.172Z"
   }
 },
 {
@@ -1121,7 +1121,7 @@
   "pk": 2,
   "fields": {
     "name": "Le trait\u00e9 sur la Tol\u00e9rance",
-    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Trait\u00e9 sur la tol\u00e9rance](http://fr.wikipedia.org/wiki/Trait%C3%A9_sur_la_tol%C3%A9rance)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](http://fr.wikipedia.org/w/index.php?title=Trait%C3%A9_sur_la_tol%C3%A9rance&action=history))\r\n\r\nLe _**Trait\u00e9 sur la tol\u00e9rance**_ est une \u0153uvre de [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") publi\u00e9e en [1763](https://fr.wikipedia.org/wiki/1763 \"1763\").\r\n\r\nCe texte vise la r\u00e9habilitation de [Jean Calas](https://fr.wikipedia.org/wiki/Jean_Calas \"Jean Calas\"), [protestant](https://fr.wikipedia.org/wiki/Protestantisme \"Protestantisme\") faussement accus\u00e9 et ex\u00e9cut\u00e9 pour avoir assassin\u00e9 son fils afin d'\u00e9viter que ce dernier ne se [convertisse](https://fr.wikipedia.org/wiki/Conversion_religieuse \"Conversion religieuse\") au [catholicisme](https://fr.wikipedia.org/wiki/Catholicisme \"Catholicisme\").\r\n\r\nDans ce _Trait\u00e9 sur la Tol\u00e9rance_, Voltaire invite \u00e0 la [tol\u00e9rance](https://fr.wikipedia.org/wiki/Tol%C3%A9rance \"Tol\u00e9rance\") entre les [religions](https://fr.wikipedia.org/wiki/Religion \"Religion\") et prend pour cible le [fanatisme](https://fr.wikipedia.org/wiki/Fanatisme \"Fanatisme\") religieux (plus particuli\u00e8rement celui des [j\u00e9suites](https://fr.wikipedia.org/wiki/J%C3%A9suite \"J\u00e9suite\") chez lesquels il a fait de brillantes \u00e9tudes \u00e9tant jeune homme) et pr\u00e9sente un r\u00e9quisitoire contre les [superstitions](https://fr.wikipedia.org/wiki/Superstition \"Superstition\") accol\u00e9es aux religions.\r\n\r\n<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/v7Oqdb25hrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
+    "description": "[Contenu soumis \u00e0 la licence CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.fr). Source : Article _[Trait\u00e9 sur la tol\u00e9rance](http://fr.wikipedia.org/wiki/Trait%C3%A9_sur_la_tol%C3%A9rance)_ de [Wikip\u00e9dia en fran\u00e7ais](http://fr.wikipedia.org/) ([auteurs](http://fr.wikipedia.org/w/index.php?title=Trait%C3%A9_sur_la_tol%C3%A9rance&action=history))\r\n\r\nLe _**Trait\u00e9 sur la tol\u00e9rance**_ est une \u0153uvre de [Voltaire](https://fr.wikipedia.org/wiki/Voltaire \"Voltaire\") publi\u00e9e en [1763](https://fr.wikipedia.org/wiki/1763 \"1763\").\r\n\r\nCe texte vise la r\u00e9habilitation de [Jean Calas](https://fr.wikipedia.org/wiki/Jean_Calas \"Jean Calas\"), [protestant](https://fr.wikipedia.org/wiki/Protestantisme \"Protestantisme\") faussement accus\u00e9 et ex\u00e9cut\u00e9 pour avoir assassin\u00e9 son fils afin d'\u00e9viter que ce dernier ne se [convertisse](https://fr.wikipedia.org/wiki/Conversion_religieuse \"Conversion religieuse\") au [catholicisme](https://fr.wikipedia.org/wiki/Catholicisme \"Catholicisme\").\r\n\r\nDans ce _Trait\u00e9 sur la Tol\u00e9rance_, Voltaire invite \u00e0 la [tol\u00e9rance](https://fr.wikipedia.org/wiki/Tol%C3%A9rance \"Tol\u00e9rance\") entre les [religions](https://fr.wikipedia.org/wiki/Religion \"Religion\") et prend pour cible le [fanatisme](https://fr.wikipedia.org/wiki/Fanatisme \"Fanatisme\") religieux (plus particuli\u00e8rement celui des [j\u00e9suites](https://fr.wikipedia.org/wiki/J%C3%A9suite \"J\u00e9suite\") chez lesquels il a fait de brillantes \u00e9tudes \u00e9tant jeune homme) et pr\u00e9sente un r\u00e9quisitoire contre les [superstitions](https://fr.wikipedia.org/wiki/Superstition \"Superstition\") accol\u00e9es aux religions.\r\n\r\n<center>\r\n<iframe src=\"https://www.youtube.com/embed/v7Oqdb25hrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
     "language": "fr",
     "type": "VIDEO",
     "author": 8,
@@ -1132,7 +1132,7 @@
     "media": "",
     "slug": "le-traite-sur-la-tolerance",
     "published": "2019-04-11T11:52:01.402Z",
-    "updated": "2019-06-04T12:30:02.467Z"
+    "updated": "2019-06-06T06:23:54.599Z"
   }
 },
 {
@@ -1140,7 +1140,7 @@
   "pk": 3,
   "fields": {
     "name": "Les Lumi\u00e8res (XVIIIe si\u00e8cle)",
-    "description": "<a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.fr\">Contenu soumis \u00e0 la licence CC-BY-SA</a>. Source : Article <em><a href=\"http://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie)\">Lumi\u00e8res (philosophie)</a></em> de <a href=\"http://fr.wikipedia.org/\">Wikip\u00e9dia en fran\u00e7ais</a> (<a href=\"http://fr.wikipedia.org/w/index.php?title=Lumi%C3%A8res_(philosophie)&action=history\">auteurs</a>)\r\n\r\nLes **Lumi\u00e8res**<sup id=\"cite_ref-1\" class=\"reference\">[<span class=\"cite_crochet\">[</span>1<span class=\"cite_crochet\">]</span>](#cite_note-1)</sup> sont un mouvement culturel, philosophique, litt\u00e9raire et intellectuel qui \u00e9merge dans la seconde moiti\u00e9 du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle avec des philosophes comme [Spinoza](https://fr.wikipedia.org/wiki/Baruch_Spinoza \"Baruch Spinoza\"), [Locke](https://fr.wikipedia.org/wiki/John_Locke \"John Locke\"), [Bayle](https://fr.wikipedia.org/wiki/Pierre_Bayle \"Pierre Bayle\") et [Newton](https://fr.wikipedia.org/wiki/Isaac_Newton \"Isaac Newton\"), avant de se d\u00e9velopper dans toute l'[Europe](https://fr.wikipedia.org/wiki/Europe \"Europe\"), notamment en [France](https://fr.wikipedia.org/wiki/France \"France\"), au [<abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIIe_si%C3%A8cle \"XVIIIe si\u00e8cle\"). Par extension, on a donn\u00e9 \u00e0 cette p\u00e9riode le nom de [si\u00e8cle des Lumi\u00e8res](https://fr.wikipedia.org/wiki/Si%C3%A8cle_des_Lumi%C3%A8res \"Si\u00e8cle des Lumi\u00e8res\").\r\n\r\n<center>\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/A6MJ6ssXBHw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
+    "description": "<a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.fr\">Contenu soumis \u00e0 la licence CC-BY-SA</a>. Source : Article <em><a href=\"http://fr.wikipedia.org/wiki/Lumi%C3%A8res_(philosophie)\">Lumi\u00e8res (philosophie)</a></em> de <a href=\"http://fr.wikipedia.org/\">Wikip\u00e9dia en fran\u00e7ais</a> (<a href=\"http://fr.wikipedia.org/w/index.php?title=Lumi%C3%A8res_(philosophie)&action=history\">auteurs</a>)\r\n\r\nLes **Lumi\u00e8res**<sup id=\"cite_ref-1\" class=\"reference\">[<span class=\"cite_crochet\">[</span>1<span class=\"cite_crochet\">]</span>](#cite_note-1)</sup> sont un mouvement culturel, philosophique, litt\u00e9raire et intellectuel qui \u00e9merge dans la seconde moiti\u00e9 du <abbr class=\"abbr\" title=\"17\u1d49 si\u00e8cle\"><span class=\"romain\">XVII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle avec des philosophes comme [Spinoza](https://fr.wikipedia.org/wiki/Baruch_Spinoza \"Baruch Spinoza\"), [Locke](https://fr.wikipedia.org/wiki/John_Locke \"John Locke\"), [Bayle](https://fr.wikipedia.org/wiki/Pierre_Bayle \"Pierre Bayle\") et [Newton](https://fr.wikipedia.org/wiki/Isaac_Newton \"Isaac Newton\"), avant de se d\u00e9velopper dans toute l'[Europe](https://fr.wikipedia.org/wiki/Europe \"Europe\"), notamment en [France](https://fr.wikipedia.org/wiki/France \"France\"), au [<abbr class=\"abbr\" title=\"18\u1d49 si\u00e8cle\"><span class=\"romain\">XVIII</span><sup style=\"font-size:72%\">e</sup></abbr> si\u00e8cle](https://fr.wikipedia.org/wiki/XVIIIe_si%C3%A8cle \"XVIIIe si\u00e8cle\"). Par extension, on a donn\u00e9 \u00e0 cette p\u00e9riode le nom de [si\u00e8cle des Lumi\u00e8res](https://fr.wikipedia.org/wiki/Si%C3%A8cle_des_Lumi%C3%A8res \"Si\u00e8cle des Lumi\u00e8res\").\r\n\r\n<center>\r\n<iframe src=\"https://www.youtube.com/embed/A6MJ6ssXBHw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n</center>",
     "language": "fr",
     "type": "VIDEO",
     "author": 8,
@@ -1151,7 +1151,7 @@
     "media": "",
     "slug": "les-lumieres-xviiie-siecle",
     "published": "2019-04-11T11:54:17.795Z",
-    "updated": "2019-06-04T12:28:23.398Z"
+    "updated": "2019-06-06T06:22:49.024Z"
   }
 },
 {
@@ -1225,10 +1225,10 @@
     "published": "2019-03-27T08:28:03.654Z",
     "updated": "2019-06-03T11:56:52.949Z",
     "resources": [
-      1,
-      2,
+      4,
       3,
-      4
+      1,
+      2
     ]
   }
 },
@@ -1246,8 +1246,8 @@
     "published": "2019-03-27T08:28:24.405Z",
     "updated": "2019-06-03T11:56:58.289Z",
     "resources": [
-      2,
-      3
+      3,
+      2
     ]
   }
 },
@@ -1265,9 +1265,9 @@
     "published": "2019-03-27T08:28:58.578Z",
     "updated": "2019-06-03T11:57:12.131Z",
     "resources": [
+      6,
       1,
-      2,
-      6
+      2
     ]
   }
 },
