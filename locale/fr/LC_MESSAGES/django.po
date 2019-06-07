@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-04 14:22+0200\n"
-"PO-Revision-Date: 2019-06-04 14:23+0200\n"
+"POT-Creation-Date: 2019-06-07 08:17+0200\n"
+"PO-Revision-Date: 2019-06-07 08:17+0200\n"
 "Last-Translator: Guillaume Bernard <guillaume.bernard@koala-lms.org>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.2.3\n"
 
-#: lms/settings.py:121
+#: lms/settings.py:122
 msgid "French"
 msgstr "Français"
 
-#: lms/settings.py:122
+#: lms/settings.py:123
 msgid "English"
 msgstr "Anglais"
 
@@ -64,11 +64,33 @@ msgstr ""
 "Oups, quelque chose s’est mal passé et il semble que la page que vous avez "
 "demandé a crashé."
 
-#: templates/base.html:40
+#: templates/base.html:44
+msgid "Versions used"
+msgstr "Versions utilisées"
+
+#: templates/base.html:47
+msgid "Koala LMS"
+msgstr "Koala LMS"
+
+#: templates/base.html:50
+#, python-format
+msgid "<strong>Koala</strong> n°%(version)s"
+msgstr "<strong>Koala</strong> n°%(version)s"
+
+#: templates/base.html:53
+msgid "Koala LMS applications"
+msgstr "Applications Koala LMS"
+
+#: templates/base.html:57 templates/base.html:63
+#, python-format
+msgid "<strong>django-koalalms-learning</strong> n°%(version)s"
+msgstr "<strong>django-koalalms-learning</strong> n°%(version)s"
+
+#: templates/base.html:70
 msgid "Report an issue"
 msgstr "Signaler une erreur"
 
-#: templates/base.html:44
+#: templates/base.html:74
 msgid ""
 "When running preview, you will surely encounter bugs and other issues. This "
 "is normal and helps us to enhance Koala-LMS. Please, report any error you "
@@ -78,11 +100,11 @@ msgstr ""
 "des bogues et d’autres problèmes. C’est normal et cela nous aide à améliorer "
 "Koala-LMS. S’il vous plaît, rapportez toutes les erreurs que vous trouvez."
 
-#: templates/base.html:45
+#: templates/base.html:75
 msgid "Technical preview"
 msgstr "Aperçu technologique"
 
-#: templates/base.html:59
+#: templates/base.html:89
 msgid ""
 "You are running a preview of Koala LMS. You have been automatically logged "
 "in as a demonstration user that owns courses, activities and resources to "

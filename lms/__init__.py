@@ -18,6 +18,19 @@
 #
 # We make an extensive use of the Django framework, https://www.djangoproject.com/
 #
+
+
+__version_info__ = {
+    'number': {
+        'major': '1',
+        'minor': '0',
+        'revision': '0',
+
+    },
+    'tag': "rc1"
+}
+__version__ = '.'.join(__version_info__.get('number').values()) + __version_info__.get('tag')
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -29,6 +42,7 @@ logger.addHandler(console_handler)
 
 try:
     from django.conf import settings
+
     logger.setLevel(settings.LOGGING_LEVEL)
 except (ImportError, Exception):
     logger.setLevel(logging.INFO)

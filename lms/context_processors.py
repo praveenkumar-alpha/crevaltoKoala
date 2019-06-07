@@ -28,3 +28,17 @@ def running_in_demo(request):
     except (ImportError, AttributeError):
         pass
     return {'running_in_demo': False}
+
+
+def applications_version(request):
+    versions = {}
+    import importlib
+    for module in ['lms', 'learning', 'accounts']:
+        try:
+            module = importlib.import_module(module)
+            versions.update(
+                {'{}_version'.format(module.__name__): module.__version__}
+            )
+        except ImportError:
+            pass
+    return versions

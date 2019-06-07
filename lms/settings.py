@@ -77,7 +77,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'lms.context_processors.running_in_demo'
+                'lms.context_processors.running_in_demo',
+                'lms.context_processors.applications_version',
             ]
         },
     },
@@ -118,8 +119,8 @@ AUTH_PASSWORD_VALIDATORS = [
 gettext = lambda x: x
 LANGUAGE_CODE = 'en'
 LANGUAGES = (
-   ('fr', gettext('French')),
-   ('en', gettext('English')),
+    ('fr', gettext('French')),
+    ('en', gettext('English')),
 )
 
 TIME_ZONE = 'UTC'
