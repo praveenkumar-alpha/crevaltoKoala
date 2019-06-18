@@ -24,7 +24,7 @@ As you may know, **Django** is a super easy, extensible framework. Thanks to thi
 
 **Koala LMS** and the components run with [**Django 2.2**](https://docs.djangoproject.com/en/2.2/releases/2.2/) and [**version 3.7**](https://www.python.org/downloads/release/python-370/). Only **long term support Django releases** will be supported in the future.
 
-## :ship: Download Docker image
+## :ship: Start using Docker
 
 You need to [install `docker`](https://docs.docker.com/install/) on your system. We host the [docker image in the Gitlab Registry](https://gitlab.com/koala-lms/lms/container_registry). Its `Dockerfile` is located at [`./docker/stable/Dockerfile`](docker/stable/Dockerfile). You can get the image (*<50MB to download*) using:
 ```bash
@@ -37,6 +37,8 @@ You can tweak the `koala-lms` deployment using some environment variables. None 
 * `LANGUAGE_CODE`: the Django corresponding setting.
 * `TIME_ZONE`: the Django corresponding setting.
 * `FIXTURE`: the fixture to load (relative to the project directory, ie: `./fixtures/sample.json`)
+* `DEMO`: if you wish to enable the demonstration server
+* `DEMONSTRATION_LOGIN`: the user that exists in the *fixture* that will be logged in
 * `DEBUG`: whether to use Django debug mode.
 
 #### Start the container
@@ -47,6 +49,25 @@ docker run --name koala-lms -e FIXTURE="./fixtures/sample-fr.json" -e DEBUG=1 -p
 ```
 And the container will boot. The application is distributed under the URL [localhost:8080](http://localhost:8080).
 
+## :snake: Start using a Python virtual environment
+
+You can start **Koala LMS** and help us in the development by downloading the components. 
+
+1. Ensure you use Python 3.7 or greater.
+2. Create a Python virtual environment: `python3 -m venv venv`
+3. Clone the Git repository: `git clone https://gitlab.com/koala-lms/lms.git`
+4. Activate the Python virtual environment: `source ./venv/bin/activate`
+5. Move into the `lms` project and install the dependencies: `pip3 install -r requirements.txt`
+6. Migrate and create the database: `./manage.py migrate`
+7. You can optinaly load some fixtures, like the french ones: `./manage.py loaddata ./fixtures/sample-fr.json`
+
+Now, you track stable applications. If you wish to contribute to the `learning` application for instance, you MUST NOT download it in the `lms` directory, but elsewhere. 
+
+1. Clone the Git repository: `git clone https://gitlab.com/koala-lms/django-learning.git`
+2. Create a symbolic link in the `lms` directory to the `learning` package: `cd lms && ln -s ../django-learning/learning learning`.
+3. Now, run the project, you’re using the code from the `master` or `develop` branch.
+
+When running the development server, we recommend you to set `DEMO` to `True`, create a user or a super user (`manage.py createsuperuser…`) and set `DEMONSTRATION_LOGIN` to that user.
 ## :open_hands: Contributing
 
 Every kind of contribution is well welcomed! You can give us your feedback or report bugs. You can help us translate Koala-LMS components, write documentation, and more.
