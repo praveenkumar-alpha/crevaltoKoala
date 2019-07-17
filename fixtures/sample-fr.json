@@ -4,7 +4,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$150000$sXQxPVVFcyNO$P9/u7Awuii5JO6i6HOnnARFQcANlN3/oObK6bazL01k=",
-    "last_login": "2019-06-03T10:52:31.625Z",
+    "last_login": "2019-07-16T13:36:19.636Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -1095,6 +1095,28 @@
     "date_joined": "2019-04-29T09:51:34.365Z",
     "groups": [],
     "user_permissions": []
+  }
+},
+{
+  "model": "accounts.notification",
+  "pk": 7,
+  "fields": {
+    "recipient": 8,
+    "timestamp": "2019-07-16T20:19:56.080Z",
+    "message": "La ressource \u00ab Contexte historique \u00bb a \u00e9t\u00e9 modifi\u00e9e le 14 juillet 2019. Vous devez valider la ressource pour qu\u2019elle soit visible dans les activit\u00e9s qui l\u2019utilisent",
+    "target": null,
+    "is_read": false
+  }
+},
+{
+  "model": "accounts.notification",
+  "pk": 9,
+  "fields": {
+    "recipient": 8,
+    "timestamp": "2019-07-17T08:12:01.248Z",
+    "message": "Une ressource demande votre attention",
+    "target": "/learning/resource/detail/le-traite-sur-la-tolerance/",
+    "is_read": false
   }
 },
 {
