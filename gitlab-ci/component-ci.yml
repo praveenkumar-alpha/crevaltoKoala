@@ -1,6 +1,7 @@
 image: python:alpine
 
 before_script:
+  - apk add --no-cache build-base
   - pip3 install -r ./requirements.txt  # Install project requirements
 
 stages:
