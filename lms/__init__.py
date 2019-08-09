@@ -27,7 +27,6 @@ __version_info__ = {
         'revision': '0',
 
     },
-    'tag': "rc1"
 }
 __version__ = '.'.join(__version_info__.get('number').values()) + __version_info__.get('tag')
 
