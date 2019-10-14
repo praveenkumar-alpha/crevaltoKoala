@@ -25,10 +25,9 @@ __version_info__ = {
         'major': '1',
         'minor': '0',
         'revision': '0',
-
     },
 }
-__version__ = '.'.join(__version_info__.get('number').values()) + __version_info__.get('tag')
+__version__ = '.'.join(__version_info__.get('number').values()) + __version_info__.get('tag', '')
 
 import logging
 
