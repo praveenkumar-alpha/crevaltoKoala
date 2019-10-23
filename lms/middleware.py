@@ -35,11 +35,13 @@ class DemonstrationUserAuthentication:
         self.demo = getattr(settings, 'DEMO', False)
         if self.demo and hasattr(settings, 'DEMONSTRATION_LOGIN'):
             self.user = get_user_model().objects.filter(username=getattr(settings, 'DEMONSTRATION_LOGIN')).get()
-        else:
+        elif self.demo and not hasattr(settings, 'DEMONSTRATION_LOGIN'):
             raise ValueError("When you enable the demonstration server, you must provide "
                              "the login of the user that will be connected automatically."
                              "You have to provide the login using the DEMONSTRATION_LOGIN "
                              "key in your settings")
+        else:
+            logger.info("Not running in demonstration mode.")
 
     def __call__(self, request):
         # This works only when running a demonstration server
