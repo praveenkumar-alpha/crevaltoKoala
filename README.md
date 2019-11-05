@@ -36,7 +36,7 @@ docker pull registry.gitlab.com/koala-lms/lms
 You can tweak the `koala-lms` deployment using some environment variables. None is required.
 * `LANGUAGE_CODE`: the Django corresponding setting.
 * `TIME_ZONE`: the Django corresponding setting.
-* `FIXTURE`: the fixture to load (relative to the project directory, ie: `./fixtures/sample.json`)
+* `FIXTURE`: the fixture to load (relative to the project directory, ie: `./fixtures/sample.json`). You will find additional fixtures in the `fixtures` directory.
 * `DEMO`: if you wish to enable the demonstration server
 * `DEMONSTRATION_LOGIN`: the user that exists in the *fixture* that will be logged in
 * `DEBUG`: whether to use Django debug mode.
@@ -51,23 +51,51 @@ And the container will boot. The application is distributed under the URL [local
 
 ## :snake: Start using a Python virtual environment
 
-You can start **Koala LMS** and help us in the development by downloading the components. 
+### Prepare your workspace
 
-1. Ensure you use Python 3.7 or greater.
-2. Create a Python virtual environment: `python3 -m venv venv`
-3. Clone the Git repository: `git clone https://gitlab.com/koala-lms/lms.git`
-4. Activate the Python virtual environment: `source ./venv/bin/activate`
-5. Move into the `lms` project and install the dependencies: `pip3 install -r requirements.txt`
-6. Migrate and create the database: `./manage.py migrate`
-7. You can optinaly load some fixtures, like the french ones: `./manage.py loaddata ./fixtures/sample-fr.json`
+The really first step before contributing to Koala LMS is to prepare your workspace: it will contain your Python virtual environmnent, as long as the Django Project, **lms** and the applications you are working on: **django-learning**, **django-accounts**, etc. Before doing so, ensure you use Python 3.7 or greater, and that you can use the `virtualenv` Python module. If not, documentation [for Ubuntu](https://linuxize.com/post/how-to-create-python-virtual-environments-on-ubuntu-18-04/), or [for Fedora](https://developer.fedoraproject.org/start/sw/web-app/django.html).
 
-Now, you track stable applications. If you wish to contribute to the `learning` application for instance, you MUST NOT download it in the `lms` directory, but elsewhere. 
+1. Move where you want in your filesystem hierarchy and create a directory, for instance, `koala_lms`.
+2. Move into this directory.
+3. Create a Python virtual environment with: `python3 -m venv venv`.
+4. Activate your Python virtual environment, using `source venv/bin/activate`.
+
+### Download and use the latest version of Koala LMS
+
+1. In your workspace, clone the Git repository: `git clone https://gitlab.com/koala-lms/lms.git`. A new directory called `lms` appears. It contains the Django project, this project.
+2. Move into the `lms` project and install the **Koala LMS** dependencies: `pip3 install -r requirements.txt`
+3. Before doing any migration, the [`SECRET_KEY`](https://docs.djangoproject.com/fr/2.2/ref/settings/#std:setting-SECRET_KEY) parameter must be set. You **MUST NOT** change the `lms/settings.py` file, as it contains settings for deployments of Koala LMS. Otherwise, for development purposes, you are encouraged to add a `lms/local_settings.py` file, where you can add the setting, like: `SECRET_KEY = "azertyuiop"`.
+4. Call `migrate` to create the database: `./manage.py migrate`
+5. You can optinaly load some fixtures, like the french ones: `./manage.py loaddata ./fixtures/sample-fr.json`
+
+#### Load the demonstration user
+
+If you intend to contribute to **Koala LMS**, it might be useful not to login manually each time you use the application. To avoid this, we provide, trough a [Django middleware](https://docs.djangoproject.com/en/2.2/topics/http/middleware/), a way to be automatically connected, when running a **demonstration server**.
+
+In order to enable it, update the `lms/local_settings.py` file and add the following:
+```python
+DEMO = True  # To indicate the code is running as a demonstration
+DEMONSTRATION_LOGIN = "erik-orsenna"  # A user that exists in the database and that will be logged-in automatically
+```
+
+#### Create a super-user
+
+A super user is useful when you want to access [**Django’s admin backend**](https://docs.djangoproject.com/en/2.2/ref/contrib/admin/). To create it, call `./manage.py createsuperuser` and fill the form with a username and a password.
+
+### Run the development server
+
+The development server can be run using the command line `./manage.py runserver`. Then, by default, a web-server will be started, listening the port 8000 on localhost. You can access it through [https://127.0.0.1:8000](https://127.0.0.1:8000).
+
+### Contribute to Koala LMS application
+
+Now, you track stable applications. If you wish to contribute to the `learning` application for instance, you **MUST NOT** download it in the `lms` directory, but in your workspace. For more information on how applications work, please read [Applications](https://docs.djangoproject.com/en/2.2/ref/applications/) from the Django documentation.
 
 1. Clone the Git repository: `git clone https://gitlab.com/koala-lms/django-learning.git`
-2. Create a symbolic link in the `lms` directory to the `learning` package: `cd lms && ln -s ../django-learning/learning learning`.
+2. Create a symbolic link in the `lms` directory (**Koala LMS** project) to the `learning` package: `cd lms && ln -s ../django-learning/learning learning`.
 3. Now, run the project, you’re using the code from the `master` or `develop` branch.
 
-When running the development server, we recommend you to set `DEMO` to `True`, create a user or a super user (`manage.py createsuperuser…`) and set `DEMONSTRATION_LOGIN` to that user.
+**NOTE**: you might need to refresh the dependencies in the virtual environment, as new versions of applications may require extra dependencies.
+
 ## :open_hands: Contributing
 
 Every kind of contribution is well welcomed! You can give us your feedback or report bugs. You can help us translate Koala-LMS components, write documentation, and more.
